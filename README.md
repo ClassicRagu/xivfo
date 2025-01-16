@@ -1,6 +1,6 @@
-# [xivfo.com - XIV Field Operations](https://www.xivfo.com/)
+# XIV Field Operations
 
-[A website to host guides for all FFXIV Field Operations content](https://www.xivfo.com/)
+A website to host guides for all FFXIV Field Operations content
 
 This site is in early alpha with only 1 page currently functional. This will likely eventually replace bozja.net.
 
