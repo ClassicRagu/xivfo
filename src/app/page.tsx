@@ -46,9 +46,6 @@ export default function Home() {
         <Typography variant="h4" component="h1" sx={{ mb: 2 }}>
           FFXIV Field Operations Guides and Tools
         </Typography>
-        <Typography component="p" sx={{ mb: 2 }}>
-          The goal of this site is not to be a 1 stop shop but rather a link aggregator for all content with a few tools tacked on.
-        </Typography>
         <ButtonBaseDemo images={images} />
       </Box>
     </Container>
