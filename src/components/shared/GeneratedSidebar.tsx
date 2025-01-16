@@ -65,10 +65,10 @@ export default function GeneratedSidebar(props: {
         </ListItem>
       </List>
       <Divider />
-      {props.sidebarSections.map((section) => {
+      {props.sidebarSections.map((section, index) => {
         return (
-          <div key={section.name}>
-            <List subheader={<ListSubheader>{section.name}</ListSubheader>}>
+          <div key={index}>
+            <List subheader={section.name != "" ? <ListSubheader>{section.name}</ListSubheader> : null}>
               {section.contents.map((sectionContents) => {
                 return (
                   <ListItem disablePadding key={sectionContents.name}>
@@ -90,7 +90,6 @@ export default function GeneratedSidebar(props: {
                 );
               })}
             </List>
-            <Divider />
           </div>
         );
       })}

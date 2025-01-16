@@ -46,6 +46,9 @@ export default function Home() {
         <Typography variant="h4" component="h1" sx={{ mb: 2 }}>
           FFXIV Field Operations Guides and Tools
         </Typography>
+        <Typography component="p" sx={{ mb: 2 }}>
+          As a note this site is in very early Alpha and will be subject to plenty of change 
+        </Typography>
         <ButtonBaseDemo images={images} />
       </Box>
     </Container>

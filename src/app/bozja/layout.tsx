@@ -8,12 +8,23 @@ export default function PersistentDrawerLeft(props: {
 }) {
   const sidebarData: SidebarSection[] = [
     {
-      name: "BSF + Zadnor",
+      name: "",
       contents: [
-        { name: "Farming", url: "/BSF_Zadnor/Farming" },
+        { name: "Bozja Home", url: "/bozja" },
+      ],
+    },
+    {
+      name: "",
+      contents: [
+        { name: "New Player Guide", url: "/bozja/Guide" },
+      ],
+    },
+    {
+      name: "Everything Else",
+      contents: [
         {
-          name: "Fragment Map",
-          url: "https://www.bozja.net/map",
+          name: "bozja.net",
+          url: "https://www.bozja.net",
           external: true,
         },
       ],

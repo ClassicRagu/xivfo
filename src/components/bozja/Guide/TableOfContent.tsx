@@ -13,13 +13,13 @@ const getClassName = (level: number) => {
     case 3:
       return {
         marginLeft: "10px",
-        listStyleTypes: "circle",
+        listStyleType: "circle",
         marginBottom: "15px",
       };
     case 4:
       return {
         marginLeft: "20px",
-        listStyleTypes: "square",
+        listStyleType: "square",
         marginBottom: "15px",
       };
     default:
@@ -73,7 +73,7 @@ function TableOfContent() {
     <nav
       style={{
         maxWidth: "350px",
-        minWidth: "220px",
+        minWidth: "300px",
         padding: "16px",
         alignSelf: "flex-start",
         position: "sticky",
