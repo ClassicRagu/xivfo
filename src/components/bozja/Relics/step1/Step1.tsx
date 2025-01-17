@@ -69,7 +69,7 @@ function RelicStep1() {
               height: "auto",
             }}
             alt="Scalepower Location"
-            src="/relic/step1/ScalepowderLocation.PNG"
+            src="/bozja/Relics/step1/ScalepowderLocation.PNG"
             onClick={() => {
               setScalpowderModelState(true);
             }}
@@ -85,7 +85,7 @@ function RelicStep1() {
         <Box
           component="img"
           sx={{
-            position: "absolute" as "absolute",
+            position: "absolute",
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
@@ -93,7 +93,7 @@ function RelicStep1() {
             height: "auto",
             maxWidth: 900,
           }}
-          src="/relic/step1/ScalepowderLocation.PNG"
+          src="/bozja/Relics/step1/ScalepowderLocation.PNG"
         />
       </Modal>
     </>

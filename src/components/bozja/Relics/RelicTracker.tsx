@@ -50,7 +50,7 @@ function RelicTracker() {
       try {
         // I'm so sorry
         if (importValue.toLocaleLowerCase() == "bee" || importValue.toLocaleLowerCase() == "b") {
-          var snd = new Audio("bee.mp3");
+          const snd = new Audio("bee.mp3");
           snd.volume = 0.2;
           snd.play();
           setImported("bee");
