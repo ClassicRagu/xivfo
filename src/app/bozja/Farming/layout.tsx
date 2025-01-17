@@ -1,7 +1,10 @@
 import { Box, Button, Grid2, Typography } from "@mui/material";
 import NextLink from "next/link";
 
-const routes = [{ name: "Fragment Map", route: "/bozja/Farming" }];
+const routes = [
+  { name: "Fragment Map", route: "/bozja/Farming" },
+  { name: "Farming Weather", route: "/bozja/Farming/Farming_Windows/Bozjan%20Southern%20Front/Care" },
+];
 
 export default function Home(props: { children: React.ReactNode }) {
   return (

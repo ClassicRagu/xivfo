@@ -14,7 +14,7 @@ export default function Home(props: {
   return (
     <div style={{ display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center" }}>
       <div>
-        <Typography variant="h2" component="h1" sx={{ mb: 2 }}>
+        <Typography variant="h3" component="h1" sx={{ mb: 2 }}>
           Guides
         </Typography>
       </div>
