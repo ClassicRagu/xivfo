@@ -10,10 +10,10 @@ const images = [
   },
   {
     url: "/Bozjan%20Southern%20Front.png",
-    title: "BSF and Zadnor",
-    pageUrl: "/bozja/BSF_Zadnor",
+    title: "Farming",
+    pageUrl: "/bozja/Farming",
   },
-  {
+  /*{
     url: "/CLL.png",
     title: "Castrum Lacus Litore and The Dalriada",
     pageUrl: "/bozja/CLL_Dal",
@@ -22,11 +22,11 @@ const images = [
     url: "/DR.png",
     title: "Delubrum Reginae",
     pageUrl: "/bozja/DR",
-  },
+  },*/
   {
-    url: "",
-    title: "Misc",
-    pageUrl: "/bozja/Misc",
+    url: "/BozjaRelics.png",
+    title: "Relics",
+    pageUrl: "/bozja/Relics",
   },
 ];
 
