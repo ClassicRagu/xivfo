@@ -44,14 +44,14 @@ function RelicList() {
                 height: "50px",
               }}
               alt={`${job.jobName} Job Icon`}
-              src={`/bozja/Relics/weapons/${job.jobAbv}/${job.jobName}.png`}
+              src={`/Bozja/Relics/weapons/${job.jobAbv}/${job.jobName}.png`}
             />
           </TableCell>
           <TableCell>
             <IconBox
               step={0}
               job={index}
-              relicImage={`/bozja/Relics/weapons/${job.jobAbv}/${job.jobAbv}_1_HD.png`}
+              relicImage={`/Bozja/Relics/weapons/${job.jobAbv}/${job.jobAbv}_1_HD.png`}
               altText={`${job.jobName} Step 1`}
             />
           </TableCell>
@@ -59,7 +59,7 @@ function RelicList() {
             <IconBox
               step={1}
               job={index}
-              relicImage={`/bozja/Relics/weapons/${job.jobAbv}/${job.jobAbv}_1_HD.png`}
+              relicImage={`/Bozja/Relics/weapons/${job.jobAbv}/${job.jobAbv}_1_HD.png`}
               altText={`${job.jobName} Step 2`}
             />
           </TableCell>
@@ -67,7 +67,7 @@ function RelicList() {
             <IconBox
               step={2}
               job={index}
-              relicImage={`/bozja/Relics/weapons/${job.jobAbv}/${job.jobAbv}_1_HD.png`}
+              relicImage={`/Bozja/Relics/weapons/${job.jobAbv}/${job.jobAbv}_1_HD.png`}
               altText={`${job.jobName} Step 3`}
             />
           </TableCell>
@@ -75,7 +75,7 @@ function RelicList() {
             <IconBox
               step={3}
               job={index}
-              relicImage={`/bozja/Relics/weapons/${job.jobAbv}/${job.jobAbv}_2_HD.png`}
+              relicImage={`/Bozja/Relics/weapons/${job.jobAbv}/${job.jobAbv}_2_HD.png`}
               altText={`${job.jobName} Step 4`}
             />
           </TableCell>
@@ -83,7 +83,7 @@ function RelicList() {
             <IconBox
               step={4}
               job={index}
-              relicImage={`/bozja/Relics/weapons/${job.jobAbv}/${job.jobAbv}_2_HD.png`}
+              relicImage={`/Bozja/Relics/weapons/${job.jobAbv}/${job.jobAbv}_2_HD.png`}
               altText={`${job.jobName} Step 5`}
             />
           </TableCell>
@@ -91,7 +91,7 @@ function RelicList() {
             <IconBox
               step={5}
               job={index}
-              relicImage={`/bozja/Relics/weapons/${job.jobAbv}/${job.jobAbv}_3_HD.png`}
+              relicImage={`/Bozja/Relics/weapons/${job.jobAbv}/${job.jobAbv}_3_HD.png`}
               altText={`${job.jobName} Step 6`}
             />
           </TableCell>

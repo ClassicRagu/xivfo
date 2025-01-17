@@ -41,7 +41,7 @@ function OneTimeStep2() {
                 marginRight: "5px",
               }}
               alt="Scalepower"
-              src="/bozja/Relics/Skirmish.png"
+              src="/Bozja/Relics/Skirmish.png"
             />
             <span style={{ verticalAlign: "middle" }}>
               <strong>One Time Grind #2: What Dreams Are Made Of</strong>

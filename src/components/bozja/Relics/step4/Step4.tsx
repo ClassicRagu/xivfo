@@ -40,7 +40,7 @@ function RelicStep4() {
                 marginRight: "5px",
               }}
               alt="LoathsomeMemory"
-              src="/bozja/Relics/step4/LoathsomeMemory.png"
+              src="/Bozja/Relics/step4/LoathsomeMemory.png"
             />
             <span style={{ verticalAlign: "middle" }}>
               <strong>Step 4: Change of Arms</strong>

@@ -40,7 +40,7 @@ function RelicStep6() {
                 marginRight: "5px",
               }}
               alt="RawEmotion"
-              src="/bozja/Relics/step6/RawEmotion.png"
+              src="/Bozja/Relics/step6/RawEmotion.png"
             />
             <span style={{ verticalAlign: "middle" }}>
               <strong>Step 6: Irresistible</strong>

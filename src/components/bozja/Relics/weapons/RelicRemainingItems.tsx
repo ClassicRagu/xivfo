@@ -52,7 +52,7 @@ function RelicRemainingItems() {
                         component="img"
                         sx={imageStyle}
                         alt="Scalepower"
-                        src="/bozja/Relics/step1/Scalepowder.png"
+                        src="/Bozja/Relics/step1/Scalepowder.png"
                       />
                       <span style={{ verticalAlign: "middle" }}>
                         Thavnairian Scalepowder
@@ -71,7 +71,7 @@ function RelicRemainingItems() {
                         component="img"
                         sx={imageStyle}
                         alt="TorturedMemory"
-                        src="/bozja/Relics/step2/TorturedMemory.png"
+                        src="/Bozja/Relics/step2/TorturedMemory.png"
                       />
                       <span style={{ verticalAlign: "middle" }}>
                         Tortured/Sorrowful/Harrowing Memories
@@ -90,7 +90,7 @@ function RelicRemainingItems() {
                         component="img"
                         sx={imageStyle}
                         alt="BitterMemory"
-                        src="/bozja/Relics/step3/BitterMemory.png"
+                        src="/Bozja/Relics/step3/BitterMemory.png"
                       />
                       <span style={{ verticalAlign: "middle" }}>
                         Bitter Memories
@@ -109,7 +109,7 @@ function RelicRemainingItems() {
                         component="img"
                         sx={imageStyle}
                         alt="LoathsomeMemory"
-                        src="/bozja/Relics/step4/LoathsomeMemory.png"
+                        src="/Bozja/Relics/step4/LoathsomeMemory.png"
                       />
                       <span style={{ verticalAlign: "middle" }}>
                         Loathsome Memories
@@ -128,7 +128,7 @@ function RelicRemainingItems() {
                         component="img"
                         sx={imageStyle}
                         alt="TimewornArtifact"
-                        src="/bozja/Relics/step5/TimewornArtifact.png"
+                        src="/Bozja/Relics/step5/TimewornArtifact.png"
                       />
                       <span style={{ verticalAlign: "middle" }}>
                         Timeworn Artifacts
@@ -147,7 +147,7 @@ function RelicRemainingItems() {
                         component="img"
                         sx={imageStyle}
                         alt="RawEmotion"
-                        src="/bozja/Relics/step6/RawEmotion.png"
+                        src="/Bozja/Relics/step6/RawEmotion.png"
                       />
                       <span style={{ verticalAlign: "middle" }}>
                         Raw Emotions

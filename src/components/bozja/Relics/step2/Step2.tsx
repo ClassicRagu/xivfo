@@ -41,7 +41,7 @@ function RelicStep2() {
                 marginRight: "5px"
               }}
               alt="TorturedMemory"
-              src="/bozja/Relics/step2/TorturedMemory.png"
+              src="/Bozja/Relics/step2/TorturedMemory.png"
             />
             <Box
               component="img"
@@ -52,7 +52,7 @@ function RelicStep2() {
                 marginRight: "5px"
               }}
               alt="SorrowfulMemory"
-              src="/bozja/Relics/step2/SorrowfulMemory.png"
+              src="/Bozja/Relics/step2/SorrowfulMemory.png"
             />
             <Box
               component="img"
@@ -63,7 +63,7 @@ function RelicStep2() {
                 marginRight: "5px"
               }}
               alt="HarrowingMemory"
-              src="/bozja/Relics/step2/HarrowingMemory.png"
+              src="/Bozja/Relics/step2/HarrowingMemory.png"
             />
             <span style={{ verticalAlign: "middle" }}>
           <strong>Step 2: For Want of a Memory</strong>

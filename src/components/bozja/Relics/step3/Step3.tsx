@@ -41,7 +41,7 @@ function RelicStep3() {
                 marginRight: "5px",
               }}
               alt="BitterMemory"
-              src="/bozja/Relics/step3/BitterMemory.png"
+              src="/Bozja/Relics/step3/BitterMemory.png"
             />
             <span style={{ verticalAlign: "middle" }}>
               <strong>Step 3: The Will to Resist</strong>

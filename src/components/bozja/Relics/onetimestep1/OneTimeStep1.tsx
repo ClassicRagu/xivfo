@@ -41,7 +41,7 @@ function OneTimeStep1() {
                 marginRight: "5px",
               }}
               alt="HauntingMemory"
-              src="/bozja/Relics/onetimestep1/HauntingMemory.png"
+              src="/Bozja/Relics/onetimestep1/HauntingMemory.png"
             />
             <Box
               component="img"
@@ -53,7 +53,7 @@ function OneTimeStep1() {
                 marginRight: "5px",
               }}
               alt="VexatiousMemory"
-              src="/bozja/Relics/onetimestep1/VexatiousMemory.png"
+              src="/Bozja/Relics/onetimestep1/VexatiousMemory.png"
             />
             <span style={{ verticalAlign: "middle" }}>
               <strong>One Time Grind #1: The Resistance Remembers</strong>

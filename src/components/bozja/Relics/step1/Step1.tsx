@@ -43,7 +43,7 @@ function RelicStep1() {
                 marginRight: "5px"
               }}
               alt="Scalepower"
-              src="/bozja/Relics/step1/Scalepowder.png"
+              src="/Bozja/Relics/step1/Scalepowder.png"
             />
             <span style={{ verticalAlign: "middle" }}>
               <strong>Step 1: Resistance Is (Not) Futile</strong>
@@ -69,7 +69,7 @@ function RelicStep1() {
               height: "auto",
             }}
             alt="Scalepower Location"
-            src="/bozja/Relics/step1/ScalepowderLocation.PNG"
+            src="/Bozja/Relics/step1/ScalepowderLocation.PNG"
             onClick={() => {
               setScalpowderModelState(true);
             }}
@@ -93,7 +93,7 @@ function RelicStep1() {
             height: "auto",
             maxWidth: 900,
           }}
-          src="/bozja/Relics/step1/ScalepowderLocation.PNG"
+          src="/Bozja/Relics/step1/ScalepowderLocation.PNG"
         />
       </Modal>
     </>

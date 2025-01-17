@@ -40,7 +40,7 @@ function RelicStep5() {
                 marginRight: "5px",
               }}
               alt="TimewornArtifact"
-              src="/bozja/Relics/step5/TimewornArtifact.png"
+              src="/Bozja/Relics/step5/TimewornArtifact.png"
             />
             <span style={{ verticalAlign: "middle" }}>
               <strong>Step 5: A New Path of Resistance</strong>
