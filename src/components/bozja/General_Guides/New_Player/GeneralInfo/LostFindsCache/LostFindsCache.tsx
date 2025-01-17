@@ -8,8 +8,6 @@ export default function LostFindsCache() {
     React.useState(false);
   const [insideCacheModelState, setInsideCacheModelState] =
     React.useState(false);
-  const [commanderLocationModelState, setCommanderLocationModelState] =
-    React.useState(false);
 
   return (
     <div>
@@ -59,7 +57,7 @@ export default function LostFindsCache() {
       <Typography component="p" sx={{ mb: 2 }}>
         For the sake of this guide, all you need to know is how the holster
         works, how to apply an essence how to equip actions, and how to use
-        actions. We'll be supplying you with some pre-made loadouts to make your
+        actions. We&apos;ll be supplying you with some pre-made loadouts to make your
         journey through StQ as smooth as possible.
       </Typography>
       <Typography component="p" sx={{ mb: 2 }}>
@@ -81,12 +79,12 @@ export default function LostFindsCache() {
         represented in your Maximum Capacity displayed at the bottom of the
         menu. Each action and item in the Lost Cache has a different weight
         value. Once you have the actions and items you want, you can hit the
-        "Confirm" button on the bottom of the Lost Finds Cache to lock in your
+        &quot;Confirm&quot; button on the bottom of the Lost Finds Cache to lock in your
         changes.
       </Typography>
       <Typography component="p" sx={{ mb: 2 }}>
-        You can access your holster at any time from the main resistance menu's
-        "Lost Finds Holster" button.
+        You can access your holster at any time from the main resistance menu&apos;s
+        &quot;Lost Finds Holster&quot; button.
       </Typography>
       <Box
         component="img"
