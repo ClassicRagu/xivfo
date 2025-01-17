@@ -1,0 +1,135 @@
+[
+  {
+    "Name": "How Do I Unlock Bozja?",
+    "Info": [
+      "Bozja is unlocked by first completing the <LINK> questline.",
+      "Once Return to Ivalice is completed you can begin the quest <LINK>."
+    ],
+    "Links": [
+      [
+        "Return to Ivalice",
+        "https://ffxiv.consolegameswiki.com/wiki/Return_to_Ivalice"
+      ],
+      [
+        "Hail to the Queen",
+        "https://ffxiv.consolegameswiki.com/wiki/Hail_to_the_Queen"
+      ]
+    ]
+  },
+  {
+    "Name": "How Do I Increase My Rank?",
+    "Info": [
+      "Do Skirmishes and Critical Engagements.",
+      "Killing enemies outside of Skirmishes and CEs yields 0 mettle."
+    ],
+    "Links": [[], []]
+  },
+  {
+    "Name": "What is the best gear in Bozja?",
+    "Info": [
+      "Stats are set in Bozja, not synced, so any gear works. Just make sure to have something equipped. Emperor's gear and level 90 BiS are the same!",
+      "The only exception to this is the Augmented Bozjan and Augmented Laws Order gear which gives haste in Bozja zones.",
+      "This haste bonus is nice but is by no means required for any content."
+    ],
+    "Links": [
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "Name": "How Do I Get Lost Actions?",
+    "Info": [
+      "Lost Actions are obtained via Forgotten Fragments. Most fragments are obtained from overworld enemies though some come from other sources.",
+      "You can use the Fragment Map feature to help find the fragment you are looking for.",
+      "Here is a guide on farming fragments as well: <LINK>"
+    ],
+    "Links": [
+      [],
+      [],
+      [
+        "Cluster + Fragment Farming Guide",
+        "https://docs.google.com/presentation/d/1ax8nkureepnIoTTSdcNhyIHQgCLqbcZzoe_H8kpyunU/edit?usp=sharing"
+      ]
+    ]
+  },
+  {
+    "Name": "How Do I Get Bozjan Clusters?",
+    "Info": [
+      "Clusters have a chance of dropping from any 4th Legion enemies.",
+      "Here is a guide on farming clusters as well: <LINK>"
+    ],
+    "Links": [[],
+    [
+      "Cluster + Fragment Farming Guide",
+      "https://docs.google.com/presentation/d/1ax8nkureepnIoTTSdcNhyIHQgCLqbcZzoe_H8kpyunU/edit?usp=sharing"
+    ]]
+  },
+  {
+    "Name": "Is it ok to do Castrum with 5 people?",
+    "Info": [
+      "Yes, CLL scales to the number of players. I would only suggest not going in with 4 or less players.",
+      "If you want more technical numbers check out this <LINK>."
+    ],
+    "Links": [
+      [],
+      [
+        "CLL + Dal Scaling Spreadsheet",
+        "https://docs.google.com/spreadsheets/d/15VOR-2mV-vJUaptjEQRKQzommbh7T02K69wsb0UXq_U/edit?usp=sharing"
+      ]
+    ]
+  },
+  {
+    "Name": "Why is nobody queuing for Delubrum?",
+    "Info": [
+      "Delubrum Reginae (DRN) is entirely managed via the Party Finder feature.",
+      "DRN also has a required 10 minute queue for parties less than 24 so don't be concerned if it takes a bit to get in."
+    ],
+    "Links": [[], []]
+  },
+  {
+    "Name": "How do I deal damage in Bozja?",
+    "Info": [
+      "If you are in BSF or Zadnor <LINK>.",
+      "If you are in Delubrum Reginae <LINK>."
+    ],
+    "Links": [
+      ["Follow this Guide", "https://i.imgur.com/eG36Jd6.png"],
+      ["Follow this Guide", "https://i.imgur.com/OmaJ15C.png"]
+    ]
+  },
+  {
+    "Name": "What do Resistance Honors give?",
+    "Info": [
+      "Ray of Valor: +3% Damage per stack",
+      "Ray of Fortitude: +5% HP per stack",
+      "Ray of Succor: +10% Healing per stack"
+    ],
+    "Links": [
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "Name": "Do people still play Bozja content?",
+    "Info": [
+      "Yes. If there are very few people in instance you are probably playing during more quiet hours.",
+      "On NA servers, BSF and Zadnor are most active during the evenings in the US."
+    ],
+    "Links": [
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "Name": "How are Eureka and Bozja similar/different?",
+    "Info": [
+      "<LINK>"
+    ],
+    "Links": [
+      ["There is way too much to write on this so check out this doc", "https://docs.google.com/document/d/1G81LHC8qmnqH7LLF0R2mazKwBQeSjNbcxS0LsP8gLbs/edit?usp=sharing"]
+    ]
+  }
+]

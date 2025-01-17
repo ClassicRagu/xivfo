@@ -1,6 +1,6 @@
 "use client";
 import { Link } from "@mui/material";
-import { useHeadsObserver } from "./hooks";
+import { useHeadsObserver } from "@/hooks/shared/TableOfContentHook";
 import { useEffect, useState } from "react";
 import NextLink from "next/link";
 

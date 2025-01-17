@@ -1,0 +1,115 @@
+[
+  {
+    "Name": "DRS",
+    "Guides": [
+      ["NA DRS Schedule", "https://docs.google.com/spreadsheets/d/13N8GAstI86L8o2WG_Emr3R5IRXnVXLQPldxnZrZ5wgE/"],
+      ["EU DRS Schedule", "https://docs.google.com/spreadsheets/d/1uPDvKs8BrqWVOXFtDcs1aWXfa0x0azS-5Qjc3cvGlV0/edit#gid=1371846925"]
+    ],
+    "Additional": ["Please look at the Discord servers linked for more DRS info."]
+  },
+  {
+    "Name": "Leveling Guides",
+    "Guides": [
+      ["Powerleveling", "https://docs.google.com/presentation/d/1d5fXPAjpSwScplTubtVQd6TCeKaKl8uWWTG2hGJLshc/edit?usp=sharing"],
+      ["Carter's Abbreviated Leveling Builds", "https://i.imgur.com/9ifcv37.png"],
+      ["Leveling Guide Video", "https://www.youtube.com/watch?v=j4QlaHIeHyk"],
+      ["BSF and Zadnor Mettle and EXP", "https://docs.google.com/spreadsheets/d/12OTz5WzRtuNDrRRuvu9OSl-5SQkIEyN6SsySf0BLESQ/edit#gid=1138845215"]
+    ]
+  },
+  {
+    "Name": "Farming Guides",
+    "Guides": [
+      ["Cluster + Fragment Farming", "https://docs.google.com/presentation/d/1ax8nkureepnIoTTSdcNhyIHQgCLqbcZzoe_H8kpyunU/edit?usp=sharing"],
+      ["Zadnor Z3 Mettle Farming Builds", "https://i.imgur.com/Dbf0rcr.png"],
+      ["Omnifarm Guide", "https://docs.google.com/document/d/1oAqt15SuzRPWgyr8CQUior57mPBDSJEej7N98jKCCpQ/edit"],
+      ["Greedy's Rank V Farming Guide", "https://docs.google.com/document/d/14xI0XLeknZfqFDlD3KVynCyVwTTYNuOPsdfymtWPf1c"],
+      ["Rank V Farming Guide", "https://i.imgur.com/pojV5bX.png"],
+      ["Bozja Weather", "https://lynn.pet/forecast/fragments"]
+    ]
+  },
+  {
+    "Name": "BSF and Zadnor",
+    "Guides": [
+      ["Carter's BSF/Zadnor Info", "https://tinyurl.com/carterbozjadoc"],
+      ["General BSF Guide", "https://docs.google.com/document/u/0/d/1zl-Z99fF1x8uhZwk9ewW4Q5UcR2dLLS_zzxQSRFWQNM"],
+      ["Zadnor CE Guide", "https://docs.google.com/document/d/1x6Yf8ewBXAPt0nMXt0gFPVjaby_KrTx-W4Zjal-I_Yg/edit"],
+      ["General BSF/Zadnor Info", "https://docs.google.com/spreadsheets/d/1P-BB75bAYytcYpPXPrgXkvWg_Xvs7_TwloE9tz9cxS0/edit?usp=drivesdk"],
+      ["BSF Map", "https://preview.redd.it/ryjo0y8ymrb71.png?width=2048&format=png&auto=webp&s=90a556eb4ccd5c49729a7507e7d7eca2c22a247f"],
+      ["Zadnor Map", "https://preview.redd.it/un3kcnv6rrb71.png?width=2048&format=png&auto=webp&s=f9728079c715f8cfb28b121a3731fdb7258a8087"],
+      ["BSF CEs", "https://i.imgur.com/Othlizv.jpg"],
+      ["Zadnor CEs", "https://i.imgur.com/AnCGMKk.jpg"],
+      ["Local CE Tracker", "https://syldrathecat.github.io/xivcat/bozja-tracker/"]
+    ]
+  },
+  {
+    "Name": "Duels",
+    "Guides": [
+      ["Duel Playlist", "https://www.youtube.com/playlist?list=PLtYQjW6LdeRNdNq-ae4cEM3yQUkVrVMO1"],
+      ["No Excellence Overslot Cheese", "https://docs.google.com/document/d/1uOc66HMhw0GauYSjX_Mwx876oB-kC1eVQujY4tLZ468/edit?usp=sharing"],
+      ["Excellence Overslot Cheese", "https://youtu.be/kWtYQZq0x0c?si=UxvRW3m3Do-795OK"]
+    ]
+  },
+  {
+    "Name": "DRN",
+    "Guides": [
+      ["DRN Speedrun Guide", "https://docs.google.com/presentation/d/1QP7R6tUbwSNWX30crFon2z3xhfe0m5NPu7pCySyI6r4/edit#slide=id.p"],
+      ["Rank 12-14 DRN Loadouts", "https://bozja.net/FirstDRNLoadouts.png"],
+      ["Budget/Beginner DRN Loadouts", "https://bozja.net/BudgetDRN.png"],
+      ["Ideal 5 Person DRN Loadouts", "https://i.imgur.com/tjgIByv.png"],
+      ["Ideal 8 Person DRN Loadouts", "https://i.imgur.com/OmaJ15C.png"],
+      ["CEM 24 Person DRN Loadouts", "https://i.imgur.com/y0jNEno.png"]
+    ]
+  },
+  {
+    "Name": "CLL + Dal",
+    "Guides": [
+      ["CLL + Dal Strategies", "https://docs.google.com/presentation/d/1IXJalAFUasymj1nIxfF2ihi4wR7MpetGHJO41kgqZa4/edit?usp=sharing"],
+      ["CLL + Dal Scaling", "https://docs.google.com/spreadsheets/d/15VOR-2mV-vJUaptjEQRKQzommbh7T02K69wsb0UXq_U/edit?usp=sharing"],
+      ["CLL + Dal Spawning Logic", "https://docs.google.com/document/d/1nDnR3vjzUqkx30JbzPZE2oNZoFSIQfv3D3kRW2vGZ5I/edit?usp=sharing"],
+      ["Dal Beginner Loadouts", "https://bozja.net/DalLoadouts.png"],
+      ["CLL Action Cheat Sheet", "https://i.imgur.com/RkP5ERW.png"],
+      ["Dal Action Cheat Sheet", "https://i.imgur.com/H0LkztK.png"]
+    ]
+  },
+  {
+    "Name": "Actions",
+    "Guides": [
+      ["Lost Actions", "https://ffxiv.kmiwl.de/bozja/"],
+      ["How to do Damage in Bozja", "https://i.imgur.com/eG36Jd6.png"]
+    ]
+  },
+  {
+    "Name": "NA Discord Servers",
+    "Guides": [
+      ["(All NA) FOE (Previously PEBE) [DR/CLL/Dal]", "https://discord.gg/foexiv"],
+      ["(Primal) THL [DR/CLL/Dal]", "https://discord.gg/thehelplines"],
+      ["(Crystal) CAFE [DR/CLL/Dal]", "https://discord.gg/c-a-f-e"],
+      ["(Aether) ABBA [DR/Cluster Farms]", "https://discord.gg/abbaffxiv"],
+      ["(Crystal) CEM [Omnifarms]", "https://discord.gg/cem"],
+      ["(Crystal) I/O [Omnifarms/Mettle Farms/CLL/Dal]", "https://discord.gg/AcXV7qv9sU"]
+    ]
+  },
+  {
+    "Name": "EU Discord Servers",
+    "Guides": [
+      ["(Chaos) Late Night [LNG: EN]", "https://discord.gg/28SRRADTK3"],
+      ["(Light) Savage Slimes [LNG: EN]", "https://discord.gg/SavageSlimes"],
+      ["(Light) Light Forays Group [LNG: EN + DE]", "https://discord.gg/LightForays"],
+      ["Conclave d'Exploration [LNG: FR]", "https://discord.gg/CgSRvTEHh8"],
+      ["Boreal Bridge [LNG: ES]", "https://discord.gg/wmTbhNQ5Wn"],
+      ["(Light) Savage Lemmings [LNG: DE]", "https://discord.gg/p3QwFREXJP"]
+    ]
+  },
+  {
+    "Name": "OCE Discord Servers",
+    "Guides": [
+      ["Content Achievers", "https://discord.gg/FJFxr2U"],
+      ["DRs Reclears", "https://discord.gg/rrG2SaDVD9"]
+    ]
+  },
+  {
+    "Name": "About",
+    "Guides": [["GitHub Repo", "https://github.com/ClassicRagu/bozjanet2"]],
+    "Additional": ["This site is developed and maintained by (Coeurl) Celliera Tsukemeownya."]
+  }
+]

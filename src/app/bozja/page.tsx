@@ -5,8 +5,8 @@ import { Box, Container } from "@mui/material";
 const images = [
   {
     url: "/WhereEaglesNest.png",
-    title: "New Player Guide",
-    pageUrl: "/bozja/Guide",
+    title: "General Guides",
+    pageUrl: "/bozja/General_Guides",
   },
   {
     url: "/Bozjan%20Southern%20Front.png",

@@ -4,7 +4,7 @@ import React from "react";
 import NextLink from "next/link";
 import dynamic from "next/dynamic";
 
-const TableOfContent = dynamic(() => import("./TableOfContent"), {
+const TableOfContent = dynamic(() => import("../../../shared/TableOfContent"), {
   ssr: false,
 });
 
