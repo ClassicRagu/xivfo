@@ -48,7 +48,7 @@ function RelicToggle({ mode }: { mode: string }) {
         <Button
           size="large"
           style={{ minWidth: "250px" }}
-          onClick={() => router.push(`/bozja/Relics/guide`)}
+          onClick={() => router.push(`/bozja/Relics/Guide`)}
           variant={mode == "guide" ? "contained" : "outlined"}
         >
           Guide

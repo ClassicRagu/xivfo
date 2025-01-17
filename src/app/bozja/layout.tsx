@@ -16,7 +16,22 @@ export default function PersistentDrawerLeft(props: {
     {
       name: "General Guides",
       contents: [
-        { name: "General Guides", url: "/bozja/General_Guides" },
+        { name: "General Guides Home", url: "/bozja/General_Guides" },
+        { name: "Complete Guide", url: "/bozja/General_Guides/New_Player" },
+        { name: "FAQ", url: "/bozja/General_Guides/FAQ" },
+      ],
+    },
+    {
+      name: "Farming",
+      contents: [
+        { name: "Fragment Map", url: "/bozja/Farming" }
+      ],
+    },
+    {
+      name: "Relics",
+      contents: [
+        { name: "Relic Tracker", url: "/bozja/Relics" },
+        { name: "Relic Guide", url: "/bozja/Relics/Guide" }
       ],
     },
     {
