@@ -5,7 +5,13 @@ import {
 } from "@mui/material";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import { ThemeProvider } from "@mui/material/styles";
+import { Metadata } from "next";
 import * as React from "react";
+
+export const metadata: Metadata = {
+  title: "FFXIV Field Operations",
+  description: "A website that provides and links guides for various FFXIV Field Operations content",
+};
 
 export default function BaseLayout(props: {
   children: React.ReactNode;
