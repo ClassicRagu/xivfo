@@ -4,7 +4,7 @@ import NextLink from "next/link";
 const routes = [
   { name: "Complete Guide", route: "./General_Guides/New_Player" },
   { name: "Guide Links", route: "./General_Guides/Guide_Links" },
-  { name: "Lost Action Guide", route: "./General_Guides/Lost_Actions" },
+  //{ name: "Lost Action Guide", route: "./General_Guides/Lost_Actions" },
   { name: "FAQ", route: "./General_Guides/FAQ" },
 ];
 
