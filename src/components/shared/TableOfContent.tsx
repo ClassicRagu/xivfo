@@ -59,7 +59,7 @@ function TableOfContent() {
   const { activeId } = useHeadsObserver();
 
   useEffect(() => {
-    const elements = Array.from(document.querySelectorAll("h2, h3, h4")).map(
+    const elements = Array.from(document.querySelectorAll("h2, h3")).map(
       (elem) => ({
         id: elem.id,
         text: elem.innerHTML,

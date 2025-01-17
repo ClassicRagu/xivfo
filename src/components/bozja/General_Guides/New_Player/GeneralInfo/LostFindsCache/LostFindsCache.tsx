@@ -35,7 +35,7 @@ export default function LostFindsCache() {
             height: "auto",
           }}
           alt="The Lost Finds Cache"
-          src="/Bozja/Guide/LostFindsCache.png"
+          src="/Bozja/Guide/LostFindsCache.PNG"
           onClick={() => {
             setLostFindsCacheModelState(true);
           }}
@@ -48,7 +48,7 @@ export default function LostFindsCache() {
             height: "auto",
           }}
           alt="The Inside of the Lost Finds Cache"
-          src="/Bozja/Guide/InsideCache.png"
+          src="/Bozja/Guide/InsideCache.PNG"
           onClick={() => {
             setInsideCacheModelState(true);
           }}
@@ -94,7 +94,7 @@ export default function LostFindsCache() {
           height: "auto",
         }}
         alt="The Lost Finds Holster"
-        src="/Bozja/Guide/LostFindsHolster.png"
+        src="/Bozja/Guide/LostFindsHolster.PNG"
       />
       <Modal
         open={lostFindsCacheModelState}
@@ -113,7 +113,7 @@ export default function LostFindsCache() {
             height: "auto",
             maxWidth: 700,
           }}
-          src="/Bozja/Guide/LostFindsCache.png"
+          src="/Bozja/Guide/LostFindsCache.PNG"
         />
       </Modal>
       <Modal
@@ -133,7 +133,7 @@ export default function LostFindsCache() {
             height: "auto",
             maxWidth: 1300,
           }}
-          src="/Bozja/Guide/InsideCache.png"
+          src="/Bozja/Guide/InsideCache.PNG"
         />
       </Modal>
     </div>

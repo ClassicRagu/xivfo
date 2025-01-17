@@ -28,7 +28,7 @@ export default function MettleAndResistanceRank() {
           height: "auto",
         }}
         alt="The StQ Resistance Rank Menu"
-        src="/Bozja/Guide/BozjaResistanceRank.png"
+        src="/Bozja/Guide/BozjaResistanceRank.PNG"
         onClick={() => {
           setResistanceMenuModelState(true);
         }}
@@ -62,7 +62,7 @@ export default function MettleAndResistanceRank() {
           height: "auto",
         }}
         alt="The StQ Resistance Rank Menu"
-        src="/Bozja/Guide/BozjaCommander.png"
+        src="/Bozja/Guide/BozjaCommander.PNG"
         onClick={() => {
           setCommanderModelState(true);
         }}
@@ -75,7 +75,7 @@ export default function MettleAndResistanceRank() {
           height: "auto",
         }}
         alt="The StQ Resistance Rank Menu"
-        src="/Bozja/Guide/BozjaCommanderLocation.png"
+        src="/Bozja/Guide/BozjaCommanderLocation.PNG"
         onClick={() => {
           setCommanderLocationModelState(true);
         }}
@@ -98,7 +98,7 @@ export default function MettleAndResistanceRank() {
             height: "auto",
             maxWidth: 700,
           }}
-          src="/Bozja/Guide/BozjaResistanceRank.png"
+          src="/Bozja/Guide/BozjaResistanceRank.PNG"
         />
       </Modal>
       <Modal
@@ -118,7 +118,7 @@ export default function MettleAndResistanceRank() {
             height: "auto",
             maxWidth: 700,
           }}
-          src="/Bozja/Guide/BozjaCommander.png"
+          src="/Bozja/Guide/BozjaCommander.PNG"
         />
       </Modal>
       <Modal
@@ -138,7 +138,7 @@ export default function MettleAndResistanceRank() {
             height: "auto",
             maxWidth: 700,
           }}
-          src="/Bozja/Guide/BozjaCommanderLocation.png"
+          src="/Bozja/Guide/BozjaCommanderLocation.PNG"
         />
       </Modal>
     </div>

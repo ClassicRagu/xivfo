@@ -41,7 +41,7 @@ export default function Unlockling() {
           height: "auto",
         }}
         alt="Bozja Quest Start Location"
-        src="/Bozja/Guide/BozjaStart.png"
+        src="/Bozja/Guide/BozjaStart.PNG"
         onClick={() => {
           setScalpowderModelState(true);
         }}
@@ -63,7 +63,7 @@ export default function Unlockling() {
             height: "auto",
             maxWidth: 900,
           }}
-          src="/Bozja/Guide/BozjaStart.png"
+          src="/Bozja/Guide/BozjaStart.PNG"
         />
       </Modal>
     </div>
