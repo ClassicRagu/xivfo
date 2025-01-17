@@ -24,7 +24,7 @@ const images = [
     pageUrl: "/bozja/DR",
   },*/
   {
-    url: "/BozjaRelics.png",
+    url: "/BozjaRelics.PNG",
     title: "Relics",
     pageUrl: "/bozja/Relics",
   },
