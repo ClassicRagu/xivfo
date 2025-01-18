@@ -477,7 +477,7 @@ export default function LoadoutGen() {
                         marginRight: "10px",
                       }}
                       alt={build.Essence}
-                      src={`/Bozja/Lost%20Finds/${build.Essence.replace(
+                      src={`/Bozja/Lost%20Finds%20SD/${build.Essence.replace(
                         " ",
                         "%20"
                       )}.png`}
@@ -496,7 +496,7 @@ export default function LoadoutGen() {
                         marginRight: "10px",
                       }}
                       alt={build.Action1}
-                      src={`/Bozja/Lost%20Finds/${build.Action1.replace(
+                      src={`/Bozja/Lost%20Finds%20SD/${build.Action1.replace(
                         " ",
                         "%20"
                       )}.png`}
@@ -515,7 +515,7 @@ export default function LoadoutGen() {
                         marginRight: "10px",
                       }}
                       alt={build.Action2}
-                      src={`/Bozja/Lost%20Finds/${build.Action2.replace(
+                      src={`/Bozja/Lost%20Finds%20SD/${build.Action2.replace(
                         " ",
                         "%20"
                       )}.png`}
