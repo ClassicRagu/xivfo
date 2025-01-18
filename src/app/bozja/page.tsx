@@ -4,12 +4,12 @@ import { Box, Container } from "@mui/material";
 
 const images = [
   {
-    url: "/WhereEaglesNest.png",
+    url: "/WhereEaglesNest.webp",
     title: "General Guides",
     pageUrl: "/bozja/General_Guides",
   },
   {
-    url: "/Bozjan%20Southern%20Front.png",
+    url: "/Bozjan%20Southern%20Front.webp",
     title: "Farming",
     pageUrl: "/bozja/Farming",
   },
@@ -24,7 +24,7 @@ const images = [
     pageUrl: "/bozja/DR",
   },*/
   {
-    url: "/BozjaRelics.PNG",
+    url: "/BozjaRelics.webp",
     title: "Relics",
     pageUrl: "/bozja/Relics",
   },

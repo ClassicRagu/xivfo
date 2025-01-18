@@ -6,12 +6,12 @@ import { AppBar, Toolbar } from '@mui/material';
 
 const images = [
   {
-    url: '/Eureka%20Anemos.png',
+    url: '/Eureka%20Anemos.webp',
     title: 'The Forbidden Land Eureka',
     pageUrl: "/eureka"
   },
   {
-    url: '/Bozjan%20Southern%20Front.png',
+    url: '/Bozjan%20Southern%20Front.webp',
     title: 'Save the Queen (Bozja)',
     pageUrl: "/bozja"
   },
