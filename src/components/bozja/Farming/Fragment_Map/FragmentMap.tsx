@@ -8,15 +8,15 @@ import {
   Circle,
 } from "react-leaflet";
 
-import { fragments } from "@/static/Farming/Fragment_Map/Actions";
+import { fragments } from "@/static/bozja/Farming/Fragment_Map/Actions";
 import L, { Icon, LatLngBoundsExpression, LatLngTuple } from "leaflet";
 import { useAtom } from "jotai";
 import { fragmentState } from "@/hooks/bozja/Farming/Fragment_Map/fragmentState";
 import { mapXY } from "@/functions/bozja/Farming/Fragment_Map/mapXY";
-import { BSFClusterMobs } from "@/static/Farming/Fragment_Map/BSFClusterMobs";
+import { BSFClusterMobs } from "@/static/bozja/Farming/Fragment_Map/BSFClusterMobs";
 import { magitekState } from "@/hooks/bozja/Farming/Fragment_Map/magitekState";
 import { MapMarkers } from "./MapMarkers/MapMarkers";
-import { ZadnorClusterMobs } from "@/static/Farming/Fragment_Map/ZadnorClusterMobs";
+import { ZadnorClusterMobs } from "@/static/bozja/Farming/Fragment_Map/ZadnorClusterMobs";
 
 const bounds: LatLngBoundsExpression = [
   [1, 1],

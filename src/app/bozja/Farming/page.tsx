@@ -16,7 +16,7 @@ import {
   actions,
   fragments,
   fragmentList,
-} from "@/static/Farming/Fragment_Map/Actions";
+} from "@/static/bozja/Farming/Fragment_Map/Actions";
 import { useAtom } from "jotai";
 import { fragmentState } from "@/hooks/bozja/Farming/Fragment_Map/fragmentState";
 import dynamic from "next/dynamic";

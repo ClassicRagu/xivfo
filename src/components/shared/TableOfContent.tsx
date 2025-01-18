@@ -27,35 +27,8 @@ const getClassName = (level: number) => {
   }
 };
 
-function getWindowDimensions() {
-  if(window){
-  const { innerWidth: width, innerHeight: height } = window;
-  return {
-    width,
-    height
-  };} else {
-    return {width: 0, height: 0}
-  }
-}
-
-function useWindowDimensions() {
-  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
-
-  useEffect(() => {
-    function handleResize() {
-      setWindowDimensions(getWindowDimensions());
-    }
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  return windowDimensions;
-}
-
 function TableOfContent() {
   const [headings, setHeadings] = useState<ContentObj[]>([]);
-  const { width } = useWindowDimensions();
   const { activeId } = useHeadsObserver();
 
   useEffect(() => {
@@ -70,23 +43,6 @@ function TableOfContent() {
   }, []);
 
   return (
-    <nav
-      style={{
-        maxWidth: "350px",
-        minWidth: "300px",
-        padding: "16px",
-        alignSelf: "flex-start",
-        position: "sticky",
-        top: "48px",
-        maxHeight: "calc(100vh - 70px)",
-        overflow: "auto",
-        marginTop: "150px",
-      }}
-      hidden={width < 1000}
-    >
-      <h1>
-        {"On this page"}
-      </h1>
       <ul>
         {headings.map((heading) => (
           <li key={heading.id} style={getClassName(heading.level)}>
@@ -111,7 +67,6 @@ function TableOfContent() {
           </li>
         ))}
       </ul>
-    </nav>
   );
 }
 
