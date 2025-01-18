@@ -68,9 +68,8 @@ const buildsObj = [
             of the most important, Lost Font of Power. Lost Font of Power, FoP,
             increases your damage dealt by 30% and critical hit rate by 40% for
             30 seconds. Luckily this action is actually on a 2 minute cooldown
-            so it&apos;s more clear that you should use it during 2 minutes. Stack it
-            with Banner of Noble ends for a flat 2.015x damage multiplier before
-            accounting for crit rate!
+            so it&apos;s more clear that you should use it during 2 minutes.
+            Stack it with Banner of Noble Ends for even bigger multipliers!
           </Typography>
         ),
       },
@@ -144,17 +143,16 @@ const buildsObj = [
             Rank 12 introduces our second set of damage actions and arguably one
             of the most powerful, Lost Font of Magic. Lost Font of Magi, FoM,
             increases your damage dealt by 70% for 30 seconds. Luckily this
-            action is actually on a 2 minute cooldown so it&apos;s more clear that
-            you should use it during 2 minutes. Stack it with Banner of Noble
-            ends for a flat 2.015x damage multiplier before accounting for crit
-            rate!
+            action is actually on a 2 minute cooldown so it&apos;s more clear
+            that you should use it during 2 minutes. Stack it with Banner of
+            Noble Ends for even bigger multipliers!
             <br />
             <br />
             <b>Lost Font of Magic does come with 1 major downside:</b> It drains
             your MP and once it has fully drained your MP it falls off. If you
-            are using Lost Font of Magic on any job that isn&apos;t BLM you MUST have
-            Resistance Ether Kits. Like potion kits, Ether Kits restore 50% of
-            your MP once you fall below a certain threshold. In the case of
+            are using Lost Font of Magic on any job that isn&apos;t BLM you MUST
+            have Resistance Ether Kits. Like potion kits, Ether Kits restore 50%
+            of your MP once you fall below a certain threshold. In the case of
             Ether Kits, the threshold for activation is {"<"}20% MP remaining.
           </Typography>
         ),
@@ -176,8 +174,8 @@ const buildsObj = [
             <br />
             <br />
             As one final note, do not use this build if someone else is using
-            Lost Flare Star. Only one LFS can be applied at any time so it&apos;s
-            better to just use the rank 12-14 or 18+ builds.
+            Lost Flare Star. Only one LFS can be applied at any time so
+            it&apos;s better to just use the rank 12-14 or 18+ builds.
           </Typography>
         ),
       },
@@ -203,7 +201,7 @@ const buildsObj = [
   },
   {
     name: "Healer",
-    ranks: ["2-8", "8-11", "12-14", "15-17", "18+"],
+    ranks: ["2-7", "8-11", "12-17", "WHM 15", "WHM 16+", "Other 18+"],
     builds: [
       {
         Essence: "Essence of the Aetherweaver",
@@ -212,7 +210,14 @@ const buildsObj = [
         BuildInfo: (
           <Typography component="p" sx={{ mb: 2 }}>
             Healer, and Tanks, are perhaps the most fun jobs starting out since
-            they get their essences immediately.
+            they get their essences immediately. However they don&apos;t have the
+            nice rank 5 breakpoint of the other jobs so we have the give the
+            Resistance Potion Kit info a bit early.
+            <br />
+            Rank 5 is an important rank as it is the first rank that can use
+            Resistance Potion Kits. Potion Kits are consumable items you can put
+            in your holster that heal 50% of your HP when you fall below 50% HP
+            making them absurdly powerful and a must have in Bozja!
           </Typography>
         ),
       },
@@ -222,7 +227,10 @@ const buildsObj = [
         Action2: "None",
         BuildInfo: (
           <Typography component="p" sx={{ mb: 2 }}>
-            None
+            Rank 8 introduces our first damage actions in StQ, banners. Banner
+            of Noble Ends, NEnds, is a powerful banner that boosts your damage
+            by 50% for 15 seconds, use it during your 2 minute burst windows for
+            the most value!
           </Typography>
         ),
       },
@@ -232,7 +240,20 @@ const buildsObj = [
         Action2: "Banner of Noble Ends",
         BuildInfo: (
           <Typography component="p" sx={{ mb: 2 }}>
-            None
+            Rank 12 introduces our second set of damage actions and arguably one
+            of the most powerful, Lost Font of Magic. Lost Font of Magi, FoM,
+            increases your damage dealt by 70% for 30 seconds. Luckily this
+            action is actually on a 2 minute cooldown so it&apos;s more clear
+            that you should use it during 2 minutes. Stack it with Banner of
+            Noble Ends for even bigger multipliers!
+            <br />
+            <br />
+            <b>Lost Font of Magic does come with 1 major downside:</b> It drains
+            your MP and once it has fully drained your MP it falls off. If you
+            are using Lost Font of Magic on any job that isn&apos;t BLM you MUST
+            have Resistance Ether Kits. Like potion kits, Ether Kits restore 50%
+            of your MP once you fall below a certain threshold. In the case of
+            Ether Kits, the threshold for activation is {"<"}20% MP remaining.
           </Typography>
         ),
       },
@@ -242,7 +263,15 @@ const buildsObj = [
         Action2: "Lost Font of Magic",
         BuildInfo: (
           <Typography component="p" sx={{ mb: 2 }}>
-            None
+            Rank 15 introduces an extremely powerful Lost Action for Healers,
+            Lost Seraph Strike. Lost Seraph Strike is a 500 potency AOE that
+            grants you a 60% damage buff. This comes at a cost though as it
+            reduces your healing potency by 60% and requires 5000 MP as well.
+            <br />
+            The reason we only suggest this build for White Mage is the action
+            Thin Air. Thin Air reduces the MP cost of Lost Seraph Strike to 0 MP
+            completely eliminating one of its downsides. No other healer can do
+            this which is why they do not use this build.
           </Typography>
         ),
       },
@@ -252,7 +281,21 @@ const buildsObj = [
         Action2: "Lost Burst",
         BuildInfo: (
           <Typography component="p" sx={{ mb: 2 }}>
-            None
+            The final upgrade for WHM shows up at rank 16 with Lost Burst. This
+            combo can shread Skirmishes to nothing and is one of the most
+            powerful skirmish farming builds in the game.
+          </Typography>
+        ),
+      },
+      {
+        Essence: "Essence of the Aetherweaver",
+        Action1: "Lost Chainspell",
+        Action2: "Lost Burst",
+        BuildInfo: (
+          <Typography component="p" sx={{ mb: 2 }}>
+            The final upgrade for Non-WHM healers shows up at rank 18. Lost
+            Chainspell is nearly as good as Lost Seraph Strike, 45% damage up
+            for spells, but without the 5000 MP cost tied to it.
           </Typography>
         ),
       },
@@ -260,7 +303,7 @@ const buildsObj = [
   },
   {
     name: "Tank",
-    ranks: ["2-8", "8-11", "12-17", "18+"],
+    ranks: ["2-7", "8-11", "12-17", "18+"],
     builds: [
       {
         Essence: "Essence of the Martialist",
@@ -268,7 +311,15 @@ const buildsObj = [
         Action2: "None",
         BuildInfo: (
           <Typography component="p" sx={{ mb: 2 }}>
-            None
+            Tanks, and Healers, are perhaps the most fun jobs starting out since
+            they get their essences immediately. However they don&apos;t have the
+            nice rank 5 breakpoint of the other jobs so we have the give the
+            Resistance Potion Kit info a bit early.
+            <br />
+            Rank 5 is an important rank as it is the first rank that can use
+            Resistance Potion Kits. Potion Kits are consumable items you can put
+            in your holster that heal 50% of your HP when you fall below 50% HP
+            making them absurdly powerful and a must have in Bozja!
           </Typography>
         ),
       },
@@ -278,7 +329,10 @@ const buildsObj = [
         Action2: "None",
         BuildInfo: (
           <Typography component="p" sx={{ mb: 2 }}>
-            None
+            Rank 8 introduces our first damage actions in StQ, banners. Banner
+            of Noble Ends, NEnds, is a powerful banner that boosts your damage
+            by 50% for 15 seconds, use it during your 2 minute burst windows for
+            the most value!
           </Typography>
         ),
       },
@@ -288,7 +342,12 @@ const buildsObj = [
         Action2: "Banner of Noble Ends",
         BuildInfo: (
           <Typography component="p" sx={{ mb: 2 }}>
-            None
+            Rank 12 introduces our second set of damage actions and arguably one
+            of the most important, Lost Font of Power. Lost Font of Power, FoP,
+            increases your damage dealt by 30% and critical hit rate by 40% for
+            30 seconds. Luckily this action is actually on a 2 minute cooldown
+            so it&apos;s more clear that you should use it during 2 minutes.
+            Stack it with Banner of Noble Ends for even bigger multipliers!
           </Typography>
         ),
       },
@@ -298,7 +357,12 @@ const buildsObj = [
         Action2: "Lost Rampage",
         BuildInfo: (
           <Typography component="p" sx={{ mb: 2 }}>
-            None
+            Tank gets its final upgrade from the very first zone of Zadnor, Lost
+            Rampage. Lost Rampage is an extremely powerful AOE action that makes
+            multi-enemy skirmishes a breeze.
+            <br />
+            The essence here is switched to Bloodsucker for the safety it gives
+            but feel free to continue using Martialist if you&apos;d like.
           </Typography>
         ),
       },
