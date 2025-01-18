@@ -3,6 +3,7 @@ import { Link, Typography } from "@mui/material";
 import NextLink from "next/link";
 import MettleAndResistanceRank from "./Mettle/MettleAndResistanceRank";
 import ActionsEssencesAndItems from "./LostFindsCache/LostFindsCache";
+import UsingActions from "./UsingActions/UsingActions";
 
 export default function GeneralInfo() {
 
@@ -20,6 +21,7 @@ export default function GeneralInfo() {
       </Typography>
       <MettleAndResistanceRank />
       <ActionsEssencesAndItems />
+      <UsingActions />
     </div>
   );
 }
