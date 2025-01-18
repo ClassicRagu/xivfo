@@ -86,7 +86,7 @@ export default function Guide() {
             component="h2"
             sx={{ mb: 1 }}
           >
-            What Actions and Essences should I ideally use?
+            What Actions and Essences are good?
           </Typography>
         </Link>
         <Typography component="p" sx={{ mb: 2 }}>

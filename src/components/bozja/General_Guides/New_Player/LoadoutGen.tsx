@@ -1,5 +1,6 @@
 "use client";
 import {
+  Box,
   FormControl,
   InputLabel,
   MenuItem,
@@ -210,8 +211,8 @@ const buildsObj = [
         BuildInfo: (
           <Typography component="p" sx={{ mb: 2 }}>
             Healer, and Tanks, are perhaps the most fun jobs starting out since
-            they get their essences immediately. However they don&apos;t have the
-            nice rank 5 breakpoint of the other jobs so we have the give the
+            they get their essences immediately. However they don&apos;t have
+            the nice rank 5 breakpoint of the other jobs so we have the give the
             Resistance Potion Kit info a bit early.
             <br />
             Rank 5 is an important rank as it is the first rank that can use
@@ -312,8 +313,8 @@ const buildsObj = [
         BuildInfo: (
           <Typography component="p" sx={{ mb: 2 }}>
             Tanks, and Healers, are perhaps the most fun jobs starting out since
-            they get their essences immediately. However they don&apos;t have the
-            nice rank 5 breakpoint of the other jobs so we have the give the
+            they get their essences immediately. However they don&apos;t have
+            the nice rank 5 breakpoint of the other jobs so we have the give the
             Resistance Potion Kit info a bit early.
             <br />
             Rank 5 is an important rank as it is the first rank that can use
@@ -374,9 +375,9 @@ export default function LoadoutGen() {
   const [role, setRole] = React.useState("");
   const [rank, setRank] = React.useState("");
   const [build, setBuild] = React.useState({
-    Essence: "Waiting for Input",
-    Action1: "Waiting for Input",
-    Action2: "Waiting for Input",
+    Essence: "None",
+    Action1: "None",
+    Action2: "None",
     BuildInfo: (
       <Typography component="p" sx={{ mb: 2 }}>
         None
@@ -405,9 +406,9 @@ export default function LoadoutGen() {
               onChange={(e: SelectChangeEvent) => {
                 setRank("");
                 setBuild({
-                  Essence: "Waiting for Input",
-                  Action1: "Waiting for Input",
-                  Action2: "Waiting for Input",
+                  Essence: "None",
+                  Action1: "None",
+                  Action2: "None",
                   BuildInfo: (
                     <Typography component="p" sx={{ mb: 2 }}>
                       None
@@ -466,10 +467,62 @@ export default function LoadoutGen() {
             <TableBody>
               <TableRow>
                 <TableCell component="th" scope="row">
+                  {build.Essence != "None" ? (
+                    <Box
+                      component="img"
+                      sx={{
+                        verticalAlign: "middle",
+                        width: "30px",
+                        height: "30px",
+                        marginRight: "10px",
+                      }}
+                      alt={build.Essence}
+                      src={`/Bozja/Lost%20Finds/${build.Essence.replace(
+                        " ",
+                        "%20"
+                      )}.png`}
+                    />
+                  ) : null}
                   {build.Essence}
                 </TableCell>
-                <TableCell>{build.Action1}</TableCell>
-                <TableCell>{build.Action2}</TableCell>
+                <TableCell>
+                  {build.Action1 != "None" ? (
+                    <Box
+                      component="img"
+                      sx={{
+                        verticalAlign: "middle",
+                        width: "30px",
+                        height: "30px",
+                        marginRight: "10px",
+                      }}
+                      alt={build.Action1}
+                      src={`/Bozja/Lost%20Finds/${build.Action1.replace(
+                        " ",
+                        "%20"
+                      )}.png`}
+                    />
+                  ) : null}
+                  {build.Action1}
+                </TableCell>
+                <TableCell>
+                  {build.Action2 != "None" ? (
+                    <Box
+                      component="img"
+                      sx={{
+                        verticalAlign: "middle",
+                        width: "30px",
+                        height: "30px",
+                        marginRight: "10px",
+                      }}
+                      alt={build.Action2}
+                      src={`/Bozja/Lost%20Finds/${build.Action2.replace(
+                        " ",
+                        "%20"
+                      )}.png`}
+                    />
+                  ) : null}
+                  {build.Action2}
+                </TableCell>
               </TableRow>
             </TableBody>
           </Table>
