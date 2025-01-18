@@ -19,7 +19,7 @@ export default function BSFGuide() {
           </Typography>
         </Link>
         <Typography component="p" sx={{ mb: 2 }}>
-          Welcome to The Bozjan Southern Front, the first of the Save the Queen zones. We'll be going thro
+          Welcome to The Bozjan Southern Front, the first of the Save the Queen zones. We&apos;ll be going thro
         </Typography>
       </div>
       <TableOfContents />

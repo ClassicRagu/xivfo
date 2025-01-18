@@ -1,13 +1,5 @@
 import { Typography } from "@mui/material";
 
-const routes = [
-  { name: "Unlocking/General Info", route: "/bozja/General_Guides/New_Player" },
-  { name: "The Bozjan Southern Front", route: "/bozja/General_Guides/New_Player/BSF" },
-  { name: "Delubrum Reginae", route: "/bozja/General_Guides/New_Player/DRN" },
-  { name: "Zadnor", route: "/bozja/General_Guides/New_Player/Zadnor" },
-  { name: "The Dalriada", route: "/bozja/General_Guides/Dal" },
-];
-
 export default function Home(props: { children: React.ReactNode }) {
   return (
     <>
@@ -27,7 +19,6 @@ export default function Home(props: { children: React.ReactNode }) {
           <Typography component="p" sx={{ mb: 2 }}>
             This is a guide to help players through Bozja from start to finish.
           </Typography>
-          
         </div>
       </div>
       {props.children}
