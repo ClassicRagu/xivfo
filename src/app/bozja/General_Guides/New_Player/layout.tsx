@@ -1,5 +1,4 @@
-import { Box, Button, Grid2, Typography } from "@mui/material";
-import NextLink from "next/link";
+import { Typography } from "@mui/material";
 
 const routes = [
   { name: "Unlocking/General Info", route: "/bozja/General_Guides/New_Player" },

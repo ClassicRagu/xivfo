@@ -1,4 +1,4 @@
-import { Button, Divider, Link, Typography } from "@mui/material";
+import { Link, Typography } from "@mui/material";
 import TableOfContents from "@/components/shared/TableOfContents";
 import NextLink from "next/link";
 
@@ -19,7 +19,7 @@ export default function BSFGuide() {
           </Typography>
         </Link>
         <Typography component="p" sx={{ mb: 2 }}>
-          Welcome to The Bozjan Southern Front, the first of the Save the Queen zones.
+          Welcome to The Bozjan Southern Front, the first of the Save the Queen zones. We'll be going thro
         </Typography>
       </div>
       <TableOfContents />
