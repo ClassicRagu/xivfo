@@ -8,12 +8,6 @@ export default function Unlockling() {
 
   return (
     <div>
-      <Typography variant="h3" component="h1" sx={{ mb: 2 }}>
-        Welcome to Bozja!
-      </Typography>
-      <Typography component="p" sx={{ mb: 2 }}>
-        This is a guide to help players through Bozja from start to finish.
-      </Typography>
       <Link component={NextLink} href="#unlocking">
         <Typography id="unlocking" variant="h3" component="h2" sx={{ mb: 1 }}>
           Unlocking Bozja
