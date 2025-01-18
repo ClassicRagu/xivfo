@@ -16,6 +16,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
+import { actions } from "@/static/bozja/Farming/Fragment_Map/Actions";
 
 const buildsObj = [
   {
@@ -459,6 +460,7 @@ export default function LoadoutGen() {
           >
             <TableHead>
               <TableRow>
+                <TableCell></TableCell>
                 <TableCell>Essence</TableCell>
                 <TableCell>Action 1</TableCell>
                 <TableCell>Action 2</TableCell>
@@ -466,6 +468,9 @@ export default function LoadoutGen() {
             </TableHead>
             <TableBody>
               <TableRow>
+                <TableCell>
+                  <b>Build</b>
+                </TableCell>
                 <TableCell component="th" scope="row">
                   {build.Essence != "None" ? (
                     <Box
@@ -522,6 +527,29 @@ export default function LoadoutGen() {
                     />
                   ) : null}
                   {build.Action2}
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>
+                  <b>Fragments</b>
+                </TableCell>
+                <TableCell component="th" scope="row">
+                  {build.Essence != "None"
+                    ? actions.filter((x) => x.ActionName === build.Essence)[0]
+                        .Fragment
+                    : build.Essence}
+                </TableCell>
+                <TableCell>
+                  {build.Action1 != "None"
+                    ? actions.filter((x) => x.ActionName === build.Action1)[0]
+                        .Fragment
+                    : build.Action1}
+                </TableCell>
+                <TableCell>
+                  {build.Action2 != "None"
+                    ? actions.filter((x) => x.ActionName === build.Action2)[0]
+                        .Fragment
+                    : build.Action2}
                 </TableCell>
               </TableRow>
             </TableBody>
