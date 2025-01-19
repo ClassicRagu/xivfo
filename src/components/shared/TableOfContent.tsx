@@ -51,7 +51,7 @@ function TableOfContent() {
               href={`#${heading.id}`}
               onClick={(e) => {
                 e.preventDefault();
-                const docHeading = document.querySelector(`#${heading.id}`);
+                const docHeading = document.querySelector(`[id="${heading.id}"]`);
                 if (docHeading) {
                   docHeading.scrollIntoView({
                     behavior: "smooth",
