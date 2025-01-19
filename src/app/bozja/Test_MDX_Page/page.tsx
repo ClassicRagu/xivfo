@@ -1,4 +1,4 @@
-import Overview from "@/components/bozja/General_Guides/New_Player/overview.mdx";
+import Overview from "@/components/bozja/Test_MDX_Page/overview.mdx";
 import TableOfContents from "@/components/shared/TableOfContents";
 
 export default function Home() {
