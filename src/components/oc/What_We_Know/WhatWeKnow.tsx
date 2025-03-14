@@ -148,6 +148,15 @@ export default function WhatWeKnow() {
                     <ImageWithPopup src="/OC/ForkedTower.jpg" alt="Slide showing forked tower" maxWidth={1200} widthPercent="50%" />
                     <ImageWithPopup src="/OC/ForkedTowerEntry.jpg" alt="Slide showing forked tower's spawn and entry conditions" maxWidth={1200} widthPercent="50%" />
                 </div>
+                <Link component={NextLink} href="#roadmap" style={{ display: "flex" }}>
+                    <Typography id="roadmap" variant="h3" component="h2" sx={{ mb: 1 }}>
+                        Roadmap
+                    </Typography>
+                </Link>
+                <Typography component="p" sx={{ mb: 2 }}>
+                    {"7.4X will add new Phantom Jobs and 7.5X will add a new area, likely to be around the size of Southern Horn, as well as even more Phantom Jobs."}<br />
+                    <ImageWithPopup src="/OC/Roadmap.jpg" alt="Image of the Occult Crescent Roadmap" maxWidth={1200} widthPercent="50%" />
+                </Typography>
                 <Link component={NextLink} href="#notes" style={{ display: "flex" }}>
                     <Typography id="notes" variant="h3" component="h2" sx={{ mb: 1 }}>
                         Additional Notes
@@ -155,10 +164,15 @@ export default function WhatWeKnow() {
                 </Link>
                 <Typography component="p" sx={{ mb: 2 }}>
                     {"Bozjan Field Records have returned as Crescent Isle Notes."}<br />
-                </Typography>
-                <div>
                     <ImageWithPopup src="/OC/IsleNote.jpg" alt="Image of the Crescent Isle Notes" maxWidth={1200} widthPercent="50%" />
-                </div>
+                </Typography>
+                <Typography component="p" sx={{ mb: 2 }}>
+                    {"There are 2 new currencies, Enlightenment Silver and Gold Pieces, though it is not clear how they will be used."}<br />
+                    <ImageWithPopup src="/OC/Currencies.jpg" alt="Image of the 2 new currencies" maxWidth={1200} widthPercent="50%" />
+                </Typography>
+                <Typography component="p" sx={{ mb: 2 }}>
+                    {"There will be gear that increases stats in the content (similar to Elemental+2 gear in Eureka), there is no slide shown for this in the live letter but it is mentioned."}<br />
+                </Typography>
             </div>
             <TableOfContents />
         </div>
