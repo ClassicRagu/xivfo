@@ -1,0 +1,31 @@
+import Typography from "@mui/material/Typography";
+import ButtonBaseDemo from "@/components/shared/HomePageButtons";
+import { Box, Container } from "@mui/material";
+
+const images = [
+  {
+    url: "/OC/OCPreview.jpg",
+    title: "What We Know So Far",
+    pageUrl: "/oc/What_We_Know",
+  },
+];
+
+export default function Home() {
+  return (
+    <Container maxWidth="lg">
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Typography variant="h4" component="h1" sx={{ mb: 2 }}>
+          Occult Crescent
+        </Typography>
+        <ButtonBaseDemo images={images} />
+      </Box>
+    </Container>
+  );
+}

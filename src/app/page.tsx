@@ -16,9 +16,9 @@ const images = [
     pageUrl: "/bozja"
   },
   {
-    url: '',
-    title: 'Shade\'s Triangle (Coming in 7.X)',
-    pageUrl: ""
+    url: '/OC/OCPreview.jpg',
+    title: 'Occult Crescent (Coming in 7.25)',
+    pageUrl: "/oc"
   },
 ];
 

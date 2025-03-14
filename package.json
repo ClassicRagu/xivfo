@@ -18,7 +18,7 @@
     "@mui/material-nextjs": "^6.1.9",
     "@next/mdx": "^15.1.5",
     "@types/mdx": "^2.0.13",
-    "jotai": "^2.11.0",
+    "jotai": "^2.12.2",
     "leaflet": "^1.9.4",
     "next": "^15.1.4",
     "react": "^19.0.0",
