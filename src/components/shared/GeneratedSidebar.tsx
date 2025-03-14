@@ -35,6 +35,7 @@ type SectionContents = {
 export default function GeneratedSidebar(props: {
   children: React.ReactNode;
   sidebarSections: SidebarSection[];
+  pageName?: string;
 }) {
   const router = useRouter();
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -116,7 +117,7 @@ export default function GeneratedSidebar(props: {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            XIV Field Operations - Save the Queen
+            XIV Field Operations - {props.pageName ? props.pageName : "Save the Queen"}
           </Typography>
         </Toolbar>
       </AppBar>

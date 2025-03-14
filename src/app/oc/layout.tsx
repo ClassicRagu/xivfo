@@ -17,7 +17,7 @@ import GeneratedSidebar, {
     ];
   
     return (
-      <GeneratedSidebar sidebarSections={sidebarData}>
+      <GeneratedSidebar sidebarSections={sidebarData} pageName="Occult Crescent">
         {props.children}
       </GeneratedSidebar>
     );
