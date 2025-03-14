@@ -14,7 +14,7 @@ export default function WhatWeKnow() {
             }}
         >
             <div style={{ padding: "16px", borderRadius: "8px", marginLeft: "0px" }}>
-                <Link component={NextLink} href="#potkit" style={{ display: "flex" }}>
+                <Link component={NextLink} href="#leveling" style={{ display: "flex" }}>
                     <Typography id="leveling" variant="h3" component="h2" sx={{ mb: 1 }}>
                         How to Start and the Knowledge Leveling System
                     </Typography>
@@ -43,7 +43,7 @@ export default function WhatWeKnow() {
                 <div>
                     <ImageWithPopup src="/OC/LevelSync.jpg" alt="Knowledge Level Sync Slide from Live Latter" maxWidth={1200} widthPercent="50%" />
                 </div>
-                <Link component={NextLink} href="#potkit" style={{ display: "flex" }}>
+                <Link component={NextLink} href="#phantom" style={{ display: "flex" }}>
                     <Typography id="phantom" variant="h3" component="h2" sx={{ mb: 1 }}>
                         Phantom Jobs
                     </Typography>
@@ -56,9 +56,9 @@ export default function WhatWeKnow() {
                 </Typography>
                 <div>
                     <ImageWithPopup src="/OC/JobList.jpg" alt="Image of the Job List" maxWidth={1200} widthPercent="50%" />
-                    <ImageWithPopup src="/OC/ActionSettings.jpg" alt="Image of the Job List" maxWidth={1200} widthPercent="50%" />
+                    <ImageWithPopup src="/OC/ActionSettings.jpg" alt="Image of Job Actions" maxWidth={1200} widthPercent="50%" />
                 </div>
-                <Link component={NextLink} href="#potkit" style={{ display: "flex" }}>
+                <Link component={NextLink} href="#known" style={{ display: "flex" }}>
                     <Typography id="known" variant="h4" component="h3" sx={{ mb: 1 }}>
                         Known Job Actions
                     </Typography>
@@ -109,6 +109,56 @@ export default function WhatWeKnow() {
                         </ul>
                     </li>
                 </ul>
+                <Link component={NextLink} href="#zone" style={{ display: "flex" }}>
+                    <Typography id="zone" variant="h3" component="h2" sx={{ mb: 1 }}>
+                        The Zone: Southern Horn
+                    </Typography>
+                </Link>
+                <Typography component="p" sx={{ mb: 2 }}>
+                    {"Occult Crescent: Southern Horn is the zone being released in patch 7.25."}<br />
+                    {"This zone is notably quite large compared to existing foray zones and includes a total of 5 aetherytes. All aetherytes can be unlocked immediately with no level requirement as long as you can get to them"}<br />
+                    {"Within the zone there will be FATEs (Bozja Skirmishes), Critical Encounters (Bozja Critical Engagements), and Magic Pots (Eureka Bunnies) as well as the usual enemies for you to kill."}<br />
+                    {"Unlike Bozja, CEs in OC will require you to walk to them and stand in the circle in order to join. Additionally, all 72 people in instance can join all CEs."}<br />
+                    {"The Southern Horn will also include treasure chests throughout the instance for players to find."}<br />
+                </Typography>
+                <div>
+                    <ImageWithPopup src="/OC/OCMap.jpg" alt="Image of the South Horn Map" maxWidth={1200} widthPercent="50%" />
+                    <ImageWithPopup src="/OC/CESlide.jpg" alt="Slide explaining CEs" maxWidth={1200} widthPercent="50%" />
+                </div>
+                <div>
+                    <ImageWithPopup src="/OC/CriticalEncounter.jpg" alt="Image of YoshiP standing in front of a CE" maxWidth={1200} widthPercent="50%" />
+                    <ImageWithPopup src="/OC/InsideCE.jpg" alt="Image of YoshiP standing in a CE" maxWidth={1200} widthPercent="50%" />
+                </div>
+                <div>
+                    <ImageWithPopup src="/OC/MagicPot.jpg" alt="Slide explaining Magic Pots" maxWidth={1200} widthPercent="50%" />
+                    <ImageWithPopup src="/OC/WildChests.jpg" alt="Slide explaining treasure in the wild" maxWidth={1200} widthPercent="50%" />
+                </div>
+                <Link component={NextLink} href="#forked" style={{ display: "flex" }}>
+                    <Typography id="forked" variant="h3" component="h2" sx={{ mb: 1 }}>
+                        The Raid: Forked Tower
+                    </Typography>
+                </Link>
+                <Typography component="p" sx={{ mb: 2 }}>
+                    {"Forked Tower will be a 48 person raid joined from inside Occult Crescent: Southern Horn."}<br />
+                    {"Unlike past raids it seems to be spawnable anytime by players in instance. 16 players must obtain and use 16 \"ciphers\" in a designated location to enter."}<br />
+                    {"It seems to use a combination of Bozja's Priority Deployment system along with BA's Aetheric Stabilizers as using a cipher will grant you priority but will not guarantee entry."}<br />
+                    {"This instance will have Resurrection Restriction."}<br />
+                </Typography>
+                <div>
+                    <ImageWithPopup src="/OC/ForkedTower.jpg" alt="Slide showing forked tower" maxWidth={1200} widthPercent="50%" />
+                    <ImageWithPopup src="/OC/ForkedTowerEntry.jpg" alt="Slide showing forked tower's spawn and entry conditions" maxWidth={1200} widthPercent="50%" />
+                </div>
+                <Link component={NextLink} href="#notes" style={{ display: "flex" }}>
+                    <Typography id="notes" variant="h3" component="h2" sx={{ mb: 1 }}>
+                        Additional Notes
+                    </Typography>
+                </Link>
+                <Typography component="p" sx={{ mb: 2 }}>
+                    {"Bozjan Field Records have returned as Crescent Isle Notes."}<br />
+                </Typography>
+                <div>
+                    <ImageWithPopup src="/OC/IsleNote.jpg" alt="Image of the Crescent Isle Notes" maxWidth={1200} widthPercent="50%" />
+                </div>
             </div>
             <TableOfContents />
         </div>
