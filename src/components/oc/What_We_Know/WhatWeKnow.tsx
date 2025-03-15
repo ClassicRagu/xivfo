@@ -120,6 +120,7 @@ export default function WhatWeKnow() {
                     {"Within the zone there will be FATEs (Bozja Skirmishes), Critical Encounters (Bozja Critical Engagements), and Magic Pots (Eureka Bunnies) as well as the usual enemies for you to kill."}<br />
                     {"Unlike Bozja, CEs in OC will require you to walk to them and stand in the circle in order to join. Additionally, all 72 people in instance can join all CEs."}<br />
                     {"The Southern Horn will also include treasure chests throughout the instance for players to find."}<br />
+                    {"IL Sync for the instance is 700 and has the same entry message as Eureka so it's likely stats will not be set. This means best in slot will likely be mostly melded Neo-Kindom with a some current IL 760 gear."}<br />
                 </Typography>
                 <div>
                     <ImageWithPopup src="/OC/OCMap.jpg" alt="Image of the South Horn Map" maxWidth={1200} widthPercent="50%" />
