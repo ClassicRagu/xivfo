@@ -1,4 +1,4 @@
-import { Link, Typography } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
 import TableOfContents from "@/components/shared/TableOfContents";
 import NextLink from "next/link";
 import { ImageWithPopup } from "@/components/shared/ImageWithPopup";
@@ -60,60 +60,170 @@ export default function WhatWeKnow() {
                 </div>
                 <Link component={NextLink} href="#known" style={{ display: "flex" }}>
                     <Typography id="known" variant="h4" component="h3" sx={{ mb: 1 }}>
-                        Known Job Actions
+                        Known Jobs
                     </Typography>
                 </Link>
                 <Typography component="p" sx={{ mb: 2 }}>
-                    Thank you to Neru Neru for Translations and O&apos;palt for documenting <Link component={NextLink} href="https://docs.google.com/spreadsheets/d/1Z3pEOxE-E6vJ9eg9TX8X8rNYwUgpT-L5npEu2c3dEJQ/edit?gid=0#gid=0">in this doc.</Link> <br/>
-                    All info in this section is supplied from that doc. <br/>
+                    Thank you to Neru Neru for Translations and O&apos;palt for documenting <Link component={NextLink} href="https://docs.google.com/spreadsheets/d/1Z3pEOxE-E6vJ9eg9TX8X8rNYwUgpT-L5npEu2c3dEJQ/edit?gid=0#gid=0">in this doc.</Link> <br />
+                    All info in this section is supplied from that doc. <br />
                     Speculations are marked with Italics and are based on FFV info.
                 </Typography>
+                <div style={{ display: "flex", alignItems: "baseline" }}>
+                    <Box
+                        component="img"
+                        sx={{
+                            width: "50px",
+                            height: "50px",
+                            marginRight: "10px",
+                        }}
+                        alt={"Freelancer"}
+                        src={`/OC/Freelancer.png`}
+                    />
+                    <Link component={NextLink} href="#freelancer" >
+                        <Typography id="freelancer" variant="h5" component="h4">
+                            Freelancer
+                        </Typography>
+                    </Link>
+                </div>
+                <Typography component="p" sx={{ mb: 2 }}>
+                    {"Freelancer is the default job."}
+                </Typography>
                 <ul>
-                    <li>Freelancer: Default Job
-                        <ul>
-                            <li>Occult First Aid: Restores 30% of your Max HP.</li>
-                            <li>Occult Treasure Search: Look up the number of treasure boxes in the current Crescent Island field.</li>
-                        </ul>
-                    </li>
-                    <li>Bard: Unlocked through a starter quest.
-                        <ul>
-                            <li>Lvl 1: Song of Attack: <i>Some kind of attack buff</i></li>
-                            <li>Lvl 2: Romeo&apos;s Ballad: <i>Likely an enemy-side debuff</i></li>
-                            <li>Lvl 3: Mighty March: <i>Likely a regen</i></li>
-                            <li>Lvl 4: Hero&apos;s Rime: <i>Raises party level in FF5, may be a rez since it shares a similar name to Spirit of the Remembered.</i></li>
-                            <li>Lvl 2: Trait - Song Effectiveness Up</li>
-                        </ul>
-                    </li>
-                    <li>Time Mage: Unlock Unknown
-                        <ul>
-                            <li>Lvl 1: Occult Slow III: Slow target and area around it by 80% for 30 seconds.</li>
-                            <li>Lvl 2: Occult Comet: 500 potency AoE damage. 8 second cast time & 60 second cooldown, affected by GCD speed</li>
-                            <li>Lvl 3: Occult Mage Masher: Reduces target&apos;s magic damage by 10% for 60 seconds. 30 second cooldown.</li>
-                            <li>Lvl 4: Occult Dispel: Remove one buff from the target.</li>
-                            <li>Lvl 5: Occult Quick: For you or one ally. Grants 20 seconds of a 10% weaponskill/autoattack/recast timer increase and makes all spells instant casts. Also grants 10 seconds of a 50% movespeed increase. likely 120s CD</li>
-                        </ul>
-                    </li>
-                    <li>Knight: Unlocked through a starter quest.
-                        <ul>
-                            <li>Lvl 1: Guard: <i>Likely reduces damage taken.</i></li>
-                            <li>Lvl 2: Prayer: <i>Some kind of healing spell</i></li>
-                            <li>Lvl 3: Occult Heal: <i>Some kind of heal spell</i></li>
-                            <li>Lvl 6: Oath/Vow: <i>Maybe some kind of tank stance?</i></li>
-                            <li>Lvl 4: Trait - Guard Effectiveness Up</li>
-                            <li>Lvl 5: Trait - Prayer Effectiveness Up</li>
-                        </ul>
-                    </li>
-                    <li>Monk: Unlocked through a starter quest.
-                        <ul>
-                            <li>Lvl 1: Phantom Kick: <i>Some kind of single-target damage probably</i></li>
-                            <li>Lvl 2: Occult Counter: <i>Likely a counter effect, maybe like Damnation?</i></li>
-                            <li>Lvl 3: Counterstance: <i>Increases chance to counter at cost of defense in FF11</i></li>
-                            <li>Lvl 5: Occult Chakra: <i>Likely a self-heal</i></li>
-                            <li>Lvl 4: Trait - Kick Effect Up 1</li>
-                            <li>Lvl 6: Trait - Kick Effect Up 2</li>
-                        </ul>
-                    </li>
+                    <li>Occult First Aid: Restores 30% of your Max HP.</li>
+                    <li>Occult Treasure Search: Look up the number of treasure boxes in the current Crescent Island field.</li>
                 </ul>
+                <div style={{ display: "flex", alignItems: "baseline" }}>
+                    <Box
+                        component="img"
+                        sx={{
+                            width: "50px",
+                            height: "50px",
+                            marginRight: "10px",
+                        }}
+                        alt={"Bard"}
+                        src={`/OC/Bard.png`}
+                    />
+                    <Link component={NextLink} href="#bard" >
+                        <Typography id="bard" variant="h5" component="h4">
+                            Bard
+                        </Typography>
+                    </Link>
+                </div>
+                <Typography component="p" sx={{ mb: 2 }}>
+                    {"Bard is unlocked in a starter quest."}
+                </Typography>
+                <ul>
+                    <li>Lvl 1: Song of Attack: <i>Some kind of attack buff</i></li>
+                    <li>Lvl 2: Romeo&apos;s Ballad: <i>Likely an enemy-side debuff</i></li>
+                    <li>Lvl 3: Mighty March: <i>Likely a regen</i></li>
+                    <li>Lvl 4: Hero&apos;s Rime: <i>Raises party level in FF5, may be a rez since it shares a similar name to Spirit of the Remembered.</i></li>
+                    <li>Lvl 2: Trait - Song Effectiveness Up</li>
+                </ul>
+                <div style={{ display: "flex", alignItems: "baseline" }}>
+                    <Box
+                        component="img"
+                        sx={{
+                            width: "50px",
+                            height: "50px",
+                            marginRight: "10px",
+                        }}
+                        alt={"Monk"}
+                        src={`/OC/Monk.png`}
+                    />
+                    <Link component={NextLink} href="#monk" >
+                        <Typography id="monk" variant="h5" component="h4">
+                            Monk
+                        </Typography>
+                    </Link>
+                </div>
+                <Typography component="p" sx={{ mb: 2 }}>
+                    {"Monk is unlocked in a starter quest."}
+                </Typography>
+                <ul>
+                    <li>Lvl 1: Phantom Kick: <i>Some kind of single-target damage probably</i></li>
+                    <li>Lvl 2: Occult Counter: <i>Likely a counter effect, maybe like Damnation?</i></li>
+                    <li>Lvl 3: Counterstance: <i>Increases chance to counter at cost of defense in FF11</i></li>
+                    <li>Lvl 5: Occult Chakra: <i>Likely a self-heal</i></li>
+                    <li>Lvl 4: Trait - Kick Effect Up 1</li>
+                    <li>Lvl 6: Trait - Kick Effect Up 2</li>
+                </ul>
+                <div style={{ display: "flex", alignItems: "baseline" }}>
+                    <Box
+                        component="img"
+                        sx={{
+                            width: "50px",
+                            height: "50px",
+                            marginRight: "10px",
+                        }}
+                        alt={"Knight"}
+                        src={`/OC/Knight.png`}
+                    />
+                    <Link component={NextLink} href="#knight" >
+                        <Typography id="knight" variant="h5" component="h4">
+                            Knight
+                        </Typography>
+                    </Link>
+                </div>
+                <Typography component="p" sx={{ mb: 2 }}>
+                    {"Knight is unlocked in a starter quest."}
+                </Typography>
+                <ul>
+                    <li>Lvl 1: Guard: <i>Likely reduces damage taken.</i></li>
+                    <li>Lvl 2: Prayer: <i>Some kind of healing spell</i></li>
+                    <li>Lvl 3: Occult Heal: <i>Some kind of heal spell</i></li>
+                    <li>Lvl 6: Oath/Vow: <i>Maybe some kind of tank stance?</i></li>
+                    <li>Lvl 4: Trait - Guard Effectiveness Up</li>
+                    <li>Lvl 5: Trait - Prayer Effectiveness Up</li>
+                </ul>
+                <div style={{ display: "flex", alignItems: "baseline" }}>
+                    <Box
+                        component="img"
+                        sx={{
+                            width: "50px",
+                            height: "50px",
+                            marginRight: "10px",
+                        }}
+                        alt={"Time Mage"}
+                        src={`/OC/Time%20Mage.png`}
+                    />
+                    <Link component={NextLink} href="#timemage" >
+                        <Typography id="timemage" variant="h5" component="h4">
+                            Time Mage
+                        </Typography>
+                    </Link>
+                </div>
+                <Typography component="p" sx={{ mb: 2 }}>
+                    {"Time Mage's unlock is unknown."}
+                </Typography>
+                <ul>
+                    <li>Lvl 1: Occult Slow III: Slow target and area around it by 80% for 30 seconds.</li>
+                    <li>Lvl 2: Occult Comet: 500 potency AoE damage. 8 second cast time & 60 second cooldown, affected by GCD speed</li>
+                    <li>Lvl 3: Occult Mage Masher: Reduces target&apos;s magic damage by 10% for 60 seconds. 30 second cooldown.</li>
+                    <li>Lvl 4: Occult Dispel: Remove one buff from the target.</li>
+                    <li>Lvl 5: Occult Quick: For you or one ally. Grants 20 seconds of a 10% weaponskill/autoattack/recast timer increase and makes all spells instant casts. Also grants 10 seconds of a 50% movespeed increase. likely 120s CD</li>
+                </ul>
+                <Link component={NextLink} href="#knight" >
+                    <Typography id="knight" variant="h5" component="h4">
+                        Additional Known Jobs
+                    </Typography>
+                </Link>
+                <ul>
+                    <li>Geomancer: Live Letter LXXXV and Korean Fan Fest</li>
+                    <li>Ranger: Live Letter LXXXV and Korean Fan Fest</li>
+                    <li>Berserker: Live Letter LXXXV and Korean Fan Fest</li>
+                    <li>Chemist: Live Letter LXXXV and Korean Fan Fest</li>
+                    <li>Cannoneer: Live Letter LXXXV and Korean Fan Fest</li>
+                    <li>Thief: Korean Fan Fest</li>
+                    <li>Oracle: Korean Fan Fest</li>
+                    <li>Samurai: Korean Fan Fest</li>
+                </ul>
+                <div>
+                    <ImageWithPopup src="/OC/OCJobs.jpg" alt="Image of the Job List" maxWidth={1200} widthPercent="50%" />
+                    <ImageWithPopup src="/OC/OCExtraJobs.jpg" alt="Image of additional Jobs" maxWidth={1200} widthPercent="50%" />
+                </div>
+                <div>
+                    <ImageWithPopup src="/OC/DT_FieldOp_Jobs.png" alt="Image of the Job List shown on the KR stream" maxWidth={1200} widthPercent="50%" />
+                </div>
                 <Link component={NextLink} href="#zone" style={{ display: "flex" }}>
                     <Typography id="zone" variant="h3" component="h2" sx={{ mb: 1 }}>
                         The Zone: Southern Horn

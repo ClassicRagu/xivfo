@@ -18,6 +18,7 @@ export default function Home(props: { children: React.ReactNode }) {
             What We Know About Occult Crescent {"(as of 3/14/25)"}
           </Typography>
           <Typography component="p" sx={{ mb: 2 }}>
+            Occult Crescent will be released in Patch 7.25 on May 27th 2025.<br/>
             <Link href="https://www.youtube.com/live/fydpys-4P4w" component={NextLink}>FINAL FANTASY XIV Letter from the Producer LIVE Part LXXXVI</Link><br />
             Thank you to Miuna and iluna minori in the FFXIV Reddit discord for translating much of the information in the live letter that is used here.<br />
             Additionally thank you to those in FOE and Savage Slimes who helped translate additional images.
