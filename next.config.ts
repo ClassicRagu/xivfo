@@ -4,6 +4,13 @@ import createMDX from '@next/mdx'
 const nextConfig: NextConfig = {
   /* config options here */
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  async redirects() {
+    return [{
+      source: "/map",
+      destination: "/bozja/Farming",
+      permanent: false,
+    }]
+  }
 };
 
 const withMDX = createMDX({
