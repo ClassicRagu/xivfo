@@ -9,6 +9,16 @@ const nextConfig: NextConfig = {
       source: "/map",
       destination: "/bozja/Farming",
       permanent: false,
+    },
+    {
+      source: "/relic",
+      destination: "/bozja/Relics",
+      permanent: false,
+    },
+    {
+      source: "/relic/guide",
+      destination: "/bozja/Relics/Guide",
+      permanent: false,
     }]
   }
 };
