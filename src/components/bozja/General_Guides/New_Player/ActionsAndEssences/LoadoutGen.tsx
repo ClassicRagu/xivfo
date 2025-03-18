@@ -453,9 +453,9 @@ export default function LoadoutGen() {
             </FormControl>
           ) : null}
         </div>
-        <TableContainer component={Paper} sx={{ minWidth: 650, maxWidth: 800 }}>
+        <TableContainer component={Paper} sx={{ maxWidth: 800 }}>
           <Table
-            sx={{ minWidth: 650, maxWidth: 800 }}
+            sx={{ maxWidth: 800 }}
             aria-label="simple table"
           >
             <TableHead>

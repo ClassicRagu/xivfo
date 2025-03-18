@@ -15,13 +15,13 @@ export default function Guide() {
         marginBottom: "30px",
       }}
     >
-      <div style={{ padding: "16px", borderRadius: "8px", marginLeft: "0px" }}>
+      <div style={{ paddingTop: "16px" }}>
         <Unlockling />
-        <Divider sx={{ m: 2 }} />
+        <Divider sx={{ mt: 2, mb: 2 }} />
         <GeneralInfo />
-        <Divider sx={{ m: 2 }} />
+        <Divider sx={{ mt: 2, mb: 2 }} />
         <ActionsAndEssences />
-        <Divider sx={{ m: 2 }} />
+        <Divider sx={{ mt: 2, mb: 2}} />
         <Link component={NextLink} href="#potkit" style={{ display: "flex" }}>
           <Box
             component="img"

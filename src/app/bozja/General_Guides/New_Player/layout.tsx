@@ -11,7 +11,7 @@ export default function Home(props: { children: React.ReactNode }) {
         }}
       >
         <div
-          style={{ padding: "16px", paddingBottom: "0px", borderRadius: "8px", marginLeft: "0px" }}
+          style={{ paddingTop: "16px", paddingBottom: "0px", borderRadius: "8px", marginLeft: "0px" }}
         >
           <Typography variant="h3" component="h1" sx={{ mb: 2 }}>
             Welcome to Bozja!
