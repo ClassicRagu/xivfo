@@ -36,11 +36,11 @@ export default function PersistentDrawerLeft(props: {
       ],
     },
     {
-      name: "Everything Else",
+      name: "Delubrum Reginae (Savage)",
       contents: [
         {
-          name: "bozja.net",
-          url: "https://www.bozja.net",
+          name: "DRS Guide",
+          url: "https://opalt.gitbook.io/delubrum-savage-basics",
           external: true,
         },
       ],
