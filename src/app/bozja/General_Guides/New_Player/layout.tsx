@@ -17,7 +17,7 @@ export default function Home(props: { children: React.ReactNode }) {
             Welcome to Bozja!
           </Typography>
           <Typography component="p" sx={{ mb: 2 }}>
-            This is a guide to help players through Bozja from start to finish.
+            This is a guide to help players through Bozja from start to finish. This page is a work in progress still.
           </Typography>
         </div>
       </div>

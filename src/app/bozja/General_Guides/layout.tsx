@@ -2,7 +2,7 @@ import { Box, Button, Grid2, Typography } from "@mui/material";
 import NextLink from "next/link";
 
 const routes = [
-  { name: "Complete Guide", route: "/bozja/General_Guides/New_Player" },
+  { name: "Complete Guide (WIP)", route: "/bozja/General_Guides/New_Player" },
   { name: "General Guides Home", route: "/bozja/General_Guides" },
   //{ name: "Lost Action Guide", route: "./General_Guides/Lost_Actions" },
   { name: "FAQ", route: "/bozja/General_Guides/FAQ" },

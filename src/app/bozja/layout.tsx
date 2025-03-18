@@ -17,7 +17,7 @@ export default function PersistentDrawerLeft(props: {
       name: "General Guides",
       contents: [
         { name: "General Guides Home", url: "/bozja/General_Guides" },
-        { name: "Complete Guide", url: "/bozja/General_Guides/New_Player" },
+        { name: "Complete Guide (WIP)", url: "/bozja/General_Guides/New_Player" },
         { name: "FAQ", url: "/bozja/General_Guides/FAQ" },
       ],
     },
