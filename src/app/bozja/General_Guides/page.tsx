@@ -3,7 +3,7 @@ import React from "react";
 import BozjaAccordians, {
   BozjaAccordianProps,
 } from "@/components/shared/BozjaAccordians";
-import { Box, Grid2 } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 
 const guides = require("@/static/bozja/General_Guides/Guide_Links/guides.json");
 
@@ -22,14 +22,14 @@ export default function Home() {
         justifyContent: "center",
       }}
     >
-      <Grid2
+      <Grid
         container
         spacing={1}
         sx={{alignItems: "top", justifyContent: "center", width: "85%"}}
         style={{ minHeight: "200px" }}
       >
         {formattedGuides}
-      </Grid2>
+      </Grid>
     </Box>
   );
 }

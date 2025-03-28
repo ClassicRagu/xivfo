@@ -5,7 +5,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { Grid2, Link } from "@mui/material";
+import { Grid, Link } from "@mui/material";
 import { openKeyState } from "@/hooks/shared/openKeyState";
 import { useAtom } from "jotai";
 
@@ -81,9 +81,9 @@ function BozjaAccordians(props: BozjaAccordianProps) {
   };
 
   return (
-    <Grid2 size={{ xs: 12, sm: 6, md: 4 }} key={props.Name}>
+    <Grid size={{ xs: 12, sm: 6, md: 4 }} key={props.Name}>
       {card(props.Name, props.Guides, props.Additional)}
-    </Grid2>
+    </Grid>
   );
 }
 

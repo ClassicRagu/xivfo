@@ -1,13 +1,13 @@
 "use client";
 import * as React from "react";
-import { Button, Grid2 } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import { useRouter } from "next/navigation";
 
 function RelicToggle({ mode }: { mode: string }) {
   const router = useRouter();
 
   return (
-    <Grid2
+    <Grid
       container
       spacing={2}
       style={{
@@ -18,7 +18,7 @@ function RelicToggle({ mode }: { mode: string }) {
         width: "100%",
       }}
     >
-      <Grid2
+      <Grid
         style={{
           display: "flex",
           alignContent: "center",
@@ -35,8 +35,8 @@ function RelicToggle({ mode }: { mode: string }) {
         >
           Tracker
         </Button>
-      </Grid2>
-      <Grid2
+      </Grid>
+      <Grid
         style={{
           display: "flex",
           alignContent: "center",
@@ -53,8 +53,8 @@ function RelicToggle({ mode }: { mode: string }) {
         >
           Guide
         </Button>
-      </Grid2>
-    </Grid2>
+      </Grid>
+    </Grid>
   );
 }
 

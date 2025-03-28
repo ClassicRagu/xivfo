@@ -1,4 +1,4 @@
-import { Box, Button, Grid2, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import NextLink from "next/link";
 
 const routes = [
@@ -26,7 +26,7 @@ export default function Home(props: {
             justifyContent: "center",
           }}
         >
-          <Grid2
+          <Grid
             container
             spacing={2}
             style={{
@@ -39,7 +39,7 @@ export default function Home(props: {
             }}
           >
             {routes.map((route, index) => (
-              <Grid2
+              <Grid
                 key={`${route.name}-${index}`}
                 style={{
                   display: "flex",
@@ -58,9 +58,9 @@ export default function Home(props: {
                 >
                   {route.name}
                 </Button>
-              </Grid2>
+              </Grid>
             ))}
-          </Grid2>
+          </Grid>
         </Box>
       </div>
       {props.children}

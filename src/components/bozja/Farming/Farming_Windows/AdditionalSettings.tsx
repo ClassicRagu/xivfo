@@ -2,7 +2,7 @@ import { GridInternal, GridMain } from "@/styles/shared/GridStyles";
 import {
   FormControlLabel,
   FormGroup,
-  Grid2,
+  Grid,
   InputAdornment,
   Switch,
   TextField,
@@ -43,7 +43,7 @@ function AdditionalSettings(props: AdditionalSettingsProps) {
         marginBottom: "10px",
       }}
     >
-      <Grid2
+      <Grid
         container
         spacing={2}
         style={{
@@ -51,7 +51,7 @@ function AdditionalSettings(props: AdditionalSettingsProps) {
           alignItems: "center",
         }}
       >
-        <Grid2
+        <Grid
           style={{
             ...GridInternal,
           }}
@@ -67,8 +67,8 @@ function AdditionalSettings(props: AdditionalSettingsProps) {
               label="Show longer windows"
             />
           </FormGroup>
-        </Grid2>
-        <Grid2
+        </Grid>
+        <Grid
           style={{
             ...GridInternal,
           }}
@@ -87,8 +87,8 @@ function AdditionalSettings(props: AdditionalSettingsProps) {
               },
             }}
           />
-        </Grid2>
-      </Grid2>
+        </Grid>
+      </Grid>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 import { marks, snow } from "@/static/weather/SliderMarks";
 import { GridInternal, GridMain } from "@/styles/shared/GridStyles";
-import { Grid2, Slider, Typography } from "@mui/material";
+import { Grid, Slider, Typography } from "@mui/material";
 
 type FarmSlidersProps = {
   setWeekState: React.Dispatch<React.SetStateAction<number>>;
@@ -14,7 +14,7 @@ function FarmSliders(props: FarmSlidersProps) {
   const {setWeekState, weekState, setFindSnowState, findSnowState} = props
 
   return (
-    <Grid2
+    <Grid
       container
       spacing={2}
       style={{
@@ -22,7 +22,7 @@ function FarmSliders(props: FarmSlidersProps) {
         marginBottom: "30px"
       }}
     >
-      <Grid2
+      <Grid
         style={{
           ...GridInternal,
           marginBottom: "20px"
@@ -42,8 +42,8 @@ function FarmSliders(props: FarmSlidersProps) {
           valueLabelDisplay="off"
           marks={marks}
         />
-      </Grid2>
-      <Grid2
+      </Grid>
+      <Grid
         style={{
           ...GridInternal
         }}
@@ -62,8 +62,8 @@ function FarmSliders(props: FarmSlidersProps) {
           valueLabelDisplay="off"
           marks={snow}
         />
-      </Grid2>
-    </Grid2>
+      </Grid>
+    </Grid>
   );
 }
 

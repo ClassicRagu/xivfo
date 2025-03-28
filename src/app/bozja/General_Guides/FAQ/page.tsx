@@ -1,5 +1,5 @@
 import BozjaAccordians from "@/components/shared/BozjaAccordians";
-import { Box, Grid2, Link } from "@mui/material";
+import { Box, Grid, Link } from "@mui/material";
 import * as React from "react";
 
 const faqs = require("@/static/bozja/General_Guides/FAQ/FAQ.json");
@@ -23,11 +23,11 @@ function FAQ() {
         </Link> 
       ): null;
       formattedLinks.push(
-        <>
+        <span key={`FAQ-Link-${element.Name}`}>
           {splitInfo[0]}
           {guideLink}
           {splitInfo.length > 1 ? splitInfo[1] : null}
-        </>
+        </span>
       );
     });
     formattedFAQs.push(
@@ -48,14 +48,14 @@ function FAQ() {
         justifyContent: "center",
       }}
     >
-      <Grid2
+      <Grid
         container
         spacing={1}
         sx={{ alignItems: "top", justifyContent: "center", width: "75%" }}
         style={{ minHeight: "200px" }}
       >
         {formattedFAQs}
-      </Grid2>
+      </Grid>
     </Box>
   );
 }

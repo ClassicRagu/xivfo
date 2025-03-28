@@ -2,7 +2,7 @@
 import {
   Box,
   Button,
-  Grid2,
+  Grid,
   Modal,
   Paper,
   Table,
@@ -91,7 +91,7 @@ function RelicTracker() {
     <>
       <div style={{ padding: "10px", textAlign: "left", width: "100%", paddingTop: "0px" }}>
         <RelicRemainingItems />
-        <Grid2
+        <Grid
           container
           spacing={2}
           style={{
@@ -102,7 +102,7 @@ function RelicTracker() {
             width: "100%",
           }}
         >
-          <Grid2
+          <Grid
             style={{
               display: "flex",
               alignContent: "center",
@@ -121,8 +121,8 @@ function RelicTracker() {
             >
               Import
             </Button>
-          </Grid2>
-          <Grid2
+          </Grid>
+          <Grid
             style={{
               display: "flex",
               alignContent: "center",
@@ -141,8 +141,8 @@ function RelicTracker() {
             >
               Export
             </Button>
-          </Grid2>
-        </Grid2>
+          </Grid>
+        </Grid>
         <TableContainer component={Paper} style={{marginTop: "10px"}}>
           <Table>
             <TableHead>
