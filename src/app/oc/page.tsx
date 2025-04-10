@@ -8,6 +8,11 @@ const images = [
     title: "What We Know So Far",
     pageUrl: "/oc/What_We_Know",
   },
+  {
+    url: "",
+    title: "Countdown",
+    pageUrl: "/oc/Countdown",
+  },
 ];
 
 export default function Home() {

@@ -12,6 +12,7 @@ import GeneratedSidebar, {
         contents: [
           { name: "Occult Crescent Home", url: "/oc" },
           { name: "What We Know", url: "/oc/What_We_Know" },
+          { name: "Countdown", url: "/oc/Countdown" },
         ],
       },
     ];
