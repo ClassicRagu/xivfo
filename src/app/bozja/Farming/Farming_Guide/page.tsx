@@ -23,6 +23,9 @@ import { Loadout } from "@/components/shared/Loadout";
 import { valorState } from "@/hooks/bozja/Farming/Farming_Guide/valorState";
 import { roleState } from "@/hooks/bozja/Farming/Farming_Guide/roleState";
 import { roleInputState } from "@/hooks/bozja/Farming/Farming_Guide/roleInputState";
+import { findNextWeatherWindow } from "@/functions/bozja/Farming/Farming_Guide/findNextWeatherWindow";
+import { ZONE_BOZJAN_SOUTHERN_FRONT, ZONE_ZADNOR } from "xivweather";
+import Image from "next/image";
 
 const FragmentMap = dynamic(() => import("@/components/bozja/Farming/Fragment_Map/FragmentMap"), {
   ssr: false,
@@ -89,6 +92,34 @@ function FragmentLookup() {
           </Tooltip>
           : null
         }
+        {role != "" && fragment != "" && fragments[fragment].BSFWeather ?
+            findNextWeatherWindow(new Date(), ZONE_BOZJAN_SOUTHERN_FRONT, fragments[fragment].BSFWeather).map((x) => {
+              return <div style={{ display: "flex", margin: "8px", alignItems: "center" }} key={x.weathers[0]}>
+                <p style={{marginRight: "2px"}}>Next BSF Weather:</p>
+                <Image
+                  width={22}
+                  height={22}
+                  alt={`${x.weathers[0]} weather image`}
+                  src={`/weathericons/${x.weathers[0]}.png`}
+                />
+                <p>{x.startTime < new Date() ? "Active Now" : x.startTime.toLocaleTimeString()}</p>
+              </div>
+            }) : null
+        }
+        {role != "" && fragment != "" && fragments[fragment].ZadnorWeather ?
+            findNextWeatherWindow(new Date(), ZONE_ZADNOR, fragments[fragment].ZadnorWeather).map((x) => {
+              return <div style={{ display: "flex", margin: "8px", alignItems: "center" }} key={x.weathers[0]}>
+                <p style={{marginRight: "2px"}}>Next Zadnor Weather:</p>
+                <Image
+                  width={22}
+                  height={22}
+                  alt={`${x.weathers[0]} weather image`}
+                  src={`/weathericons/${x.weathers[0]}.png`}
+                />
+                <p style={{marginLeft: "8px"}}>{x.startTime < new Date() ? "Active Now" : x.startTime.toLocaleTimeString()}</p>
+              </div>
+            }) : null
+        }
       </div>
       {role != "" ?
         <div style={{ marginLeft: "8px" }}>
@@ -103,8 +134,8 @@ function FragmentLookup() {
             }
           </div>
           <div>
-            {fragment != "" ? farmingBuildsByValor[valor - 1][fragments[fragment].FarmType][role].HowTo : 
-            farmingBuildsByValor[valor - 1]["Cluster"][role].HowTo}
+            {fragment != "" ? farmingBuildsByValor[valor - 1][fragments[fragment].FarmType][role].HowTo :
+              farmingBuildsByValor[valor - 1]["Cluster"][role].HowTo}
           </div>
         </div> : null
       }

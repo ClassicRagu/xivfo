@@ -614,6 +614,7 @@ export const fragments: { [key: string]: Fragments } = {
   },
   Care: {
     FarmType: "Sprite",
+    BSFWeather: ["Wind", "Dust Storms"],
     BSF: [bsfMonsterLocations.Zone2.Ashkin, bsfMonsterLocations.Zone2.Sprites],
     Zadnor: [zadnorMonsterLocations.Zone2.Ashkin],
   },
@@ -623,6 +624,7 @@ export const fragments: { [key: string]: Fragments } = {
     BSF: [bsfMonsterLocations.Zone1.Star] },
   Support: {
     FarmType: "Sprite",
+    BSFWeather: ["Wind"],
     BSF: [bsfMonsterLocations.Zone3.Sprites],
     Zadnor: [zadnorMonsterLocations.Zone3.Sprites],
   },
@@ -632,6 +634,7 @@ export const fragments: { [key: string]: Fragments } = {
   },
   Preparation: {
     FarmType: "Sprite",
+    BSFWeather: ["Thunder"],
     BSF: [bsfMonsterLocations.Zone1.Ashkin, bsfMonsterLocations.Zone1.Sprites],
     Zadnor: [zadnorMonsterLocations.Zone1.Ashkin],
   },
@@ -674,6 +677,7 @@ export const fragments: { [key: string]: Fragments } = {
   Tenacity: { FarmType: "CE", Zadnor: [zadnorTenacityCEs] },
   History: {
     FarmType: "Sprite",
+    ZadnorWeather: ["Wind"],
     Zadnor: [
       zadnorMonsterLocations.Zone1.Sprites,
       zadnorMonsterLocations.Zone1.Star,
@@ -688,6 +692,7 @@ export const fragments: { [key: string]: Fragments } = {
   },
   Artistry: {
     FarmType: "Sprite",
+    ZadnorWeather: ["Rain", "Thunder"],
     Zadnor: [
       zadnorMonsterLocations.Zone2.Sprites,
       zadnorMonsterLocations.Zone2.Star,

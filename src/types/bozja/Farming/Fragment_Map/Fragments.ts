@@ -1,3 +1,4 @@
+import { AllowedWeathers } from "xivweather/lib/static/AllowedWeathers";
 import { MonsterLocation } from "./MonsterLocation";
 
 export type Fragments = {
@@ -9,5 +10,7 @@ export type Fragments = {
   DR?: boolean
   DRS?: boolean,
   FarmType: string
+  BSFWeather?: AllowedWeathers[]
+  ZadnorWeather?: AllowedWeathers[]
 };
 
