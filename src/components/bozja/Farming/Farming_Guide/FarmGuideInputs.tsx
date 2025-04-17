@@ -8,18 +8,30 @@ import {
 import "leaflet/dist/leaflet.css";
 
 import {
-  listActions,
-  actions, fragmentList
+  actions
 } from "@/static/bozja/Farming/Fragment_Map/Actions";
 import { useAtom } from "jotai";
 import { fragmentState } from "@/hooks/bozja/Farming/Fragment_Map/fragmentState";
 import { magitekState } from "@/hooks/bozja/Farming/Fragment_Map/magitekState";
+import { limitedActionList, limitedFragmentList } from "@/static/bozja/Farming/Farming_Guide/LimitedLists";
+import { roleState } from "@/hooks/bozja/Farming/Farming_Guide/roleState";
+import { valorState } from "@/hooks/bozja/Farming/Farming_Guide/valorState";
+import { roleInputState } from "@/hooks/bozja/Farming/Farming_Guide/roleInputState";
 
 function FarmGuideInputs() {
   const [inputValue, setInputValue] = React.useState("");
   const [, setFragment] = useAtom(fragmentState);
   const [magitek, setMagitek] = useAtom(magitekState);
   const [fragmentInputValue, setFragmentInputValue] = React.useState("");
+  const [, setValor] = useAtom(valorState)
+  const [, setRole] = useAtom(roleState)
+  const [, setRoleInput] = useAtom(roleInputState)
+
+  const resetStates = () => {
+    setValor(0)
+    setRole("")
+    setRoleInput(-1)
+  }
 
   return (
     <div style={{
@@ -44,11 +56,12 @@ function FarmGuideInputs() {
               if (val) {
                 setFragment(val.Fragment);
                 setFragmentInputValue(val.Fragment);
+                resetStates()
               }
             }}
             disablePortal
             id="combo-box-demo"
-            options={listActions}
+            options={limitedActionList}
             style={{
               float: "left",
             }}
@@ -66,10 +79,11 @@ function FarmGuideInputs() {
             onChange={(event, newValue) => {
               setFragment(newValue ?? "");
               setInputValue("");
+              resetStates()
             }}
             disablePortal
             id="combo-box-demo"
-            options={fragmentList}
+            options={limitedFragmentList}
             style={{
               float: "left",
             }}
@@ -90,6 +104,10 @@ function FarmGuideInputs() {
             <Checkbox
               checked={magitek}
               onClick={() => {
+                setFragment("")
+                setInputValue("")
+                setFragmentInputValue("")
+                resetStates()
                 setMagitek(!magitek);
               }}
             />

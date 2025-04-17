@@ -1,22 +1,12 @@
 "use client";
 import {
-  Box,
   FormControl,
   InputLabel,
-  MenuItem,
-  Paper,
-  Select,
-  SelectChangeEvent,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Typography,
+  MenuItem, Select,
+  SelectChangeEvent, Typography
 } from "@mui/material";
 import React from "react";
-import { actions } from "@/static/bozja/Farming/Fragment_Map/Actions";
+import { Loadout } from "@/components/shared/Loadout";
 
 const buildsObj = [
   {
@@ -453,108 +443,7 @@ export default function LoadoutGen() {
             </FormControl>
           ) : null}
         </div>
-        <TableContainer component={Paper} sx={{ maxWidth: 800 }}>
-          <Table
-            sx={{ maxWidth: 800 }}
-            aria-label="simple table"
-          >
-            <TableHead>
-              <TableRow>
-                <TableCell></TableCell>
-                <TableCell>Essence</TableCell>
-                <TableCell>Action 1</TableCell>
-                <TableCell>Action 2</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              <TableRow>
-                <TableCell>
-                  <b>Build</b>
-                </TableCell>
-                <TableCell component="th" scope="row">
-                  {build.Essence != "None" ? (
-                    <Box
-                      component="img"
-                      sx={{
-                        verticalAlign: "middle",
-                        width: "30px",
-                        height: "30px",
-                        marginRight: "10px",
-                      }}
-                      alt={build.Essence}
-                      src={`/Bozja/Lost%20Finds%20SD/${build.Essence.replace(
-                        " ",
-                        "%20"
-                      )}.png`}
-                    />
-                  ) : null}
-                  {build.Essence}
-                </TableCell>
-                <TableCell>
-                  {build.Action1 != "None" ? (
-                    <Box
-                      component="img"
-                      sx={{
-                        verticalAlign: "middle",
-                        width: "30px",
-                        height: "30px",
-                        marginRight: "10px",
-                      }}
-                      alt={build.Action1}
-                      src={`/Bozja/Lost%20Finds%20SD/${build.Action1.replace(
-                        " ",
-                        "%20"
-                      )}.png`}
-                    />
-                  ) : null}
-                  {build.Action1}
-                </TableCell>
-                <TableCell>
-                  {build.Action2 != "None" ? (
-                    <Box
-                      component="img"
-                      sx={{
-                        verticalAlign: "middle",
-                        width: "30px",
-                        height: "30px",
-                        marginRight: "10px",
-                      }}
-                      alt={build.Action2}
-                      src={`/Bozja/Lost%20Finds%20SD/${build.Action2.replace(
-                        " ",
-                        "%20"
-                      )}.png`}
-                    />
-                  ) : null}
-                  {build.Action2}
-                </TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell>
-                  <b>Fragments</b>
-                </TableCell>
-                <TableCell component="th" scope="row">
-                  {build.Essence != "None"
-                    ? actions.filter((x) => x.ActionName === build.Essence)[0]
-                        .Fragment
-                    : build.Essence}
-                </TableCell>
-                <TableCell>
-                  {build.Action1 != "None"
-                    ? actions.filter((x) => x.ActionName === build.Action1)[0]
-                        .Fragment
-                    : build.Action1}
-                </TableCell>
-                <TableCell>
-                  {build.Action2 != "None"
-                    ? actions.filter((x) => x.ActionName === build.Action2)[0]
-                        .Fragment
-                    : build.Action2}
-                </TableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
-        </TableContainer>
+        <Loadout Action1={build.Action1} Action2={build.Action2} Essence={build.Essence} />
       </div>
       <Typography variant="h5" component="h4" sx={{ mb: 1 }}>
         Build Notes

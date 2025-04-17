@@ -7,6 +7,7 @@ export type Fragments = {
   CLL?: boolean
   Dal?: boolean
   DR?: boolean
-  DRS?: boolean
+  DRS?: boolean,
+  FarmType: string
 };
 

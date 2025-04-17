@@ -25,7 +25,10 @@ const bounds: LatLngBoundsExpression = [
 
 type FragmentMapProps = {
   mapName: string,
-  farm: boolean
+  farm: boolean,
+  dragging: boolean,
+  maxZoom: number,
+  maxWidth: number
 }
 
 function FragmentMap(props: FragmentMapProps) {
@@ -37,7 +40,7 @@ function FragmentMap(props: FragmentMapProps) {
     <Card
       variant="outlined"
       sx={{
-        maxWidth: 800,
+        maxWidth: props.maxWidth,
         width: "100%",
       }}
       style={{
@@ -52,11 +55,12 @@ function FragmentMap(props: FragmentMapProps) {
           center={[21.5, 21.5]}
           zoom={4}
           minZoom={4}
-          maxZoom={8}
+          maxZoom={props.maxZoom}
           style={{ width: "100%", height: "100%" }}
           zoomControl={false}
           crs={L.CRS.Simple}
           bounds={bounds}
+          dragging={props.dragging}
         >
           {magitek && mapName == "BSF"
             ? BSFClusterMobs.map((x, index) => {
@@ -140,7 +144,9 @@ function FragmentMap(props: FragmentMapProps) {
               <Popup>First Boss Dal Chest</Popup>
             </Marker>
           ) : null}
-          <MapMarkers fragment={fragment} zone={mapName == "BSF" ? fragments[fragment].BSF : fragments[fragment].Zadnor} farm={props.farm} />
+          {fragment ?
+            <MapMarkers fragment={fragment} zone={mapName == "BSF" ? fragments[fragment].BSF : fragments[fragment].Zadnor} farm={props.farm} /> : null
+          }
           <ImageOverlay url={mapName == "BSF" ? "/Bozja/Farming/Fragment_Map/The Bozjan Southern Front.jpg" : "/Bozja/Farming/Fragment_Map/Zadnor.jpg"} bounds={bounds} />
         </MapContainer>
       </div>

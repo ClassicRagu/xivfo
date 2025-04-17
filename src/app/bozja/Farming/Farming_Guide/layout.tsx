@@ -1,5 +1,4 @@
-import { Link, Typography } from "@mui/material";
-import NextLink from "next/link"
+import { Typography } from "@mui/material";
 
 export default function Home(props: { children: React.ReactNode }) {
   return (
@@ -14,12 +13,13 @@ export default function Home(props: { children: React.ReactNode }) {
         <div
           style={{ padding: "16px", paddingBottom: "0px", borderRadius: "8px", marginLeft: "0px" }}
         >
-          <Typography variant="h3" component="h1" sx={{ mb: 2 }}>
-            Farming Guide (WIP)
+          <Typography variant="h4" component="h1" sx={{ mb: 2 }}>
+            Solo Farming Guide (WIP)
           </Typography>
           <Typography component="p" sx={{ mb: 2 }}>
             Welcome to the farming guide, this is another page that is still a work in progress but the goal of it is to put builds, locations, and weather windows all in one place. <br/>
-            Current functionality expects at least Rank 25 with 4 Rays of Valor due to me wanting to test all builds myself and only have 1 account with less than 10 rays in StQ.
+            All builds expect 0 Haste and have only been tested on 4 and 10 Valor accounts for now. This page will have more options at a later date <br />
+            As a warning this page was not designed with mobile compatibility in mind.
           </Typography>
         </div>
       </div>

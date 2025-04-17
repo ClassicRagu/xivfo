@@ -1,45 +1,40 @@
 "use client";
 import * as React from "react";
 import {
-  Autocomplete,
-  Card,
-  Checkbox,
-  FormControl,
-  FormControlLabel,
-  InputLabel,
-  Link,
-  MenuItem,
-  Select,
-  TextField,
+  Box,
+  FormControl, IconButton,
+  InputLabel, MenuItem,
+  Modal,
+  Select, Tooltip
 } from "@mui/material";
 import "leaflet/dist/leaflet.css";
+import MapIcon from '@mui/icons-material/Map';
 
 import {
-  listActions,
-  actions,
-  fragments,
-  fragmentList,
+  fragments
 } from "@/static/bozja/Farming/Fragment_Map/Actions";
 import { useAtom } from "jotai";
 import { fragmentState } from "@/hooks/bozja/Farming/Fragment_Map/fragmentState";
 import dynamic from "next/dynamic";
 import { magitekState } from "@/hooks/bozja/Farming/Fragment_Map/magitekState";
 import FarmGuideInputs from "@/components/bozja/Farming/Farming_Guide/FarmGuideInputs";
-import { farmingBuildsByValor, roles } from "@/static/bozja/Farming/Farming_Guide/FarmingBuilds";
+import { farmingBuildsByValor } from "@/static/bozja/Farming/Farming_Guide/FarmingBuilds";
 import { Loadout } from "@/components/shared/Loadout";
+import { valorState } from "@/hooks/bozja/Farming/Farming_Guide/valorState";
+import { roleState } from "@/hooks/bozja/Farming/Farming_Guide/roleState";
+import { roleInputState } from "@/hooks/bozja/Farming/Farming_Guide/roleInputState";
 
 const FragmentMap = dynamic(() => import("@/components/bozja/Farming/Fragment_Map/FragmentMap"), {
   ssr: false,
 });
 
 function FragmentLookup() {
-  const [inputValue, setInputValue] = React.useState("");
-  const [fragment, setFragment] = useAtom(fragmentState);
-  const [magitek, setMagitek] = useAtom(magitekState);
-  const [fragmentInputValue, setFragmentInputValue] = React.useState("");
-  const [valor, setValor] = React.useState(0)
-  const [roleValue, setRoleValue] = React.useState(-1)
-  const [role, setRole] = React.useState("")
+  const [fragment] = useAtom(fragmentState);
+  const [magitek] = useAtom(magitekState);
+  const [valor, setValor] = useAtom(valorState)
+  const [roleInput, setRoleInput] = useAtom(roleInputState)
+  const [role, setRole] = useAtom(roleState)
+  const [openState, setOpenState] = React.useState(false)
 
   return (
     <>
@@ -68,38 +63,82 @@ function FragmentLookup() {
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
-                value={roleValue}
+                value={roleInput}
                 label="Role"
                 onChange={(e) => {
                   console.log(e.target.value)
-                  setRole(roles[e.target.value])
-                  setRoleValue(e.target.value)
+                  setRole(Object.keys(fragment != "" ? farmingBuildsByValor[valor - 1][fragments[fragment].FarmType] : farmingBuildsByValor[valor - 1]["Cluster"])[e.target.value as number])
+                  setRoleInput(e.target.value as number)
                 }}
               >
-                {roles.map((x, index) => {
-                  return <MenuItem value={index}>{x}</MenuItem>
+                {Object.keys(fragment != "" ? farmingBuildsByValor[valor - 1][fragments[fragment].FarmType] : farmingBuildsByValor[valor - 1]["Cluster"]).map((x, index) => {
+                  return <MenuItem value={index} key={index}>{x}</MenuItem>
                 })}
               </Select>
             </FormControl>
           </div> : null
         }
+        {role != "" ?
+          <Tooltip title="Show Map" sx={{ margin: "8px" }}>
+            <IconButton
+              aria-label="map"
+              onClick={() => setOpenState(true)}
+            >
+              <MapIcon />
+            </IconButton>
+          </Tooltip>
+          : null
+        }
       </div>
       {role != "" ?
-        <div>
-          <Loadout Action1={farmingBuildsByValor[valor - 1][role].Action1} Action2={farmingBuildsByValor[valor - 1][role].Action2} Essence={farmingBuildsByValor[valor - 1][role].Essence} />
+        <div style={{ marginLeft: "8px" }}>
+          <div style={{ marginBottom: "8px" }}>
+            {fragment != "" ?
+              <Loadout Action1={farmingBuildsByValor[valor - 1][fragments[fragment].FarmType][role].Action1}
+                Action2={farmingBuildsByValor[valor - 1][fragments[fragment].FarmType][role].Action2}
+                Essence={farmingBuildsByValor[valor - 1][fragments[fragment].FarmType][role].Essence} /> :
+              <Loadout Action1={farmingBuildsByValor[valor - 1]["Cluster"][role].Action1}
+                Action2={farmingBuildsByValor[valor - 1]["Cluster"][role].Action2}
+                Essence={farmingBuildsByValor[valor - 1]["Cluster"][role].Essence} />
+            }
+          </div>
+          <div>
+            {fragment != "" ? farmingBuildsByValor[valor - 1][fragments[fragment].FarmType][role].HowTo : 
+            farmingBuildsByValor[valor - 1]["Cluster"][role].HowTo}
+          </div>
         </div> : null
       }
-      {fragment &&
-        (fragments[fragment].BSF ||
-          fragments[fragment].CLL ||
-          fragments[fragment].DR ||
-          fragments[fragment].DRS ||
-          (fragments[fragment].Quartermaster && !fragments[fragment].Zadnor)) ? (
-        <FragmentMap mapName="BSF" farm={true} />
-      ) : null}
-      {fragment && (fragments[fragment].Zadnor || fragments[fragment].Dal) ? (
-        <FragmentMap mapName="Zadnor" farm={true} />
-      ) : null}
+
+      <Modal
+        open={openState}
+        onClose={() => setOpenState(false)}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: "100%",
+            height: "auto",
+            maxWidth: 650,
+          }}
+        >
+          {(magitek || fragment) &&
+            (magitek ||
+              fragments[fragment].BSF ||
+              fragments[fragment].CLL ||
+              fragments[fragment].DR ||
+              fragments[fragment].DRS ||
+              (fragments[fragment].Quartermaster && !fragments[fragment].Zadnor)) ? (
+            <FragmentMap mapName="BSF" farm={true} dragging={false} maxZoom={4} maxWidth={650} />
+          ) : fragment && (fragments[fragment].Zadnor || fragments[fragment].Dal) ? (
+            <FragmentMap mapName="Zadnor" farm={true} dragging={false} maxZoom={4} maxWidth={650} />
+          ) : null}
+        </Box>
+      </Modal>
     </>
   );
 }
