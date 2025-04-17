@@ -17,6 +17,8 @@ import { BSFClusterMobs } from "@/static/bozja/Farming/Fragment_Map/BSFClusterMo
 import { magitekState } from "@/hooks/bozja/Farming/Fragment_Map/magitekState";
 import { MapMarkers } from "./MapMarkers/MapMarkers";
 import { ZadnorClusterMobs } from "@/static/bozja/Farming/Fragment_Map/ZadnorClusterMobs";
+import { guideFragmentState } from "@/hooks/bozja/Farming/Farming_Guide/guideFragmentState";
+import { guideMagitekState } from "@/hooks/bozja/Farming/Farming_Guide/guideMagitekState";
 
 const bounds: LatLngBoundsExpression = [
   [1, 1],
@@ -24,134 +26,133 @@ const bounds: LatLngBoundsExpression = [
 ];
 
 type FragmentMapProps = {
-  mapName: string
+  mapName: string,
+  farm: boolean,
+  dragging: boolean,
+  maxZoom: number,
+  maxWidth: number,
+  guidePage: boolean
 }
 
 function FragmentMap(props: FragmentMapProps) {
-  const {mapName} = props;
-  const [fragment] = useAtom(fragmentState);
-  const [magitek] = useAtom(magitekState);
-
+  const { mapName, guidePage } = props;
+  const [fragment] = useAtom(guidePage ? guideFragmentState : fragmentState)
+  const [magitek] = useAtom(guidePage ? guideMagitekState : magitekState)
   return (
-    <div
+    <Card
+      variant="outlined"
+      sx={{
+        maxWidth: props.maxWidth,
+        width: "100%",
+      }}
       style={{
-        justifyContent: "center",
+        textAlign: "center",
+        display: "flex",
         justifyItems: "center",
-        display:"flex"
+        justifyContent: "center",
       }}
     >
-      <Card
-        variant="outlined"
-        sx={{
-          maxWidth: 800,
-          width: "100%",
-        }}
-        style={{
-          textAlign: "center",
-          display: "flex",
-          justifyItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <div style={{ width: "100%", height: "650px" }} className="App">
-          <MapContainer
-            center={[21.5, 21.5]}
-            zoom={4}
-            minZoom={4}
-            maxZoom={8}
-            style={{ width: "100%", height: "100%" }}
-            zoomControl={false}
-            crs={L.CRS.Simple}
-            bounds={bounds}
-          >
-            {magitek && mapName == "BSF"
-              ? BSFClusterMobs.map((x, index) => {
-                  return (
-                    <Circle
-                      key={`cluster-mob-${index}`}
-                      center={mapXY(x[0], x[1]) as LatLngTuple}
-                      radius={0.06}
-                      color={"grey"}
-                    ></Circle>
-                  );
+      <div style={{ width: "100%", height: "650px" }} className="App">
+        <MapContainer
+          center={[21.5, 21.5]}
+          zoom={4}
+          minZoom={4}
+          maxZoom={props.maxZoom}
+          style={{ width: "100%", height: "100%" }}
+          zoomControl={false}
+          crs={L.CRS.Simple}
+          bounds={bounds}
+          dragging={props.dragging}
+        >
+          {magitek && mapName == "BSF"
+            ? BSFClusterMobs.map((x, index) => {
+              return (
+                <Circle
+                  key={`cluster-mob-${index}`}
+                  center={mapXY(x[0], x[1]) as LatLngTuple}
+                  radius={0.06}
+                  color={"grey"}
+                ></Circle>
+              );
+            })
+            : null}
+          {magitek && mapName == "Zadnor"
+            ? ZadnorClusterMobs.map((x, index) => {
+              return (
+                <Circle
+                  key={`cluster-mob-${index}`}
+                  center={mapXY(x[0], x[1]) as LatLngTuple}
+                  radius={0.06}
+                  color={"grey"}
+                ></Circle>
+              );
+            })
+            : null}
+          {fragment && fragments[fragment].Quartermaster ? (
+            <Marker
+              position={mapXY(14.2, 29.6) as LatLngTuple}
+              icon={
+                new Icon({
+                  iconUrl: "/Bozja/Farming/Fragment_Map/starsmile.png",
+                  iconSize: [41, 41],
+                  iconAnchor: [20, 21],
                 })
-              : null}
-            {magitek && mapName == "Zadnor"
-              ? ZadnorClusterMobs.map((x, index) => {
-                  return (
-                    <Circle
-                      key={`cluster-mob-${index}`}
-                      center={mapXY(x[0], x[1]) as LatLngTuple}
-                      radius={0.06}
-                      color={"grey"}
-                    ></Circle>
-                  );
+              }
+            >
+              <Popup>Resistance Quartermaster</Popup>
+            </Marker>
+          ) : null}
+          {fragment && fragments[fragment].CLL ? (
+            <Marker
+              position={mapXY(18.9, 13.0) as LatLngTuple}
+              icon={
+                new Icon({
+                  iconUrl: "/Bozja/Farming/Fragment_Map/CLL.png",
+                  iconSize: [50, 50],
+                  iconAnchor: [25, 25],
                 })
-              : null}
-            {fragment && fragments[fragment].Quartermaster ? (
-              <Marker
-                position={mapXY(14.2, 29.6) as LatLngTuple}
-                icon={
-                  new Icon({
-                    iconUrl: "/Bozja/Farming/Fragment_Map/starsmile.png",
-                    iconSize: [41, 41],
-                    iconAnchor: [20, 21],
-                  })
-                }
-              >
-                <Popup>Resistance Quartermaster</Popup>
-              </Marker>
-            ) : null}
-            {fragment && fragments[fragment].CLL ? (
-              <Marker
-                position={mapXY(18.9, 13.0) as LatLngTuple}
-                icon={
-                  new Icon({
-                    iconUrl: "/Bozja/Farming/Fragment_Map/CLL.png",
-                    iconSize: [50, 50],
-                    iconAnchor: [25, 25],
-                  })
-                }
-              >
-                <Popup>CLL Prisoner Chests</Popup>
-              </Marker>
-            ) : null}
-            {fragment && (fragments[fragment].DR || fragments[fragment].DRS) ? (
-              <Marker
-                position={mapXY(12.5, 32.1) as LatLngTuple}
-                icon={
-                  new Icon({
-                    iconUrl: "/Bozja/Farming/Fragment_Map/Save The Queen.png",
-                    iconSize: [34, 34],
-                    iconAnchor: [17, 17],
-                  })
-                }
-              >
-                <Popup>
-                  Delubrum Reginae {fragments[fragment].DRS ? "(Savage)" : null}
-                </Popup>
-              </Marker>
-            ) : null}
-            {fragment && fragments[fragment].Dal ? (
-              <Marker
-                position={mapXY(25.9, 8.2) as LatLngTuple}
-                icon={
-                  new Icon({
-                    iconUrl: "/Bozja/Farming/Fragment_Map/CLL.png",
-                    iconSize: [50, 50],
-                    iconAnchor: [25, 25],
-                  })
-                }
-              >
-                <Popup>First Boss Dal Chest</Popup>
-              </Marker>
-            ) : null}
-            <MapMarkers fragment={fragment} zone={mapName == "BSF" ? fragments[fragment].BSF : fragments[fragment].Zadnor} />
-            <ImageOverlay url={mapName == "BSF" ? "/Bozja/Farming/Fragment_Map/The Bozjan Southern Front.jpg" : "/Bozja/Farming/Fragment_Map/Zadnor.jpg"} bounds={bounds} />
-          </MapContainer>
-        </div>
-      </Card>
-    </div>
+              }
+            >
+              <Popup>CLL Prisoner Chests</Popup>
+            </Marker>
+          ) : null}
+          {fragment && (fragments[fragment].DR || fragments[fragment].DRS) ? (
+            <Marker
+              position={mapXY(12.5, 32.1) as LatLngTuple}
+              icon={
+                new Icon({
+                  iconUrl: "/Bozja/Farming/Fragment_Map/Save The Queen.png",
+                  iconSize: [34, 34],
+                  iconAnchor: [17, 17],
+                })
+              }
+            >
+              <Popup>
+                Delubrum Reginae {fragments[fragment].DRS ? "(Savage)" : null}
+              </Popup>
+            </Marker>
+          ) : null}
+          {fragment && fragments[fragment].Dal ? (
+            <Marker
+              position={mapXY(25.9, 8.2) as LatLngTuple}
+              icon={
+                new Icon({
+                  iconUrl: "/Bozja/Farming/Fragment_Map/CLL.png",
+                  iconSize: [50, 50],
+                  iconAnchor: [25, 25],
+                })
+              }
+            >
+              <Popup>First Boss Dal Chest</Popup>
+            </Marker>
+          ) : null}
+          {fragment ?
+            <MapMarkers fragment={fragment} zone={mapName == "BSF" ? fragments[fragment].BSF : fragments[fragment].Zadnor} farm={props.farm} /> : null
+          }
+          <ImageOverlay url={mapName == "BSF" ? "/Bozja/Farming/Fragment_Map/The Bozjan Southern Front.jpg" : "/Bozja/Farming/Fragment_Map/Zadnor.jpg"} bounds={bounds} />
+        </MapContainer>
+      </div>
+    </Card>
   );
 }
 

@@ -26,10 +26,6 @@ const FragmentMap = dynamic(() => import("@/components/bozja/Farming/Fragment_Ma
   ssr: false,
 });
 
-// This map pages will need to be moved to TS eventually. I'm leaving them
-// on JS for the initial release as there are a far more changes to be
-// made than the other files
-
 function FragmentLookup() {
   const [inputValue, setInputValue] = React.useState("");
   const [fragment, setFragment] = useAtom(fragmentState);
@@ -141,17 +137,33 @@ function FragmentLookup() {
           </Card>
         </div>
       }
-      {fragment &&
-      (fragments[fragment].BSF ||
-        fragments[fragment].CLL ||
-        fragments[fragment].DR ||
-        fragments[fragment].DRS ||
-        (fragments[fragment].Quartermaster && !fragments[fragment].Zadnor)) ? (
-        <FragmentMap mapName="BSF" />
-      ) : null}
-      {fragment && (fragments[fragment].Zadnor || fragments[fragment].Dal) ? (
-        <FragmentMap mapName="Zadnor" />
-      ) : null}
+      <div
+        style={{
+          justifyContent: "center",
+          justifyItems: "center",
+          display: "flex"
+        }}
+      >
+        {fragment &&
+          (fragments[fragment].BSF ||
+            fragments[fragment].CLL ||
+            fragments[fragment].DR ||
+            fragments[fragment].DRS ||
+            (fragments[fragment].Quartermaster && !fragments[fragment].Zadnor)) ? (
+          <FragmentMap mapName="BSF" farm={false} dragging={true} maxZoom={8} maxWidth={800} guidePage={false}/>
+        ) : null}
+      </div>
+      <div
+        style={{
+          justifyContent: "center",
+          justifyItems: "center",
+          display: "flex"
+        }}
+      >
+        {fragment && (fragments[fragment].Zadnor || fragments[fragment].Dal) ? (
+          <FragmentMap mapName="Zadnor" farm={false} dragging={true} maxZoom={8} maxWidth={800} guidePage={false}/>
+        ) : null}
+      </div>
       <div
         style={{
           display: "flex",

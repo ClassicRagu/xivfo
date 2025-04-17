@@ -4,6 +4,7 @@ import NextLink from "next/link";
 const routes = [
   { name: "Fragment Map", route: "/bozja/Farming" },
   { name: "Farming Weather", route: "/bozja/Farming/Farming_Windows/Bozjan%20Southern%20Front/Care" },
+  { name: "Solo Farming Guide (WIP)", route: "/bozja/Farming/Farming_Guide"}
 ];
 
 export default function Home(props: { children: React.ReactNode }) {

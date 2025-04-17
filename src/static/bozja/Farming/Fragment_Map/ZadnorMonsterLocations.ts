@@ -91,6 +91,7 @@ export const zadnorMonsterLocations = {
           [18.2, 33.9],
           [17.6, 34.6],
         ],
+        Farm: true
       },
     ],
     Ashkin: [
@@ -207,6 +208,7 @@ export const zadnorMonsterLocations = {
           [15.5, 37.4],
         ],
         additionalInfo: "Wind only",
+        Farm: true
       },
       {
         Monster: "Wind Sprite 1",
@@ -220,6 +222,7 @@ export const zadnorMonsterLocations = {
           [15.3, 35.5],
         ],
         additionalInfo: "Wind only",
+        Farm: true
       },
     ],
     Star: [
@@ -227,16 +230,19 @@ export const zadnorMonsterLocations = {
         Monster: "Vinegaroon Executioner",
         Level: "Star",
         Location: [32.0, 30.7],
+        Farm: true
       },
       {
         Monster: "Anancus",
         Level: "Star",
         Location: [24.4, 28.7],
+        Farm: true
       },
       {
         Monster: "Stratogryph",
         Level: "Star",
         Location: [17.2, 38.7],
+        Farm: true
       },
     ],
   },
@@ -325,6 +331,7 @@ export const zadnorMonsterLocations = {
           [6.4, 31.1],
           [6.4, 31.6],
         ],
+        Farm: true
       },
       {
         Monster: "Zadnor Sasquatch",
@@ -475,6 +482,7 @@ export const zadnorMonsterLocations = {
           [8.6, 30.8],
         ],
         additionalInfo: "Thunder only",
+        Farm: true
       },
       {
         Monster: "Water Sprite",
@@ -490,6 +498,7 @@ export const zadnorMonsterLocations = {
           [4.8, 22.9],
         ],
         additionalInfo: "Rain only",
+        Farm: true
       },
     ],
     Star: [
@@ -622,6 +631,7 @@ export const zadnorMonsterLocations = {
           [22.6, 13.9],
           [22.8, 13.8],
         ],
+        Farm: true
       },
       {
         Monster: "Zadnor Wamoura 1",
@@ -641,6 +651,7 @@ export const zadnorMonsterLocations = {
           [22.2, 12.2],
           [22.7, 12.2],
         ],
+        Farm: true
       },
       {
         Monster: "Zadnor Harpy",
@@ -737,6 +748,7 @@ export const zadnorMonsterLocations = {
           [14.3, 14.9],
         ],
         additionalInfo: "Night only",
+        Farm: true
       },
       {
         Monster: "Zadnor Haunt",
@@ -835,6 +847,7 @@ export const zadnorMonsterLocations = {
           [22.3, 17.1],
         ],
         additionalInfo: "Snow only",
+        Farm: true
       },
     ],
     Star: [
@@ -842,16 +855,19 @@ export const zadnorMonsterLocations = {
         Monster: "Glyptodon",
         Level: "Star",
         Location: [12.1, 15.5],
+        Farm: true
       },
       {
         Monster: "Molten Scorpion",
         Level: "Star",
         Location: [19.9, 18.8],
+        Farm: true
       },
       {
         Monster: "Vapula",
         Level: "Star",
         Location: [20.8, 10.9],
+        Farm: true
       },
     ],
   },

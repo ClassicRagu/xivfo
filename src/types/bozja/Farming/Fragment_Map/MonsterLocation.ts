@@ -5,4 +5,5 @@ export type MonsterLocation = {
   Location?: number[];
   radius?: number;
   additionalInfo?: string;
+  Farm?: boolean
 };
