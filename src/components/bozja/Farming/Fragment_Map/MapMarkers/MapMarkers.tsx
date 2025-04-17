@@ -7,6 +7,7 @@ import { Circle, Marker, Polygon, Popup } from "react-leaflet";
 type MapMarkerProps = {
   fragment: string
   zone: MonsterLocation[][] | undefined
+  farm: boolean
 }
 
 export function MapMarkers(props: MapMarkerProps) {
@@ -17,7 +18,7 @@ export function MapMarkers(props: MapMarkerProps) {
     if (zone)
     zone.forEach((locations, index) => {
       locations.forEach((monster) => {
-        if (monster.Level === "Star" && monster.Location) {
+        if (monster.Level === "Star" && monster.Location && (!props.farm || (props.farm && monster.Farm))) {
           tmp.push(
             <Marker
               key={`${monster.Monster}-${index}`}
@@ -35,7 +36,7 @@ export function MapMarkers(props: MapMarkerProps) {
               </Popup>
             </Marker>
           );
-        } else if (monster) {
+        } else if (monster && (!props.farm || (props.farm && monster.Farm))) {
           if (monster.Positions) {
             const positions = monster.Positions.map((x) => {
               return mapXY(x[0], x[1]);

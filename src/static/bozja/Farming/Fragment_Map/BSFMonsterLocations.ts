@@ -56,6 +56,7 @@ export const bsfMonsterLocations = {
           [32.3, 27.4],
           [31.8, 27.9],
         ],
+        Farm: true
       },
     ],
     Ashkin: [
@@ -151,6 +152,7 @@ export const bsfMonsterLocations = {
           [33.5, 27.7],
         ],
         additionalInfo: "Thunderstorm only",
+        Farm: true
       },
     ],
     Star: [
@@ -163,11 +165,13 @@ export const bsfMonsterLocations = {
         Monster: "Fern Flower",
         Level: "Star",
         Location: [25.9, 25.1],
+        Farm: true
       },
       {
         Monster: "Ink Claw",
         Level: "Star",
         Location: [35.1, 27.7],
+        Farm: true
       },
     ],
   },
@@ -231,6 +235,7 @@ export const bsfMonsterLocations = {
           [25.2, 21.2],
           [25.3, 20.6],
         ],
+        Farm: true
       },
       {
         Monster: "Bozjan Antlion",
@@ -245,6 +250,7 @@ export const bsfMonsterLocations = {
           [24.0, 19.9],
           [24.1, 20.6],
         ],
+        Farm: true
       },
       {
         Monster: "Bozjan Bandersnatch",
@@ -360,6 +366,7 @@ export const bsfMonsterLocations = {
           [21.0, 21.1],
         ],
         additionalInfo: "Gales only",
+        Farm: true
       },
       {
         Monster: "Earth Sprite",
@@ -374,6 +381,7 @@ export const bsfMonsterLocations = {
           [15.6, 20.9],
         ],
         additionalInfo: "Dust Storm only",
+        Farm: true
       },
     ],
     Star: [
@@ -381,16 +389,19 @@ export const bsfMonsterLocations = {
         Monster: "Viy",
         Level: "Star",
         Location: [28.6, 19.9],
+        Farm: true
       },
       {
         Monster: "Psoglav",
         Level: "Star",
         Location: [32.9, 18.2],
+        Farm: true
       },
       {
         Monster: "Smok",
         Level: "Star",
         Location: [15.2, 22.2],
+        Farm: true
       },
     ],
   },
@@ -432,6 +443,7 @@ export const bsfMonsterLocations = {
           [10.2, 17.6],
           [9.8, 17.6],
         ],
+        Farm: true
       },
       {
         Monster: "Bozjan Phobosuchus",
@@ -463,6 +475,7 @@ export const bsfMonsterLocations = {
           [12.5, 17.0],
           [11.7, 17.1],
         ],
+        Farm: true
       },
       {
         Monster: "Bozjan Monitor",
@@ -476,6 +489,7 @@ export const bsfMonsterLocations = {
           [18.7, 14.9],
           [19.3, 14.9],
         ],
+        Farm: true
       },
       {
         Monster: "Bozjan Snake",
@@ -562,6 +576,7 @@ export const bsfMonsterLocations = {
           [18.7, 16.8],
         ],
         additionalInfo: "Night only",
+        Farm: true
       },
       {
         Monster: "Bozjan Rider",
@@ -579,6 +594,7 @@ export const bsfMonsterLocations = {
         ],
         radius: 6000,
         additionalInfo: "Night only",
+        Farm: true
       },
     ],
     Sprites: [
@@ -639,6 +655,7 @@ export const bsfMonsterLocations = {
           [23.2, 17.4],
         ],
         additionalInfo: "Gales only",
+        Farm: true
       },
     ],
     Star: [
@@ -646,16 +663,19 @@ export const bsfMonsterLocations = {
         Monster: "Bird of Barathrum",
         Level: "Star",
         Location: [24.1, 12.8],
+        Farm: true
       },
       {
         Monster: "Clingy Claire",
         Level: "Star",
         Location: [17.5, 17.7],
+        Farm: true
       },
       {
         Monster: "Patty",
         Level: "Star",
         Location: [8.6, 18.2],
+        Farm: true
       },
     ],
   },
