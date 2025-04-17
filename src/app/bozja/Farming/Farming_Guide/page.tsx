@@ -23,8 +23,7 @@ import { Loadout } from "@/components/shared/Loadout";
 import { valorState } from "@/hooks/bozja/Farming/Farming_Guide/valorState";
 import { roleState } from "@/hooks/bozja/Farming/Farming_Guide/roleState";
 import { roleInputState } from "@/hooks/bozja/Farming/Farming_Guide/roleInputState";
-import { findNextWeatherWindow } from "@/functions/bozja/Farming/Farming_Guide/findNextWeatherWindow";
-import { ZONE_BOZJAN_SOUTHERN_FRONT, ZONE_ZADNOR } from "xivweather";
+import { findNextWeatherWindow, ZONE_BOZJAN_SOUTHERN_FRONT, ZONE_ZADNOR } from "xivweather";
 import Image from "next/image";
 
 const FragmentMap = dynamic(() => import("@/components/bozja/Farming/Fragment_Map/FragmentMap"), {
