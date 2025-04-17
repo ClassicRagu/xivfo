@@ -8,10 +8,10 @@ import {
 import "leaflet/dist/leaflet.css";
 
 import {
-  actions
+  actions, listActions
 } from "@/static/bozja/Farming/Fragment_Map/Actions";
 import { useAtom } from "jotai";
-import { limitedActionList, limitedFragmentList } from "@/static/bozja/Farming/Farming_Guide/LimitedLists";
+import { limitedFragmentList } from "@/static/bozja/Farming/Farming_Guide/LimitedLists";
 import { roleState } from "@/hooks/bozja/Farming/Farming_Guide/roleState";
 import { valorState } from "@/hooks/bozja/Farming/Farming_Guide/valorState";
 import { roleInputState } from "@/hooks/bozja/Farming/Farming_Guide/roleInputState";
@@ -61,7 +61,7 @@ function FarmGuideInputs() {
             }}
             disablePortal
             id="combo-box-demo"
-            options={limitedActionList}
+            options={listActions}
             style={{
               float: "left",
             }}

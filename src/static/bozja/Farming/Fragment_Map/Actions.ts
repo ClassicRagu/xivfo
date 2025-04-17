@@ -600,66 +600,76 @@ export const fragmentList = [
 
 export const fragments: { [key: string]: Fragments } = {
   Skill: { 
-    FarmType: "Normal", 
+    FarmType: "Normal",
+    IsStandardFarm: true, 
     BSF: [bsfMonsterLocations.Zone1.Normal] 
   },
   Awakening: { 
     FarmType: "Normal",
+    IsStandardFarm: true,
     BSF: [bsfMonsterLocations.Zone2.Normal] 
   },
   Compassion: {
     FarmType: "Normal",
+    IsStandardFarm: true,
     BSF: [bsfMonsterLocations.Zone3.Normal],
     Zadnor: [zadnorMonsterLocations.Zone3.Normal5],
   },
   Care: {
     FarmType: "Sprite",
+    IsStandardFarm: true,
     BSFWeather: ["Wind", "Dust Storms"],
     BSF: [bsfMonsterLocations.Zone2.Ashkin, bsfMonsterLocations.Zone2.Sprites],
     Zadnor: [zadnorMonsterLocations.Zone2.Ashkin],
   },
   Caution: { 
     FarmType: "Star",
+    IsStandardFarm: true,
     Quartermaster: true, 
     BSF: [bsfMonsterLocations.Zone1.Star] },
   Support: {
     FarmType: "Sprite",
+    IsStandardFarm: true,
     BSFWeather: ["Wind"],
     BSF: [bsfMonsterLocations.Zone3.Sprites],
     Zadnor: [zadnorMonsterLocations.Zone3.Sprites],
   },
   Violence: {
     FarmType: "Star",
+    IsStandardFarm: true,
     BSF: [bsfMonsterLocations.Zone3.Ashkin, bsfMonsterLocations.Zone3.Star],
   },
   Preparation: {
     FarmType: "Sprite",
+    IsStandardFarm: true,
     BSFWeather: ["Thunder"],
     BSF: [bsfMonsterLocations.Zone1.Ashkin, bsfMonsterLocations.Zone1.Sprites],
     Zadnor: [zadnorMonsterLocations.Zone1.Ashkin],
   },
   Ingenuity: { 
     FarmType: "Star",
+    IsStandardFarm: true,
     Quartermaster: true, 
     BSF: [bsfMonsterLocations.Zone2.Star] },
-  Resolve: { FarmType: "CE", BSF: [bsfResolveCEs] },
-  Mastery: { FarmType: "CLL", CLL: true },
-  Sagacity: { FarmType: "CLL", CLL: true },
-  Superstition: { FarmType: "CLL", CLL: true },
-  Transcendence: { FarmType: "CLL", CLL: true },
-  Becoming: { FarmType: "CLL", CLL: true },
-  Caprice: { FarmType: "CLL", CLL: true },
-  Clarity: { FarmType: "Cluster", DR: true, Quartermaster: true },
-  Contention: { FarmType: "Cluster", DR: true, Quartermaster: true },
-  Deception: { FarmType: "DRS", DRS: true },
-  Divinity: { FarmType: "Cluster", DR: true, Quartermaster: true },
-  Finesse: { FarmType: "Cluster", DR: true, Quartermaster: true },
-  Fortitude: { FarmType: "Cluster", DR: true, Quartermaster: true },
-  Loss: { FarmType: "DR", DR: true },
-  Observation: { FarmType: "Cluster", DR: true, Quartermaster: true },
-  Hope: { FarmType: "Cluster", Quartermaster: true },
-  Moonlight: { FarmType: "Normal", Zadnor: [zadnorMonsterLocations.Zone2.Normal] },
+  Resolve: { FarmType: "CE", IsStandardFarm: false, BSF: [bsfResolveCEs] },
+  Mastery: { FarmType: "CLL", IsStandardFarm: false, CLL: true },
+  Sagacity: { FarmType: "CLL", IsStandardFarm: false, CLL: true },
+  Superstition: { FarmType: "CLL", IsStandardFarm: false, CLL: true },
+  Transcendence: { FarmType: "CLL", IsStandardFarm: false, CLL: true },
+  Becoming: { FarmType: "CLL", IsStandardFarm: false, CLL: true },
+  Caprice: { FarmType: "CLL", IsStandardFarm: false, CLL: true },
+  Clarity: { FarmType: "Cluster", IsStandardFarm: true, DR: true, Quartermaster: true },
+  Contention: { FarmType: "Cluster", IsStandardFarm: true, DR: true, Quartermaster: true },
+  Deception: { FarmType: "DRS", IsStandardFarm: false, DRS: true },
+  Divinity: { FarmType: "Cluster", IsStandardFarm: true, DR: true, Quartermaster: true },
+  Finesse: { FarmType: "Cluster", IsStandardFarm: true, DR: true, Quartermaster: true },
+  Fortitude: { FarmType: "Cluster", IsStandardFarm: true, DR: true, Quartermaster: true },
+  Loss: { FarmType: "DR", IsStandardFarm: false, DR: true },
+  Observation: { FarmType: "Cluster", IsStandardFarm: true, DR: true, Quartermaster: true },
+  Hope: { FarmType: "Cluster", IsStandardFarm: true, Quartermaster: true },
+  Moonlight: { FarmType: "Normal", IsStandardFarm: true, Zadnor: [zadnorMonsterLocations.Zone2.Normal] },
   Rage: {
+    IsStandardFarm: true,
     FarmType: "Normal",
     Zadnor: [
       zadnorMonsterLocations.Zone1.NormalRage,
@@ -668,15 +678,17 @@ export const fragments: { [key: string]: Fragments } = {
   },
   Ferocity: {
     FarmType: "Normal",
+    IsStandardFarm: true,
     Zadnor: [
       zadnorMonsterLocations.Zone1.NormalFerocity,
       zadnorMonsterLocations.Zone1.NormalBoth,
     ],
   },
-  Desperation: { FarmType: "Normal", Zadnor: [zadnorMonsterLocations.Zone3.Normal] },
-  Tenacity: { FarmType: "CE", Zadnor: [zadnorTenacityCEs] },
+  Desperation: { FarmType: "Normal", IsStandardFarm: true, Zadnor: [zadnorMonsterLocations.Zone3.Normal] },
+  Tenacity: { FarmType: "CE", IsStandardFarm: false, Zadnor: [zadnorTenacityCEs] },
   History: {
     FarmType: "Sprite",
+    IsStandardFarm: true,
     ZadnorWeather: ["Wind"],
     Zadnor: [
       zadnorMonsterLocations.Zone1.Sprites,
@@ -685,6 +697,7 @@ export const fragments: { [key: string]: Fragments } = {
   },
   Inspiration: {
     FarmType: "Star",
+    IsStandardFarm: true,
     Zadnor: [
       zadnorMonsterLocations.Zone3.Ashkin,
       zadnorMonsterLocations.Zone3.Star,
@@ -692,17 +705,19 @@ export const fragments: { [key: string]: Fragments } = {
   },
   Artistry: {
     FarmType: "Sprite",
+    IsStandardFarm: true,
     ZadnorWeather: ["Rain", "Thunder"],
     Zadnor: [
       zadnorMonsterLocations.Zone2.Sprites,
       zadnorMonsterLocations.Zone2.Star,
     ],
   },
-  Heroism: { FarmType: "Dal", Dal: true },
-  Cunning: { FarmType: "Dal", Dal: true },
-  Revelation: { FarmType: "Dal", Dal: true },
+  Heroism: { FarmType: "Dal", IsStandardFarm: false, Dal: true },
+  Cunning: { FarmType: "Dal", IsStandardFarm: false, Dal: true },
+  Revelation: { FarmType: "Dal", IsStandardFarm: false, Dal: true },
   All_BSF: {
     FarmType: "",
+    IsStandardFarm: false,
     Quartermaster: true,
     CLL: true,
     BSF: [
@@ -723,6 +738,7 @@ export const fragments: { [key: string]: Fragments } = {
   },
   All_Zadnor: {
     FarmType: "",
+    IsStandardFarm: false,
     Dal: true,
     Zadnor: [
       zadnorMonsterLocations.Zone1.NormalRage,

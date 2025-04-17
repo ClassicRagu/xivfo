@@ -42,7 +42,7 @@ function FragmentLookup() {
     <>
       <FarmGuideInputs />
       <div style={{ display: "flex" }}>
-        {magitek || fragment != "" ?
+        {magitek || (fragment != "" && fragments[fragment].IsStandardFarm) ?
           <div style={{ display: "flex", margin: "8px" }}>
             <FormControl sx={{ width: "100px" }}>
               <InputLabel>Rays of Valor</InputLabel>
@@ -80,7 +80,7 @@ function FragmentLookup() {
             </FormControl>
           </div> : null
         }
-        {role != "" ?
+        {role != "" || (fragment && !fragments[fragment].IsStandardFarm) ?
           <Tooltip title="Show Map" sx={{ margin: "8px" }}>
             <IconButton
               aria-label="map"
@@ -138,7 +138,11 @@ function FragmentLookup() {
           </div>
         </div> : null
       }
-
+      {fragment && !fragments[fragment].IsStandardFarm ?
+      <div style={{margin: "8px"}}>
+        This fragment is not farmable. It is obtained via {fragments[fragment].FarmType}.
+      </div> : null
+      }
       <Modal
         open={openState}
         onClose={() => setOpenState(false)}

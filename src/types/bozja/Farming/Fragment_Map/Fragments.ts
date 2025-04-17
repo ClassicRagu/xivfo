@@ -12,5 +12,6 @@ export type Fragments = {
   FarmType: string
   BSFWeather?: AllowedWeathers[]
   ZadnorWeather?: AllowedWeathers[]
+  IsStandardFarm: boolean
 };
 

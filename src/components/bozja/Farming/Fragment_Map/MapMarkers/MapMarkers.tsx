@@ -36,8 +36,8 @@ export function MapMarkers(props: MapMarkerProps) {
               </Popup>
             </Marker>
           );
-        } else if (monster && (!props.farm || (props.farm && monster.Farm))) {
-          if (monster.Positions) {
+        } else if (monster) {
+          if (monster.Positions && (!props.farm || (props.farm && monster.Farm))) {
             const positions = monster.Positions.map((x) => {
               return mapXY(x[0], x[1]);
             });
