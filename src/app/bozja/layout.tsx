@@ -25,7 +25,8 @@ export default function PersistentDrawerLeft(props: {
       name: "Farming",
       contents: [
         { name: "Fragment Map", url: "/bozja/Farming" },
-        { name: "Farming Weather", url: "/bozja/Farming/Farming_Windows/Bozjan Southern Front/Care"}
+        { name: "Farming Weather", url: "/bozja/Farming/Farming_Windows/Bozjan Southern Front/Care"},
+        { name: "Solo Farming Guide (WIP)", url: "/bozja/Farming/Farming_Guide"}
       ],
     },
     {
