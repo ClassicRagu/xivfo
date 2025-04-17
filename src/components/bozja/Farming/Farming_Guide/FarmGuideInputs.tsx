@@ -35,7 +35,8 @@ function FarmGuideInputs() {
 
   return (
     <div style={{
-      display: "flex"
+      display: "flex",
+      flexWrap: "wrap"
     }}>
       {!magitek ?
         <>
@@ -65,7 +66,7 @@ function FarmGuideInputs() {
             style={{
               float: "left",
             }}
-            sx={{ m: 1, minWidth: 350 }}
+            sx={{ m: 1, minWidth: 350, display:"flex" }}
             renderInput={(params) => (
               <TextField {...params} label="Action/Essence/Item" />
             )}
@@ -87,7 +88,7 @@ function FarmGuideInputs() {
             style={{
               float: "left",
             }}
-            sx={{ m: 1, minWidth: 275 }}
+            sx={{ m: 1, minWidth: 275, display:"flex" }}
             renderInput={(params) => (
               <TextField {...params} label="Fragment" />
             )}
@@ -99,6 +100,7 @@ function FarmGuideInputs() {
             alignItems: "left",
             verticalAlign: "middle",
             paddingTop: "5px",
+            display:"flex"
           }}
           control={
             <Checkbox

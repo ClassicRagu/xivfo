@@ -1,8 +1,7 @@
 "use client";
 import * as React from "react";
 import {
-  Box,
-  FormControl, IconButton,
+  Box, FormControl, IconButton,
   InputLabel, MenuItem,
   Modal,
   Select, Tooltip
@@ -41,7 +40,7 @@ function FragmentLookup() {
   return (
     <>
       <FarmGuideInputs />
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex", flexWrap: "wrap" }}>
         {magitek || (fragment != "" && fragments[fragment].IsStandardFarm) ?
           <div style={{ display: "flex", margin: "8px" }}>
             <FormControl sx={{ width: "100px" }}>
@@ -92,32 +91,32 @@ function FragmentLookup() {
           : null
         }
         {role != "" && fragment != "" && fragments[fragment].BSFWeather ?
-            findNextWeatherWindow(new Date(), ZONE_BOZJAN_SOUTHERN_FRONT, fragments[fragment].BSFWeather).map((x) => {
-              return <div style={{ display: "flex", margin: "8px", alignItems: "center" }} key={x.weathers[0]}>
-                <p style={{marginRight: "2px"}}>Next BSF Weather:</p>
-                <Image
-                  width={22}
-                  height={22}
-                  alt={`${x.weathers[0]} weather image`}
-                  src={`/weathericons/${x.weathers[0]}.png`}
-                />
-                <p>{x.startTime < new Date() ? "Active Now" : x.startTime.toLocaleTimeString()}</p>
-              </div>
-            }) : null
+          findNextWeatherWindow(new Date(), ZONE_BOZJAN_SOUTHERN_FRONT, fragments[fragment].BSFWeather).map((x) => {
+            return <div style={{ display: "flex", margin: "8px", alignItems: "center" }} key={x.weathers[0]}>
+              <p style={{ marginRight: "2px" }}>Next BSF Weather:</p>
+              <Image
+                width={22}
+                height={22}
+                alt={`${x.weathers[0]} weather image`}
+                src={`/weathericons/${x.weathers[0]}.png`}
+              />
+              <p>{x.startTime < new Date() ? "Active Now" : x.startTime.toLocaleTimeString()}</p>
+            </div>
+          }) : null
         }
         {role != "" && fragment != "" && fragments[fragment].ZadnorWeather ?
-            findNextWeatherWindow(new Date(), ZONE_ZADNOR, fragments[fragment].ZadnorWeather).map((x) => {
-              return <div style={{ display: "flex", margin: "8px", alignItems: "center" }} key={x.weathers[0]}>
-                <p style={{marginRight: "2px"}}>Next Zadnor Weather:</p>
-                <Image
-                  width={22}
-                  height={22}
-                  alt={`${x.weathers[0]} weather image`}
-                  src={`/weathericons/${x.weathers[0]}.png`}
-                />
-                <p style={{marginLeft: "8px"}}>{x.startTime < new Date() ? "Active Now" : x.startTime.toLocaleTimeString()}</p>
-              </div>
-            }) : null
+          findNextWeatherWindow(new Date(), ZONE_ZADNOR, fragments[fragment].ZadnorWeather).map((x) => {
+            return <div style={{ display: "flex", margin: "8px", alignItems: "center" }} key={x.weathers[0]}>
+              <p style={{ marginRight: "2px" }}>Next Zadnor Weather:</p>
+              <Image
+                width={22}
+                height={22}
+                alt={`${x.weathers[0]} weather image`}
+                src={`/weathericons/${x.weathers[0]}.png`}
+              />
+              <p style={{ marginLeft: "8px" }}>{x.startTime < new Date() ? "Active Now" : x.startTime.toLocaleTimeString()}</p>
+            </div>
+          }) : null
         }
       </div>
       {role != "" ?
@@ -139,10 +138,14 @@ function FragmentLookup() {
         </div> : null
       }
       {fragment && !fragments[fragment].IsStandardFarm ?
-      <div style={{margin: "8px"}}>
-        This fragment is not farmable. It is obtained via {fragments[fragment].FarmType}.
-      </div> : null
+        <div style={{ margin: "8px" }}>
+          This fragment is not farmable. It is obtained via {fragments[fragment].FarmType}.
+        </div> : null
       }
+      {role && fragment != "" && farmingBuildsByValor[valor - 1][fragments[fragment].FarmType][role].VideoURL != "" ?
+      <iframe width="560" height="315" src={`https://www.youtube.com/embed/${farmingBuildsByValor[valor - 1][fragments[fragment].FarmType][role].VideoURL}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe> : null
+      }
+      
       <Modal
         open={openState}
         onClose={() => setOpenState(false)}
@@ -167,9 +170,9 @@ function FragmentLookup() {
               fragments[fragment].DR ||
               fragments[fragment].DRS ||
               (fragments[fragment].Quartermaster && !fragments[fragment].Zadnor)) ? (
-            <FragmentMap mapName="BSF" farm={true} dragging={false} maxZoom={4} maxWidth={650} guidePage={true}/>
+            <FragmentMap mapName="BSF" farm={true} dragging={false} maxZoom={4} maxWidth={650} guidePage={true} />
           ) : fragment && (fragments[fragment].Zadnor || fragments[fragment].Dal) ? (
-            <FragmentMap mapName="Zadnor" farm={true} dragging={false} maxZoom={4} maxWidth={650} guidePage={true}/>
+            <FragmentMap mapName="Zadnor" farm={true} dragging={false} maxZoom={4} maxWidth={650} guidePage={true} />
           ) : null}
         </Box>
       </Modal>
