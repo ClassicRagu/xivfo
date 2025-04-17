@@ -17,6 +17,8 @@ import { BSFClusterMobs } from "@/static/bozja/Farming/Fragment_Map/BSFClusterMo
 import { magitekState } from "@/hooks/bozja/Farming/Fragment_Map/magitekState";
 import { MapMarkers } from "./MapMarkers/MapMarkers";
 import { ZadnorClusterMobs } from "@/static/bozja/Farming/Fragment_Map/ZadnorClusterMobs";
+import { guideFragmentState } from "@/hooks/bozja/Farming/Farming_Guide/guideFragmentState";
+import { guideMagitekState } from "@/hooks/bozja/Farming/Farming_Guide/guideMagitekState";
 
 const bounds: LatLngBoundsExpression = [
   [1, 1],
@@ -28,14 +30,14 @@ type FragmentMapProps = {
   farm: boolean,
   dragging: boolean,
   maxZoom: number,
-  maxWidth: number
+  maxWidth: number,
+  guidePage: boolean
 }
 
 function FragmentMap(props: FragmentMapProps) {
-  const { mapName } = props;
-  const [fragment] = useAtom(fragmentState);
-  const [magitek] = useAtom(magitekState);
-
+  const { mapName, guidePage } = props;
+  const [fragment] = useAtom(guidePage ? guideFragmentState : fragmentState)
+  const [magitek] = useAtom(guidePage ? guideMagitekState : magitekState)
   return (
     <Card
       variant="outlined"

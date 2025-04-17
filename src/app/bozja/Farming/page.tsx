@@ -150,7 +150,7 @@ function FragmentLookup() {
             fragments[fragment].DR ||
             fragments[fragment].DRS ||
             (fragments[fragment].Quartermaster && !fragments[fragment].Zadnor)) ? (
-          <FragmentMap mapName="BSF" farm={false} dragging={true} maxZoom={8} maxWidth={800}/>
+          <FragmentMap mapName="BSF" farm={false} dragging={true} maxZoom={8} maxWidth={800} guidePage={false}/>
         ) : null}
       </div>
       <div
@@ -161,7 +161,7 @@ function FragmentLookup() {
         }}
       >
         {fragment && (fragments[fragment].Zadnor || fragments[fragment].Dal) ? (
-          <FragmentMap mapName="Zadnor" farm={false} dragging={true} maxZoom={8} maxWidth={800}/>
+          <FragmentMap mapName="Zadnor" farm={false} dragging={true} maxZoom={8} maxWidth={800} guidePage={false}/>
         ) : null}
       </div>
       <div

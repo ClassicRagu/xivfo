@@ -11,17 +11,17 @@ import {
   actions
 } from "@/static/bozja/Farming/Fragment_Map/Actions";
 import { useAtom } from "jotai";
-import { fragmentState } from "@/hooks/bozja/Farming/Fragment_Map/fragmentState";
-import { magitekState } from "@/hooks/bozja/Farming/Fragment_Map/magitekState";
 import { limitedActionList, limitedFragmentList } from "@/static/bozja/Farming/Farming_Guide/LimitedLists";
 import { roleState } from "@/hooks/bozja/Farming/Farming_Guide/roleState";
 import { valorState } from "@/hooks/bozja/Farming/Farming_Guide/valorState";
 import { roleInputState } from "@/hooks/bozja/Farming/Farming_Guide/roleInputState";
+import { guideFragmentState } from "@/hooks/bozja/Farming/Farming_Guide/guideFragmentState";
+import { guideMagitekState } from "@/hooks/bozja/Farming/Farming_Guide/guideMagitekState";
 
 function FarmGuideInputs() {
   const [inputValue, setInputValue] = React.useState("");
-  const [, setFragment] = useAtom(fragmentState);
-  const [magitek, setMagitek] = useAtom(magitekState);
+  const [, setFragment] = useAtom(guideFragmentState);
+  const [magitek, setMagitek] = useAtom(guideMagitekState);
   const [fragmentInputValue, setFragmentInputValue] = React.useState("");
   const [, setValor] = useAtom(valorState)
   const [, setRole] = useAtom(roleState)

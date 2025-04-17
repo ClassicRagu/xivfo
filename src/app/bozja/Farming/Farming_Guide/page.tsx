@@ -14,9 +14,7 @@ import {
   fragments
 } from "@/static/bozja/Farming/Fragment_Map/Actions";
 import { useAtom } from "jotai";
-import { fragmentState } from "@/hooks/bozja/Farming/Fragment_Map/fragmentState";
 import dynamic from "next/dynamic";
-import { magitekState } from "@/hooks/bozja/Farming/Fragment_Map/magitekState";
 import FarmGuideInputs from "@/components/bozja/Farming/Farming_Guide/FarmGuideInputs";
 import { farmingBuildsByValor } from "@/static/bozja/Farming/Farming_Guide/FarmingBuilds";
 import { Loadout } from "@/components/shared/Loadout";
@@ -25,14 +23,16 @@ import { roleState } from "@/hooks/bozja/Farming/Farming_Guide/roleState";
 import { roleInputState } from "@/hooks/bozja/Farming/Farming_Guide/roleInputState";
 import { findNextWeatherWindow, ZONE_BOZJAN_SOUTHERN_FRONT, ZONE_ZADNOR } from "xivweather";
 import Image from "next/image";
+import { guideMagitekState } from "@/hooks/bozja/Farming/Farming_Guide/guideMagitekState";
+import { guideFragmentState } from "@/hooks/bozja/Farming/Farming_Guide/guideFragmentState";
 
 const FragmentMap = dynamic(() => import("@/components/bozja/Farming/Fragment_Map/FragmentMap"), {
   ssr: false,
 });
 
 function FragmentLookup() {
-  const [fragment] = useAtom(fragmentState);
-  const [magitek] = useAtom(magitekState);
+  const [fragment] = useAtom(guideFragmentState);
+  const [magitek] = useAtom(guideMagitekState);
   const [valor, setValor] = useAtom(valorState)
   const [roleInput, setRoleInput] = useAtom(roleInputState)
   const [role, setRole] = useAtom(roleState)
@@ -163,9 +163,9 @@ function FragmentLookup() {
               fragments[fragment].DR ||
               fragments[fragment].DRS ||
               (fragments[fragment].Quartermaster && !fragments[fragment].Zadnor)) ? (
-            <FragmentMap mapName="BSF" farm={true} dragging={false} maxZoom={4} maxWidth={650} />
+            <FragmentMap mapName="BSF" farm={true} dragging={false} maxZoom={4} maxWidth={650} guidePage={true}/>
           ) : fragment && (fragments[fragment].Zadnor || fragments[fragment].Dal) ? (
-            <FragmentMap mapName="Zadnor" farm={true} dragging={false} maxZoom={4} maxWidth={650} />
+            <FragmentMap mapName="Zadnor" farm={true} dragging={false} maxZoom={4} maxWidth={650} guidePage={true}/>
           ) : null}
         </Box>
       </Modal>
