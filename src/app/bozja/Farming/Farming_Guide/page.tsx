@@ -4,10 +4,12 @@ import {
   Box, FormControl, IconButton,
   InputLabel, MenuItem,
   Modal,
-  Select, Tooltip
+  Select, Stack, Switch, Tooltip,
+  Typography
 } from "@mui/material";
 import "leaflet/dist/leaflet.css";
 import MapIcon from '@mui/icons-material/Map';
+import HelpIcon from '@mui/icons-material/Help';
 
 import {
   fragments
@@ -15,9 +17,8 @@ import {
 import { useAtom } from "jotai";
 import dynamic from "next/dynamic";
 import FarmGuideInputs from "@/components/bozja/Farming/Farming_Guide/FarmGuideInputs";
-import { farmingBuildsByValor } from "@/static/bozja/Farming/Farming_Guide/FarmingBuilds";
+import { builds } from "@/static/bozja/Farming/Farming_Guide/FarmingBuilds";
 import { Loadout } from "@/components/shared/Loadout";
-import { valorState } from "@/hooks/bozja/Farming/Farming_Guide/valorState";
 import { roleState } from "@/hooks/bozja/Farming/Farming_Guide/roleState";
 import { roleInputState } from "@/hooks/bozja/Farming/Farming_Guide/roleInputState";
 import { findNextWeatherWindow, ZONE_BOZJAN_SOUTHERN_FRONT, ZONE_ZADNOR } from "xivweather";
@@ -25,6 +26,8 @@ import Image from "next/image";
 import { guideMagitekState } from "@/hooks/bozja/Farming/Farming_Guide/guideMagitekState";
 import { guideFragmentState } from "@/hooks/bozja/Farming/Farming_Guide/guideFragmentState";
 import { farmStateAtom } from "@/hooks/bozja/Farming/Farming_Guide/farmState";
+import { riskState } from "@/hooks/bozja/Farming/Farming_Guide/riskState";
+import { getRiskAtom } from "@/hooks/bozja/Farming/Farming_Guide/getRiskState";
 
 const FragmentMap = dynamic(() => import("@/components/bozja/Farming/Fragment_Map/FragmentMap"), {
   ssr: false,
@@ -57,12 +60,13 @@ const jobs: { [index: string]: string } = {
 function FragmentLookup() {
   const [fragment] = useAtom(guideFragmentState);
   const [magitek] = useAtom(guideMagitekState);
-  const [valor, setValor] = useAtom(valorState)
+  const [risk, setRisk] = useAtom(riskState)
   const [roleInput, setRoleInput] = useAtom(roleInputState)
   const [role, setRole] = useAtom(roleState)
   const [openBSFState, setOpenBSFState] = React.useState(false)
   const [openZadnorState, setOpenZadnorState] = React.useState(false)
   const [farmState] = useAtom(farmStateAtom)
+  const [getRisk] = useAtom(getRiskAtom)
 
   return (
     <>
@@ -70,37 +74,45 @@ function FragmentLookup() {
       <div style={{ display: "flex", flexWrap: "wrap" }}>
         {magitek || (fragment != "" && fragments[fragment].IsStandardFarm) ?
           <div style={{ display: "flex", margin: "8px" }}>
-            <FormControl sx={{ width: "100px" }}>
-              <InputLabel>Rays of Valor</InputLabel>
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={valor}
-                label="Rays of Valor"
-                onChange={(e) => setValor(e.target.value as number)}
-              >
-                {farmingBuildsByValor.map((x, index) => {
-                  return <MenuItem key={index} value={index}>{index}</MenuItem>
-                })}
-              </Select>
-            </FormControl>
+            <Stack direction="column" sx={{ alignItems: 'center' }}>
+              <div style={{ display: "flex" }}>
+                <Typography sx={{ marginRight: "4px" }}>Build Safety</Typography>
+                <Tooltip title={
+                  <React.Fragment>
+                    <Typography color="inherit">Safe or Risky?</Typography>
+                    {"Safe builds are suggested for most players."}<br />
+                    {"Risky builds are more focused to those with high amounts of Valor and Fortitude stacks."}<br />
+                    {"When in doubt just stay on Safe."}
+                  </React.Fragment>
+                }>
+                  <HelpIcon fontSize="small" />
+                </Tooltip>
+              </div>
+              <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
+                <Typography>Safe</Typography>
+                <Switch checked={risk} onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                  setRole("")
+                  setRoleInput(-1)
+                  setRisk(e.target.checked)
+                }} />
+                <Typography>Risky</Typography>
+              </Stack>
+            </Stack>
           </div>
           : null}
-        {valor > -1 ?
+        {magitek || (fragment != "" && fragments[fragment].IsStandardFarm) ?
           <div style={{ display: "flex", margin: "8px" }}>
             <FormControl sx={{ width: "200px" }}>
               <InputLabel>Role</InputLabel>
               <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
                 value={roleInput}
                 label="Role"
                 onChange={(e) => {
-                  setRole(Object.keys(fragment != "" ? farmingBuildsByValor[valor][fragments[fragment].FarmType] : farmingBuildsByValor[valor]["Cluster"])[e.target.value as number])
+                  setRole(Object.keys(fragment != "" ? builds[getRisk][fragments[fragment].FarmType] : builds[getRisk]["Cluster"])[e.target.value as number])
                   setRoleInput(e.target.value as number)
                 }}
               >
-                {Object.keys(fragment != "" ? farmingBuildsByValor[valor][fragments[fragment].FarmType] : farmingBuildsByValor[valor]["Cluster"]).map((x, index) => {
+                {Object.keys(fragment != "" ? builds[getRisk][fragments[fragment].FarmType] : builds[getRisk]["Cluster"]).map((x, index) => {
                   return <MenuItem value={index} key={index}>{x}</MenuItem>
                 })}
               </Select>
@@ -174,14 +186,14 @@ function FragmentLookup() {
                 height={30}
                 alt={`Lost Protect I image`}
                 src={`/Bozja/Lost%20Finds%20SD/Lost%20Protect.png`}
-                style={{marginRight:"8px"}}
+                style={{ marginRight: "8px" }}
               />
               <Image
                 width={30}
                 height={30}
                 alt={`Lost Protect II image`}
                 src={`/Bozja/Lost%20Finds%20SD/Lost%20Protect%20II.png`}
-                style={{marginRight:"8px"}}
+                style={{ marginRight: "8px" }}
               />
               <b>Lost Protect is highly suggested for this build, especially if you have low Valor and Fortitude stacks!</b>
             </div> : null

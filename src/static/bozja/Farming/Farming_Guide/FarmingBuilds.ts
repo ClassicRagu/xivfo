@@ -8,6 +8,7 @@ type Build = {
   BadJobs: string[]
   VideoURL: string
   LostProtect: boolean
+  Risky: boolean
 }
 
 type Role = {
@@ -29,7 +30,8 @@ const SleepStar : Build = {
   OkJobs: ["SMN", "RDM", "PCT"],
   BadJobs: [],
   VideoURL: "XySwoI2ByC0",
-  LostProtect: true
+  LostProtect: true,
+  Risky: false
 }
 
 const RampageAssassinate : Build = {
@@ -41,7 +43,8 @@ const RampageAssassinate : Build = {
   OkJobs: ["NIN","DRG"],
   BadJobs: ["RPR", "SAM", "VPR"],
   VideoURL: "",
-  LostProtect: true
+  LostProtect: true,
+  Risky: false
 }
 
 const Tank0Valor : Build = {
@@ -53,7 +56,8 @@ const Tank0Valor : Build = {
   OkJobs: [],
   BadJobs: [],
   VideoURL: "xJRCKc-ACFU",
-  LostProtect: false
+  LostProtect: false,
+  Risky: false
 }
 
 const TankMagitek : Build = {
@@ -65,7 +69,8 @@ const TankMagitek : Build = {
   OkJobs: [],
   BadJobs: [],
   VideoURL: "efxFpalAqYc",
-  LostProtect: false
+  LostProtect: false,
+  Risky: false
 }
 
 const RampageAssassinateMagitek : Build = {
@@ -77,7 +82,8 @@ const RampageAssassinateMagitek : Build = {
   OkJobs: ["NIN","DRG"],
   BadJobs: ["RPR", "SAM", "VPR"],
   VideoURL: "wBMMjiGpj-Y",
-  LostProtect: true
+  LostProtect: true,
+  Risky: false
 }
 
 const Death: Build = {
@@ -89,7 +95,8 @@ const Death: Build = {
   OkJobs: ["AST", "SCH", "SGE", "SMN", "PCT"],
   BadJobs: ["BLM"],
   VideoURL: "",
-  LostProtect: false
+  LostProtect: false,
+  Risky: false
 }
 
 const SpriteTank: Build = {
@@ -101,7 +108,8 @@ const SpriteTank: Build = {
   OkJobs: [],
   BadJobs: [],
   VideoURL: "B387LCruI2I",
-  LostProtect: false
+  LostProtect: false,
+  Risky: false
 }
 
 const Sprite: Build = {
@@ -113,7 +121,8 @@ const Sprite: Build = {
   OkJobs: [],
   BadJobs: [],
   VideoURL: "B387LCruI2I",
-  LostProtect: false
+  LostProtect: false,
+  Risky: false
 }
 
 const LowCasterCluster: Build = {
@@ -125,7 +134,60 @@ const LowCasterCluster: Build = {
   OkJobs: ["SMN", "RDM", "PCT"],
   BadJobs: [],
   VideoURL: "bgGcjXxtQjU",
-  LostProtect: false
+  LostProtect: false,
+  Risky: false
+}
+
+const RiskyCasterCluster: Build = {
+  Action1: "Lost Flare Star",
+  Action2: "Lost Burst",
+  Essence: "Essence of the Beast",
+  HowTo: "Explanations are WIP",
+  IdealJobs: ["BLM"],
+  OkJobs: ["SMN", "RDM", "PCT"],
+  BadJobs: [],
+  VideoURL: "",
+  LostProtect: true,
+  Risky: true
+}
+
+const RiskyHealerCluster: Build = {
+  Action1: "Lost Seraph Strike",
+  Action2: "Lost Burst",
+  Essence: "Essence of the Templar",
+  HowTo: "Explanations are WIP",
+  IdealJobs: ["SGE"],
+  OkJobs: ["WHM", "AST"],
+  BadJobs: ["SCH"],
+  VideoURL: "",
+  LostProtect: true,
+  Risky: true
+}
+
+const FasterHealerCluster: Build = {
+  Action1: "Lost Seraph Strike",
+  Action2: "Lost Burst",
+  Essence: "Essence of the Aetherweaver",
+  HowTo: "Explanations are WIP",
+  IdealJobs: ["SGE"],
+  OkJobs: ["WHM", "AST"],
+  BadJobs: ["SCH"],
+  VideoURL: "",
+  LostProtect: true,
+  Risky: true
+}
+
+const RiskyHealerNormal: Build = {
+  Action1: "Lost Seraph Strike",
+  Action2: "Lost Burst",
+  Essence: "Deep Essence of the Templar",
+  HowTo: "Explanations are WIP",
+  IdealJobs: ["SGE"],
+  OkJobs: ["WHM", "AST"],
+  BadJobs: ["SCH"],
+  VideoURL: "",
+  LostProtect: true,
+  Risky: true
 }
 
 const DefaultBuild: FarmingBuildByRays = {
@@ -150,16 +212,25 @@ const DefaultBuild: FarmingBuildByRays = {
   }
 }
 
-export const farmingBuildsByValor: FarmingBuildByRays[] = [
-  DefaultBuild,
-  DefaultBuild,
-  DefaultBuild,
-  DefaultBuild,
-  DefaultBuild,
-  DefaultBuild,
-  DefaultBuild,
-  DefaultBuild,
-  DefaultBuild,
-  DefaultBuild,
-  DefaultBuild
-]
+const RiskyBuild: FarmingBuildByRays = {
+  "Normal": {
+    "Healer": RiskyHealerNormal
+  },
+  "Sprite": {
+    "Tank (Ideal)": SpriteTank,
+    "Everything Else": Sprite
+  },
+  "Star": {
+    "Caster/Healer": Death
+  },
+  "Cluster": {
+    "Caster": RiskyCasterCluster,
+    "Healer": RiskyHealerCluster,
+    "Extra Risk Healer": FasterHealerCluster
+  }
+}
+
+export const builds: {[index: string]: FarmingBuildByRays} = {
+  "Default": DefaultBuild,
+  "Risky": RiskyBuild
+}

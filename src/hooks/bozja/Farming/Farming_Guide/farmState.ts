@@ -1,10 +1,10 @@
 import { atom } from "jotai"
 import { guideFragmentState } from "./guideFragmentState"
-import { farmingBuildsByValor } from "@/static/bozja/Farming/Farming_Guide/FarmingBuilds"
-import { valorState } from "./valorState"
+import { builds } from "@/static/bozja/Farming/Farming_Guide/FarmingBuilds"
 import { fragments } from "@/static/bozja/Farming/Fragment_Map/Actions"
 import { roleState } from "./roleState"
 import { guideMagitekState } from "./guideMagitekState"
+import { getRiskAtom } from "./getRiskState"
 
 const emptyBuild = {
   Action1: "None",
@@ -21,13 +21,13 @@ const emptyBuild = {
 export const farmStateAtom = atom((get) => {
   const fragmentState = get(guideFragmentState)
   const magitekState = get(guideMagitekState)
-  const valor = get(valorState)
+  const getRisk = get(getRiskAtom)
   const role = get(roleState)
   if (role) {
     if (fragmentState != "") {
-      return farmingBuildsByValor[valor][fragments[fragmentState].FarmType][role]
+      return builds[getRisk][fragments[fragmentState].FarmType][role]
     } else if (magitekState) {
-      return farmingBuildsByValor[valor]["Cluster"][role]
+      return builds[getRisk]["Cluster"][role]
     }
   }
   return emptyBuild
