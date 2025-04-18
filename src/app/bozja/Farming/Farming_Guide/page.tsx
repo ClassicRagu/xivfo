@@ -24,10 +24,35 @@ import { findNextWeatherWindow, ZONE_BOZJAN_SOUTHERN_FRONT, ZONE_ZADNOR } from "
 import Image from "next/image";
 import { guideMagitekState } from "@/hooks/bozja/Farming/Farming_Guide/guideMagitekState";
 import { guideFragmentState } from "@/hooks/bozja/Farming/Farming_Guide/guideFragmentState";
+import { farmStateAtom } from "@/hooks/bozja/Farming/Farming_Guide/farmState";
 
 const FragmentMap = dynamic(() => import("@/components/bozja/Farming/Fragment_Map/FragmentMap"), {
   ssr: false,
 });
+
+const jobs: {[index: string]: string} = {
+  "PLD": "paladin",
+  "WAR": "warrior",
+  "DRK": "darkknight",
+  "GNB": "gunbreaker",
+  "WHM": "whitemage",
+  "SCH": "scholar",
+  "AST": "astrologian",
+  "MNK": "monk",
+  "DRG": "dragoon",
+  "NIN": "ninja",
+  "SAM": "samurai",
+  "BRD": "bard",
+  "MCH": "machinist",
+  "DNC": "dancer",
+  "BLM": "blackmage",
+  "SMN": "summoner",
+  "RDM": "redmage",
+  "RPR": "reaper",
+  "SGE": "sage",
+  "PCT": "pictomancer",
+  "VPR": "viper"
+};
 
 function FragmentLookup() {
   const [fragment] = useAtom(guideFragmentState);
@@ -36,6 +61,7 @@ function FragmentLookup() {
   const [roleInput, setRoleInput] = useAtom(roleInputState)
   const [role, setRole] = useAtom(roleState)
   const [openState, setOpenState] = React.useState(false)
+  const [farmState] = useAtom(farmStateAtom)
 
   return (
     <>
@@ -122,18 +148,48 @@ function FragmentLookup() {
       {role != "" ?
         <div style={{ marginLeft: "8px" }}>
           <div style={{ marginBottom: "8px" }}>
-            {fragment != "" ?
-              <Loadout Action1={farmingBuildsByValor[valor - 1][fragments[fragment].FarmType][role].Action1}
-                Action2={farmingBuildsByValor[valor - 1][fragments[fragment].FarmType][role].Action2}
-                Essence={farmingBuildsByValor[valor - 1][fragments[fragment].FarmType][role].Essence} /> :
-              <Loadout Action1={farmingBuildsByValor[valor - 1]["Cluster"][role].Action1}
-                Action2={farmingBuildsByValor[valor - 1]["Cluster"][role].Action2}
-                Essence={farmingBuildsByValor[valor - 1]["Cluster"][role].Essence} />
-            }
+              <Loadout Action1={farmState.Action1}
+                Action2={farmState.Action2}
+                Essence={farmState.Essence} />
+          </div>
+          <div style={{ display: "flex", marginBottom: "8px", alignItems: "center" }}>
+            Ideal Jobs:
+            {farmState.IdealJobs.map((x) => {
+              return <Image
+                width={30}
+                height={30}
+                alt={`${x} image`}
+                src={`/Bozja/Relics/weapons/${x}/${jobs[x]}.png`}
+                key={x}
+              />
+            })}
+          </div>
+          <div style={{ display: "flex", marginBottom: "8px", alignItems: "center" }}>
+            Ok Jobs:
+            {farmState.OkJobs.map((x) => {
+              return <Image
+                width={30}
+                height={30}
+                alt={`${x} image`}
+                src={`/Bozja/Relics/weapons/${x}/${jobs[x]}.png`}
+                key={x}
+              />
+            })}
+          </div>
+          <div style={{ display: "flex", marginBottom: "8px", alignItems: "center" }}>
+            Bad Jobs:
+            {farmState.BadJobs.map((x) => {
+              return <Image
+                width={30}
+                height={30}
+                alt={`${x} image`}
+                src={`/Bozja/Relics/weapons/${x}/${jobs[x]}.png`}
+                key={x}
+              />
+            })}
           </div>
           <div>
-            {fragment != "" ? farmingBuildsByValor[valor - 1][fragments[fragment].FarmType][role].HowTo :
-              farmingBuildsByValor[valor - 1]["Cluster"][role].HowTo}
+            {farmState.HowTo}
           </div>
         </div> : null
       }
@@ -142,10 +198,10 @@ function FragmentLookup() {
           This fragment is not farmable. It is obtained via {fragments[fragment].FarmType}.
         </div> : null
       }
-      {role && fragment != "" && farmingBuildsByValor[valor - 1][fragments[fragment].FarmType][role].VideoURL != "" ?
-      <iframe width="560" height="315" src={`https://www.youtube.com/embed/${farmingBuildsByValor[valor - 1][fragments[fragment].FarmType][role].VideoURL}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe> : null
+      {role && farmState.VideoURL != "" ?
+        <iframe width="560" height="315" src={`https://www.youtube.com/embed/${farmState.VideoURL}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe> : null
       }
-      
+
       <Modal
         open={openState}
         onClose={() => setOpenState(false)}

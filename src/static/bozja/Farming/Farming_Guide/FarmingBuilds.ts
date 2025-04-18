@@ -3,6 +3,9 @@ type Build = {
   Action2: string
   Essence: string
   HowTo: string
+  IdealJobs: string[]
+  OkJobs: string[]
+  BadJobs: string[]
   VideoURL: string
 }
 
@@ -21,6 +24,9 @@ const SleepStar : Build = {
   Action2: "Lost Flare Star",
   Essence: "Essence of the Veteran",
   HowTo: "Explanations are WIP",
+  IdealJobs: ["BLM"],
+  OkJobs: ["SMN", "RDM", "PCT"],
+  BadJobs: [],
   VideoURL: ""
 }
 
@@ -29,6 +35,9 @@ const RampageAssassinate : Build = {
   Action2: "Lost Rampage",
   Essence: "Essence of the Beast",
   HowTo: "Explanations are WIP",
+  IdealJobs: ["MNK", "DNC", "BRD", "MCH"],
+  OkJobs: ["NIN","DRG"],
+  BadJobs: ["RPR", "SAM", "VPR"],
   VideoURL: ""
 }
 
@@ -37,6 +46,9 @@ const Tank0Valor : Build = {
   Action2: "Banner of Tireless Conviction",
   Essence: "Essence of the Bloodsucker",
   HowTo: "Explanations are WIP",
+  IdealJobs: ["PLD", "WAR", "DRK", "GNB"],
+  OkJobs: [],
+  BadJobs: [],
   VideoURL: ""
 }
 
@@ -45,14 +57,20 @@ const TankMagitek : Build = {
   Action2: "Lost Spellforge",
   Essence: "Essence of the Bloodsucker",
   HowTo: "Explanations are WIP",
-  VideoURL: ""
+  IdealJobs: ["PLD", "WAR", "DRK", "GNB"],
+  OkJobs: [],
+  BadJobs: [],
+  VideoURL: "VfBqgJkhPzk"
 }
 
 const Death: Build = {
   Action1: "Lost Death",
-  Action2: "Lost Spellforge",
+  Action2: "None",
   Essence: "Essence of the Ordained",
   HowTo: "Explanations are WIP",
+  IdealJobs: ["WHM", "RDM", "BLM"],
+  OkJobs: ["AST", "SCH", "SGE", "SMN", "PCT"],
+  BadJobs: [],
   VideoURL: ""
 }
 
@@ -61,6 +79,9 @@ const SpriteTank: Build = {
   Action2: "Lost Impetus",
   Essence: "Essence of the Irregular",
   HowTo: "Explanations are WIP",
+  IdealJobs: ["PLD", "WAR", "DRK", "GNB"],
+  OkJobs: [],
+  BadJobs: [],
   VideoURL: ""
 }
 
@@ -69,6 +90,9 @@ const Sprite: Build = {
   Action2: "Lost Impetus",
   Essence: "None",
   HowTo: "Explanations are WIP",
+  IdealJobs: [],
+  OkJobs: [],
+  BadJobs: [],
   VideoURL: ""
 }
 
@@ -77,6 +101,9 @@ const LowCasterCluster: Build = {
   Action2: "Lost Burst",
   Essence: "Essence of the Beast",
   HowTo: "Explanations are WIP",
+  IdealJobs: ["BLM"],
+  OkJobs: ["SMN", "RDM", "PCT"],
+  BadJobs: [],
   VideoURL: ""
 }
 
