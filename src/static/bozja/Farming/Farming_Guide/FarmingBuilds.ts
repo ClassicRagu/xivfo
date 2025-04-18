@@ -68,9 +68,9 @@ const Death: Build = {
   Action2: "None",
   Essence: "Essence of the Ordained",
   HowTo: "Explanations are WIP",
-  IdealJobs: ["WHM", "RDM", "BLM"],
+  IdealJobs: ["WHM", "RDM"],
   OkJobs: ["AST", "SCH", "SGE", "SMN", "PCT"],
-  BadJobs: [],
+  BadJobs: ["BLM"],
   VideoURL: ""
 }
 
