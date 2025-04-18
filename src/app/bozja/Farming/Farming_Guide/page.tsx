@@ -96,11 +96,11 @@ function FragmentLookup() {
                 value={roleInput}
                 label="Role"
                 onChange={(e) => {
-                  setRole(Object.keys(fragment != "" ? farmingBuildsByValor[valor - 1][fragments[fragment].FarmType] : farmingBuildsByValor[valor - 1]["Cluster"])[e.target.value as number])
+                  setRole(Object.keys(fragment != "" ? farmingBuildsByValor[valor][fragments[fragment].FarmType] : farmingBuildsByValor[valor]["Cluster"])[e.target.value as number])
                   setRoleInput(e.target.value as number)
                 }}
               >
-                {Object.keys(fragment != "" ? farmingBuildsByValor[valor - 1][fragments[fragment].FarmType] : farmingBuildsByValor[valor - 1]["Cluster"]).map((x, index) => {
+                {Object.keys(fragment != "" ? farmingBuildsByValor[valor][fragments[fragment].FarmType] : farmingBuildsByValor[valor]["Cluster"]).map((x, index) => {
                   return <MenuItem value={index} key={index}>{x}</MenuItem>
                 })}
               </Select>

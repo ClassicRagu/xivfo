@@ -25,9 +25,9 @@ export const farmStateAtom = atom((get) => {
   const role = get(roleState)
   if (role) {
     if (fragmentState != "") {
-      return farmingBuildsByValor[valor - 1][fragments[fragmentState].FarmType][role]
+      return farmingBuildsByValor[valor][fragments[fragmentState].FarmType][role]
     } else if (magitekState) {
-      return farmingBuildsByValor[valor - 1]["Cluster"][role]
+      return farmingBuildsByValor[valor]["Cluster"][role]
     }
   }
   return emptyBuild
