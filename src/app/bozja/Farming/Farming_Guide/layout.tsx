@@ -17,9 +17,7 @@ export default function Home(props: { children: React.ReactNode }) {
             Solo Farming Guide (WIP)
           </Typography>
           <Typography component="p" sx={{ mb: 2 }}>
-            Welcome to the farming guide, this is another page that is still a work in progress but the goal of it is to put builds, locations, and weather windows all in one place. <br/>
-            All builds expect 0 Haste and have only been tested on 4 and 10 Valor accounts for now. This page will have more options at a later date <br />
-            As a warning this page was not designed with mobile compatibility in mind.
+            Welcome to the farming guide, this is another page that is still a work in progress but the goal of it is to put builds, locations, and weather windows all in one place.
           </Typography>
         </div>
       </div>
