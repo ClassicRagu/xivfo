@@ -27,7 +27,7 @@ const SleepStar : Build = {
   IdealJobs: ["BLM"],
   OkJobs: ["SMN", "RDM", "PCT"],
   BadJobs: [],
-  VideoURL: ""
+  VideoURL: "XySwoI2ByC0"
 }
 
 const RampageAssassinate : Build = {
@@ -49,7 +49,7 @@ const Tank0Valor : Build = {
   IdealJobs: ["PLD", "WAR", "DRK", "GNB"],
   OkJobs: [],
   BadJobs: [],
-  VideoURL: ""
+  VideoURL: "xJRCKc-ACFU"
 }
 
 const TankMagitek : Build = {
@@ -82,7 +82,7 @@ const SpriteTank: Build = {
   IdealJobs: ["PLD", "WAR", "DRK", "GNB"],
   OkJobs: [],
   BadJobs: [],
-  VideoURL: ""
+  VideoURL: "B387LCruI2I"
 }
 
 const Sprite: Build = {
@@ -93,7 +93,7 @@ const Sprite: Build = {
   IdealJobs: [],
   OkJobs: [],
   BadJobs: [],
-  VideoURL: ""
+  VideoURL: "B387LCruI2I"
 }
 
 const LowCasterCluster: Build = {
@@ -104,7 +104,7 @@ const LowCasterCluster: Build = {
   IdealJobs: ["BLM"],
   OkJobs: ["SMN", "RDM", "PCT"],
   BadJobs: [],
-  VideoURL: ""
+  VideoURL: "apUjgCDtaRA"
 }
 
 export const farmingBuildsByValor: FarmingBuildByRays[] = [
