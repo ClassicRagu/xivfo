@@ -1,3 +1,3 @@
 import { atom } from 'jotai';
 
-export const valorState = atom<number>(0)
+export const valorState = atom<number>(-1)

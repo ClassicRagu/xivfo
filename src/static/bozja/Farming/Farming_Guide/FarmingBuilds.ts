@@ -60,7 +60,18 @@ const TankMagitek : Build = {
   IdealJobs: ["PLD", "WAR", "DRK", "GNB"],
   OkJobs: [],
   BadJobs: [],
-  VideoURL: "VfBqgJkhPzk"
+  VideoURL: "efxFpalAqYc"
+}
+
+const RampageAssassinateMagitek : Build = {
+  Action1: "Lost Assassination",
+  Action2: "Lost Rampage",
+  Essence: "Essence of the Beast",
+  HowTo: "Explanations are WIP",
+  IdealJobs: ["MNK", "DNC", "BRD", "MCH"],
+  OkJobs: ["NIN","DRG"],
+  BadJobs: ["RPR", "SAM", "VPR"],
+  VideoURL: "wBMMjiGpj-Y"
 }
 
 const Death: Build = {
@@ -104,30 +115,41 @@ const LowCasterCluster: Build = {
   IdealJobs: ["BLM"],
   OkJobs: ["SMN", "RDM", "PCT"],
   BadJobs: [],
-  VideoURL: "apUjgCDtaRA"
+  VideoURL: "bgGcjXxtQjU"
+}
+
+const DefaultBuild: FarmingBuildByRays = {
+  "Normal": {
+    "Tank": Tank0Valor,
+    "Melee": RampageAssassinate,
+    "Phys Ranged": RampageAssassinate,
+    "Caster": SleepStar
+  },
+  "Sprite": {
+    "Tank (Ideal)": SpriteTank,
+    "Everything Else": Sprite
+  },
+  "Star": {
+    "Caster/Healer": Death
+  },
+  "Cluster": {
+    "Tank": TankMagitek,
+    "Caster": LowCasterCluster,
+    "Melee": RampageAssassinateMagitek,
+    "Phys Ranged": RampageAssassinateMagitek
+  }
 }
 
 export const farmingBuildsByValor: FarmingBuildByRays[] = [
-  {},
-  {},
-  {},
-  {
-    "Normal": {
-      "Tank": Tank0Valor,
-      "Melee": RampageAssassinate,
-      "Phys Ranged": RampageAssassinate,
-      "Caster": SleepStar
-    },
-    "Sprite": {
-      "Tank (Ideal)": SpriteTank,
-      "Everything Else": Sprite
-    },
-    "Star": {
-      "Caster/Healer": Death
-    },
-    "Cluster": {
-      "Tank": TankMagitek,
-      "Caster": LowCasterCluster
-    }
-  }
+  DefaultBuild,
+  DefaultBuild,
+  DefaultBuild,
+  DefaultBuild,
+  DefaultBuild,
+  DefaultBuild,
+  DefaultBuild,
+  DefaultBuild,
+  DefaultBuild,
+  DefaultBuild,
+  DefaultBuild
 ]

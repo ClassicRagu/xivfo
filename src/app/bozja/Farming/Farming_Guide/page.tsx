@@ -79,12 +79,14 @@ function FragmentLookup() {
                 label="Rays of Valor"
                 onChange={(e) => setValor(e.target.value as number)}
               >
-                <MenuItem value={4}>4</MenuItem>
+                {farmingBuildsByValor.map((x, index) => {
+                  return <MenuItem key={index} value={index}>{index}</MenuItem>
+                })}
               </Select>
             </FormControl>
           </div>
           : null}
-        {valor > 0 ?
+        {valor > -1 ?
           <div style={{ display: "flex", margin: "8px" }}>
             <FormControl sx={{ width: "200px" }}>
               <InputLabel>Role</InputLabel>
@@ -94,7 +96,6 @@ function FragmentLookup() {
                 value={roleInput}
                 label="Role"
                 onChange={(e) => {
-                  console.log(e.target.value)
                   setRole(Object.keys(fragment != "" ? farmingBuildsByValor[valor - 1][fragments[fragment].FarmType] : farmingBuildsByValor[valor - 1]["Cluster"])[e.target.value as number])
                   setRoleInput(e.target.value as number)
                 }}

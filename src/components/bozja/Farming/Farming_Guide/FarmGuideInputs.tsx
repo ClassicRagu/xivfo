@@ -28,7 +28,7 @@ function FarmGuideInputs() {
   const [, setRoleInput] = useAtom(roleInputState)
 
   const resetStates = () => {
-    setValor(0)
+    setValor(-1)
     setRole("")
     setRoleInput(-1)
   }
