@@ -6,7 +6,6 @@ export function useHeadsObserver( ) {
   const [activeId, setActiveId] = useState('')
   
   const handleObsever = (entries: IntersectionObserverEntry[]) => {
-    console.log(entries)
     entries.forEach((entry) => {
       if (entry?.isIntersecting) {
         setActiveId(entry.target.id)
