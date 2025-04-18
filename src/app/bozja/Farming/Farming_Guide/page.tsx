@@ -106,8 +106,8 @@ function FragmentLookup() {
             </FormControl>
           </div> : null
         }
-        {role != "" && (magitek || (fragment != "" && !fragments[fragment].IsStandardFarm) || 
-            fragments[fragment].FarmZones.includes("BSF")) ?
+        {role != "" && (magitek || (fragment != "" && !fragments[fragment].IsStandardFarm) ||
+          fragments[fragment].FarmZones.includes("BSF")) ?
           <Tooltip title="Show BSF Map" sx={{ margin: "8px" }}>
             <IconButton
               aria-label="map"
@@ -166,42 +166,48 @@ function FragmentLookup() {
               Action2={farmState.Action2}
               Essence={farmState.Essence} />
           </div>
-          <div style={{ display: "flex", marginBottom: "8px", alignItems: "center" }}>
-            Ideal Jobs:
-            {farmState.IdealJobs.map((x) => {
-              return <Image
-                width={30}
-                height={30}
-                alt={`${x} image`}
-                src={`/Bozja/Relics/weapons/${x}/${jobs[x]}.png`}
-                key={x}
-              />
-            })}
-          </div>
-          <div style={{ display: "flex", marginBottom: "8px", alignItems: "center" }}>
-            Ok Jobs:
-            {farmState.OkJobs.map((x) => {
-              return <Image
-                width={30}
-                height={30}
-                alt={`${x} image`}
-                src={`/Bozja/Relics/weapons/${x}/${jobs[x]}.png`}
-                key={x}
-              />
-            })}
-          </div>
-          <div style={{ display: "flex", marginBottom: "8px", alignItems: "center" }}>
-            Bad Jobs:
-            {farmState.BadJobs.map((x) => {
-              return <Image
-                width={30}
-                height={30}
-                alt={`${x} image`}
-                src={`/Bozja/Relics/weapons/${x}/${jobs[x]}.png`}
-                key={x}
-              />
-            })}
-          </div>
+          {farmState.IdealJobs.length > 0 ?
+            <div style={{ display: "flex", marginBottom: "8px", alignItems: "center" }}>
+              <span style={{marginRight:"8px"}}>Ideal Jobs:</span>
+              {farmState.IdealJobs.map((x) => {
+                return <Image
+                  width={30}
+                  height={30}
+                  alt={`${x} image`}
+                  src={`/Bozja/Relics/weapons/${x}/${jobs[x]}.png`}
+                  key={x}
+                />
+              })}
+            </div> : null
+          }
+          {farmState.OkJobs.length > 0 ?
+            <div style={{ display: "flex", marginBottom: "8px", alignItems: "center" }}>
+              <span style={{marginRight:"8px"}}>Ok Jobs:</span>
+              {farmState.OkJobs.map((x) => {
+                return <Image
+                  width={30}
+                  height={30}
+                  alt={`${x} image`}
+                  src={`/Bozja/Relics/weapons/${x}/${jobs[x]}.png`}
+                  key={x}
+                />
+              })}
+            </div> : null
+          }
+          {farmState.BadJobs.length > 0 ?
+            <div style={{ display: "flex", marginBottom: "8px", alignItems: "center" }}>
+              <span style={{marginRight:"8px"}}>Bad Jobs:</span> 
+              {farmState.BadJobs.map((x) => {
+                return <Image
+                  width={30}
+                  height={30}
+                  alt={`${x} image`}
+                  src={`/Bozja/Relics/weapons/${x}/${jobs[x]}.png`}
+                  key={x}
+                />
+              })}
+            </div> : null
+          }
           <div>
             {farmState.HowTo}
           </div>
