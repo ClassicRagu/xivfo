@@ -106,7 +106,7 @@ function FragmentLookup() {
             </FormControl>
           </div> : null
         }
-        {role != "" && (magitek || (fragment != "" && !fragments[fragment].IsStandardFarm) ||
+        {(role != "" || (fragment != "" && !fragments[fragment].IsStandardFarm)) && (magitek ||
           fragments[fragment].FarmZones.includes("BSF")) ?
           <Tooltip title="Show BSF Map" sx={{ margin: "8px" }}>
             <IconButton
@@ -118,7 +118,7 @@ function FragmentLookup() {
           </Tooltip>
           : null
         }
-        {role != "" && (magitek || (fragment != "" && !fragments[fragment].IsStandardFarm) ||
+        {(role != "" || (fragment != "" && !fragments[fragment].IsStandardFarm)) && (magitek ||
           fragments[fragment].FarmZones.includes("Zadnor")) ?
           <Tooltip title="Show Zadnor Map" sx={{ margin: "8px" }}>
             <IconButton
@@ -168,7 +168,7 @@ function FragmentLookup() {
           </div>
           {farmState.IdealJobs.length > 0 ?
             <div style={{ display: "flex", marginBottom: "8px", alignItems: "center" }}>
-              <span style={{marginRight:"8px"}}>Ideal Jobs:</span>
+              <span style={{ marginRight: "8px" }}>Ideal Jobs:</span>
               {farmState.IdealJobs.map((x) => {
                 return <Image
                   width={30}
@@ -182,7 +182,7 @@ function FragmentLookup() {
           }
           {farmState.OkJobs.length > 0 ?
             <div style={{ display: "flex", marginBottom: "8px", alignItems: "center" }}>
-              <span style={{marginRight:"8px"}}>Ok Jobs:</span>
+              <span style={{ marginRight: "8px" }}>Ok Jobs:</span>
               {farmState.OkJobs.map((x) => {
                 return <Image
                   width={30}
@@ -196,7 +196,7 @@ function FragmentLookup() {
           }
           {farmState.BadJobs.length > 0 ?
             <div style={{ display: "flex", marginBottom: "8px", alignItems: "center" }}>
-              <span style={{marginRight:"8px"}}>Bad Jobs:</span> 
+              <span style={{ marginRight: "8px" }}>Bad Jobs:</span>
               {farmState.BadJobs.map((x) => {
                 return <Image
                   width={30}
