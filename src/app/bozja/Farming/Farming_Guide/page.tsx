@@ -167,6 +167,25 @@ function FragmentLookup() {
               Action2={farmState.Action2}
               Essence={farmState.Essence} />
           </div>
+          {farmState.LostProtect ?
+            <div style={{ display: "flex", marginBottom: "8px", alignItems: "center" }}>
+              <Image
+                width={30}
+                height={30}
+                alt={`Lost Protect I image`}
+                src={`/Bozja/Lost%20Finds%20SD/Lost%20Protect.png`}
+                style={{marginRight:"8px"}}
+              />
+              <Image
+                width={30}
+                height={30}
+                alt={`Lost Protect II image`}
+                src={`/Bozja/Lost%20Finds%20SD/Lost%20Protect%20II.png`}
+                style={{marginRight:"8px"}}
+              />
+              <b>Lost Protect is highly suggested for this build, especially if you have low Valor and Fortitude stacks!</b>
+            </div> : null
+          }
           {farmState.IdealJobs.length > 0 ?
             <div style={{ display: "flex", marginBottom: "8px", alignItems: "center" }}>
               <span style={{ marginRight: "8px" }}>Ideal Jobs:</span>

@@ -7,6 +7,7 @@ type Build = {
   OkJobs: string[]
   BadJobs: string[]
   VideoURL: string
+  LostProtect: boolean
 }
 
 type Role = {
@@ -27,7 +28,8 @@ const SleepStar : Build = {
   IdealJobs: ["BLM"],
   OkJobs: ["SMN", "RDM", "PCT"],
   BadJobs: [],
-  VideoURL: "XySwoI2ByC0"
+  VideoURL: "XySwoI2ByC0",
+  LostProtect: true
 }
 
 const RampageAssassinate : Build = {
@@ -38,7 +40,8 @@ const RampageAssassinate : Build = {
   IdealJobs: ["MNK", "DNC", "BRD", "MCH"],
   OkJobs: ["NIN","DRG"],
   BadJobs: ["RPR", "SAM", "VPR"],
-  VideoURL: ""
+  VideoURL: "",
+  LostProtect: true
 }
 
 const Tank0Valor : Build = {
@@ -49,7 +52,8 @@ const Tank0Valor : Build = {
   IdealJobs: ["PLD", "WAR", "DRK", "GNB"],
   OkJobs: [],
   BadJobs: [],
-  VideoURL: "xJRCKc-ACFU"
+  VideoURL: "xJRCKc-ACFU",
+  LostProtect: false
 }
 
 const TankMagitek : Build = {
@@ -60,7 +64,8 @@ const TankMagitek : Build = {
   IdealJobs: ["PLD", "WAR", "DRK", "GNB"],
   OkJobs: [],
   BadJobs: [],
-  VideoURL: "efxFpalAqYc"
+  VideoURL: "efxFpalAqYc",
+  LostProtect: false
 }
 
 const RampageAssassinateMagitek : Build = {
@@ -71,7 +76,8 @@ const RampageAssassinateMagitek : Build = {
   IdealJobs: ["MNK", "DNC", "BRD", "MCH"],
   OkJobs: ["NIN","DRG"],
   BadJobs: ["RPR", "SAM", "VPR"],
-  VideoURL: "wBMMjiGpj-Y"
+  VideoURL: "wBMMjiGpj-Y",
+  LostProtect: true
 }
 
 const Death: Build = {
@@ -82,7 +88,8 @@ const Death: Build = {
   IdealJobs: ["WHM", "RDM"],
   OkJobs: ["AST", "SCH", "SGE", "SMN", "PCT"],
   BadJobs: ["BLM"],
-  VideoURL: ""
+  VideoURL: "",
+  LostProtect: false
 }
 
 const SpriteTank: Build = {
@@ -93,7 +100,8 @@ const SpriteTank: Build = {
   IdealJobs: ["PLD", "WAR", "DRK", "GNB"],
   OkJobs: [],
   BadJobs: [],
-  VideoURL: "B387LCruI2I"
+  VideoURL: "B387LCruI2I",
+  LostProtect: false
 }
 
 const Sprite: Build = {
@@ -104,7 +112,8 @@ const Sprite: Build = {
   IdealJobs: [],
   OkJobs: [],
   BadJobs: [],
-  VideoURL: "B387LCruI2I"
+  VideoURL: "B387LCruI2I",
+  LostProtect: false
 }
 
 const LowCasterCluster: Build = {
@@ -115,7 +124,8 @@ const LowCasterCluster: Build = {
   IdealJobs: ["BLM"],
   OkJobs: ["SMN", "RDM", "PCT"],
   BadJobs: [],
-  VideoURL: "bgGcjXxtQjU"
+  VideoURL: "bgGcjXxtQjU",
+  LostProtect: false
 }
 
 const DefaultBuild: FarmingBuildByRays = {

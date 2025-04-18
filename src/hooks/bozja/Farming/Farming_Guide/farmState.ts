@@ -14,7 +14,8 @@ const emptyBuild = {
   IdealJobs: [],
   OkJobs: [],
   BadJobs: [],
-  VideoURL: ""
+  VideoURL: "",
+  LostProtect: false
 }
 
 export const farmStateAtom = atom((get) => {
