@@ -30,7 +30,7 @@ const FragmentMap = dynamic(() => import("@/components/bozja/Farming/Fragment_Ma
   ssr: false,
 });
 
-const jobs: {[index: string]: string} = {
+const jobs: { [index: string]: string } = {
   "PLD": "paladin",
   "WAR": "warrior",
   "DRK": "darkknight",
@@ -60,7 +60,8 @@ function FragmentLookup() {
   const [valor, setValor] = useAtom(valorState)
   const [roleInput, setRoleInput] = useAtom(roleInputState)
   const [role, setRole] = useAtom(roleState)
-  const [openState, setOpenState] = React.useState(false)
+  const [openBSFState, setOpenBSFState] = React.useState(false)
+  const [openZadnorState, setOpenZadnorState] = React.useState(false)
   const [farmState] = useAtom(farmStateAtom)
 
   return (
@@ -105,11 +106,24 @@ function FragmentLookup() {
             </FormControl>
           </div> : null
         }
-        {role != "" || (fragment && !fragments[fragment].IsStandardFarm) ?
-          <Tooltip title="Show Map" sx={{ margin: "8px" }}>
+        {role != "" && (magitek || (fragment != "" && !fragments[fragment].IsStandardFarm) || 
+            fragments[fragment].FarmZones.includes("BSF")) ?
+          <Tooltip title="Show BSF Map" sx={{ margin: "8px" }}>
             <IconButton
               aria-label="map"
-              onClick={() => setOpenState(true)}
+              onClick={() => setOpenBSFState(true)}
+            >
+              <MapIcon />
+            </IconButton>
+          </Tooltip>
+          : null
+        }
+        {role != "" && (magitek || (fragment != "" && !fragments[fragment].IsStandardFarm) ||
+          fragments[fragment].FarmZones.includes("Zadnor")) ?
+          <Tooltip title="Show Zadnor Map" sx={{ margin: "8px" }}>
+            <IconButton
+              aria-label="map"
+              onClick={() => setOpenZadnorState(true)}
             >
               <MapIcon />
             </IconButton>
@@ -148,9 +162,9 @@ function FragmentLookup() {
       {role != "" ?
         <div style={{ marginLeft: "8px" }}>
           <div style={{ marginBottom: "8px" }}>
-              <Loadout Action1={farmState.Action1}
-                Action2={farmState.Action2}
-                Essence={farmState.Essence} />
+            <Loadout Action1={farmState.Action1}
+              Action2={farmState.Action2}
+              Essence={farmState.Essence} />
           </div>
           <div style={{ display: "flex", marginBottom: "8px", alignItems: "center" }}>
             Ideal Jobs:
@@ -203,8 +217,8 @@ function FragmentLookup() {
       }
 
       <Modal
-        open={openState}
-        onClose={() => setOpenState(false)}
+        open={openBSFState}
+        onClose={() => setOpenBSFState(false)}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
@@ -219,17 +233,27 @@ function FragmentLookup() {
             maxWidth: 650,
           }}
         >
-          {(magitek || fragment) &&
-            (magitek ||
-              fragments[fragment].BSF ||
-              fragments[fragment].CLL ||
-              fragments[fragment].DR ||
-              fragments[fragment].DRS ||
-              (fragments[fragment].Quartermaster && !fragments[fragment].Zadnor)) ? (
-            <FragmentMap mapName="BSF" farm={true} dragging={false} maxZoom={4} maxWidth={650} guidePage={true} />
-          ) : fragment && (fragments[fragment].Zadnor || fragments[fragment].Dal) ? (
-            <FragmentMap mapName="Zadnor" farm={true} dragging={false} maxZoom={4} maxWidth={650} guidePage={true} />
-          ) : null}
+          <FragmentMap mapName="BSF" farm={true} dragging={false} maxZoom={4} maxWidth={650} guidePage={true} />
+        </Box>
+      </Modal>
+      <Modal
+        open={openZadnorState}
+        onClose={() => setOpenZadnorState(false)}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: "100%",
+            height: "auto",
+            maxWidth: 650,
+          }}
+        >
+          <FragmentMap mapName="Zadnor" farm={true} dragging={false} maxZoom={4} maxWidth={650} guidePage={true} />
         </Box>
       </Modal>
     </>
