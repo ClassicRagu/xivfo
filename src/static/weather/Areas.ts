@@ -3,5 +3,6 @@ export const listAreas = [
   "Pyros",
   "Hydatos",
   "Bozjan Southern Front",
-  "Zadnor"
+  "Zadnor",
+  "Sinus Ardorum"
 ];

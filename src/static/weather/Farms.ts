@@ -139,4 +139,17 @@ export const listEurekaFarms: EurekaFarm[] = [
       },
     ],
   },
+  {
+    name: "Sinus Ardorum",
+    farms: [
+      {
+        name: "Rare Weathers",
+        weatherIcon: "/weathericons/Moon Dust.png",
+        info: {
+          weathers: ["Umbral Wind", "Moon Dust"],
+          time: -1,
+        },
+      },
+    ],
+  },
 ];
