@@ -7,10 +7,17 @@ import { getWindows } from "@/functions/weather/getWindows";
 import { FarmInfo } from "@/types/weather/FarmInfo";
 import { WindowTimes } from "@/types/weather/WindowTimes";
 import React from "react";
+import Image from "next/image";
+import HelpIcon from "@mui/icons-material/Help";
 import { listEurekaFarms } from "@/static/weather/Farms";
+import { Stack, Tooltip } from "@mui/material";
 
-function Weather({ params }: { params: Promise<{ zone: string; farm: string }> }) {
-  const {zone, farm} = React.use(params)
+function Weather({
+  params,
+}: {
+  params: Promise<{ zone: string; farm: string }>;
+}) {
+  const { zone, farm } = React.use(params);
   const [longerWindowState, setLongerWindowState] = React.useState(true);
   const [discordTimestampAdjust, setDiscordTimestampAdjust] =
     React.useState("0");
@@ -18,9 +25,7 @@ function Weather({ params }: { params: Promise<{ zone: string; farm: string }> }
   const [findSnowState, setFindSnowState] = React.useState(2);
   const [snowState, setSnowState] = React.useState<WindowTimes[] | null>(null);
   const [zoneValue, setZoneValue] = React.useState(zone.replaceAll("%20", " "));
-  const [farmValue, setFarmValue] = React.useState(
-    farm.replaceAll("%20", " ")
-  );
+  const [farmValue, setFarmValue] = React.useState(farm.replaceAll("%20", " "));
   const [farmInfo, setFarmInfo] = React.useState<FarmInfo>(
     listEurekaFarms
       .find((x) => x.name == zone.replaceAll("%20", " "))
@@ -87,15 +92,37 @@ function Weather({ params }: { params: Promise<{ zone: string; farm: string }> }
             discordTimestampAdjust={discordTimestampAdjust}
             setDiscordTimestampAdjust={setDiscordTimestampAdjust}
           />
-          <div
-            style={{
-              justifyContent: "center",
-              alignItems: "center",
-              display: "flex",
-              marginBottom: "10px",
-              width: "100%"
-            }}
-          >
+          <Stack spacing={1} sx={{ alignItems: "center" }}>
+            {snowState && snowState[0].startTime < new Date() ? (
+              <Stack direction="row" sx={{ alignItems: 'center' }} spacing={0.5}>
+                <div style={{ display: "flex" }}>
+                  <Image
+                    width={27}
+                    height={27}
+                    alt={`${snowState[0].weathers[0]} weather image`}
+                    src={`/weathericons/${snowState[0].weathers[0]}.png`}
+                  />
+                </div>
+                <div style={{ display: "flex" }}>
+                  <p>
+                    Current window ends at:{" "}
+                    {new Date(
+                      Number(snowState[0].endTime) -
+                        (snowState[0].weathers.length - 1) * 1400000
+                    ).toLocaleString()}
+                  </p>
+                </div>
+                <div style={{ display: "flex" }}>
+                  <Tooltip
+                    title={
+                      "Please bear in mind that this value does not update dynamically and requires a page reload or update to refresh"
+                    }
+                  >
+                    <HelpIcon />
+                  </Tooltip>
+                </div>
+              </Stack>
+            ) : null}
             {
               // Ensure we have a snowState
               snowState != null ? (
@@ -107,7 +134,7 @@ function Weather({ params }: { params: Promise<{ zone: string; farm: string }> }
                 />
               ) : null
             }
-          </div>
+          </Stack>
         </>
       ) : null}
     </>
