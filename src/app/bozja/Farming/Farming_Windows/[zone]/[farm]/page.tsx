@@ -93,7 +93,7 @@ function Weather({
             setDiscordTimestampAdjust={setDiscordTimestampAdjust}
           />
           <Stack spacing={1} sx={{ alignItems: "center", width: "100%" }}>
-            {snowState && snowState[0].startTime < new Date() ? (
+            {snowState && snowState.length > 0 && snowState[0].startTime < new Date() ? (
               <Stack direction="row" sx={{ alignItems: 'center' }} spacing={0.5}>
                 <div style={{ display: "flex" }}>
                   <Image
