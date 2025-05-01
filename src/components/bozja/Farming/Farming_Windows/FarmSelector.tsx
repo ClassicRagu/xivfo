@@ -1,7 +1,6 @@
 "use client";
 import { listAreas } from "@/static/weather/Areas";
 import { listEurekaFarms } from "@/static/weather/Farms";
-import { FarmInfo } from "@/types/weather/FarmInfo";
 import {
   FormControl,
   InputLabel,
@@ -17,11 +16,10 @@ type FarmSelectorProps = {
   zoneValue: string;
   setFarmValue: React.Dispatch<React.SetStateAction<string>>;
   farmValue: string;
-  setFarmInfo: React.Dispatch<React.SetStateAction<FarmInfo>>;
 };
 
 function FarmSelector(props: FarmSelectorProps) {
-  const { setZoneValue, zoneValue, setFarmValue, farmValue, setFarmInfo } =
+  const { setZoneValue, zoneValue, setFarmValue, farmValue } =
     props;
 
   const router = useRouter();
@@ -64,18 +62,7 @@ function FarmSelector(props: FarmSelectorProps) {
             onChange={(event) => {
               if (event.target.value !== undefined) {
                 setFarmValue(event.target.value);
-                setFarmInfo(
-                  listEurekaFarms
-                    .find((x) => x.name == zoneValue)
-                    ?.farms.find((x) => x.name == event.target.value)?.info ?? {
-                    weathers: [""],
-                    time: -1,
-                  }
-                );
-                // Using the NextJS router does work for this as well but it causes components to rerender
-                // it might be worth rewriting this in the future so it works properly
                 router.push(`/bozja/Farming/Farming_Windows/${zoneValue}/${event.target.value}`)
-                //window.history.pushState(null, '', `/bozja/Farming/Farming_Windows/${zoneValue}/${event.target.value}`);
               }
             }}
             value={farmValue}
