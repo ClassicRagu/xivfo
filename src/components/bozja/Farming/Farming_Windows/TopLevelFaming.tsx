@@ -5,8 +5,7 @@ import AdditionalSettings from "@/components/bozja/Farming/Farming_Windows/Addit
 import WeatherTable from "@/components/bozja/Farming/Farming_Windows/WeatherTable";
 import React from "react";
 import Image from "next/image";
-import HelpIcon from "@mui/icons-material/Help";
-import { Stack, Tooltip } from "@mui/material";
+import { Stack } from "@mui/material";
 import { snowStateAtom } from "@/hooks/bozja/Farming/Farming_Weather/snowStateAtom";
 import { useAtom } from "jotai";
 import { zoneValueAtom } from "@/hooks/bozja/Farming/Farming_Weather/zoneValueAtom";
@@ -103,15 +102,6 @@ function Weather() {
                         (snowState[0].weathers.length - 1) * 1400000
                     ).toLocaleString()}
                   </p>
-                </div>
-                <div style={{ display: "flex" }}>
-                  <Tooltip
-                    title={
-                      "Please bear in mind that this value does not update dynamically and requires a page reload or update to refresh"
-                    }
-                  >
-                    <HelpIcon />
-                  </Tooltip>
                 </div>
               </Stack>
             ) : null}
