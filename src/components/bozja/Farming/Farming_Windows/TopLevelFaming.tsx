@@ -23,6 +23,7 @@ function Weather() {
   const [snowState, setSnowState] = useAtom(snowStateAtom)
   const [zoneValue, setZoneValue] = useAtom(zoneValueAtom)
   const [farmValue, setFarmValue] = useAtom(farmValueAtom)
+  const [active, setActive] = React.useState(false)
 
   React.useEffect(() => {
     const interval = setInterval(() => {
@@ -32,6 +33,7 @@ function Weather() {
         snowState.length > 0 &&
         snowState[0].startTime < new Date()
       ) {
+        setActive(true)
         if (
           new Date(
             Number(snowState[0].endTime) -
@@ -48,6 +50,8 @@ function Weather() {
           }
           setSnowState([...tempState]);
         }
+      } else {
+        setActive(false)
       }
     }, 5000);
     return () => {
@@ -78,9 +82,7 @@ function Weather() {
             setDiscordTimestampAdjust={setDiscordTimestampAdjust}
           />
           <Stack spacing={1} sx={{ alignItems: "center", width: "100%" }}>
-            {snowState &&
-        snowState.length > 0 &&
-        snowState[0].startTime < new Date() ? (
+            {active && snowState ? (
               <Stack
                 direction="row"
                 sx={{ alignItems: "center" }}
