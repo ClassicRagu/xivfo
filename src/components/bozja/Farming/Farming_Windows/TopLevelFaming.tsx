@@ -27,7 +27,6 @@ function Weather() {
 
   React.useEffect(() => {
     const interval = setInterval(() => {
-      console.log(snowState)
       if (
         snowState &&
         snowState.length > 0 &&
