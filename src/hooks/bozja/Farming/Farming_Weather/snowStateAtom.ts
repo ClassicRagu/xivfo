@@ -1,3 +1,4 @@
+"use client"
 import { WindowTimes } from "@/types/weather/WindowTimes";
 import { atom } from "jotai";
 import { farmInfoAtom } from "./farmInfoAtom";
