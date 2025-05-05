@@ -1,3 +1,4 @@
+"use client"
 import { WindowTimes } from "@/types/weather/WindowTimes";
 import { ContentCopy } from "@mui/icons-material";
 import {
