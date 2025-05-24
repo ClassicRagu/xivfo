@@ -9,6 +9,11 @@ const images = [
     pageUrl: "/oc/What_We_Know",
   },
   {
+    url: "/OC/THREE_OF_THEM.jpg",
+    title: "Pre-OC Best In Slot",
+    pageUrl: "/oc/What_We_Know",
+  },
+  {
     url: "",
     title: "Countdown",
     pageUrl: "/oc/Countdown",

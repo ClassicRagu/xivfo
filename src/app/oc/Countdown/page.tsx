@@ -56,7 +56,7 @@ function CLL() {
             <h2>
                 {timerComponents.length ? timerComponents : <span>Why are you still here, go enjoy OC!</span>}
             </h2>
-            <p>This countdown is set to end at 6am EST on 2025-05-27 and is subject to change based on maintenance times.</p>
+            <p>This countdown is set to end at 6am EST on 2025-05-27, at the end of maintenance.</p>
         </div>
     );
 }
