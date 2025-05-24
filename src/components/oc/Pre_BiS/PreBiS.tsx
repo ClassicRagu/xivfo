@@ -215,7 +215,7 @@ function JobList() {
 
 export default function PreBiS() {
   return (
-    <div style={{ padding: "16px", borderRadius: "8px", marginLeft: "0px" }}>
+    <div style={{ padding: "16px", borderRadius: "8px", marginLeft: "0px", maxWidth:"1000px" }}>
       <TableContainer component={Paper} style={{ marginTop: "10px" }}>
         <Table>
           <TableHead>
