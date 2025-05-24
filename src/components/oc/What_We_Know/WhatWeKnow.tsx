@@ -121,6 +121,12 @@ export default function WhatWeKnow() {
             maxWidth={1200}
             widthPercent="50%"
           />
+          <ImageWithPopup
+            src="/OC/MediaPhantomJobs.jpg"
+            alt="Another image of the Job List"
+            maxWidth={1200}
+            widthPercent="50%"
+          />
         </div>
         <Link component={NextLink} href="#known" style={{ display: "flex" }}>
           <Typography id="known" variant="h4" component="h3" sx={{ mb: 1 }}>
@@ -350,8 +356,6 @@ export default function WhatWeKnow() {
             maxWidth={1200}
             widthPercent="50%"
           />
-        </div>
-        <div>
           <ImageWithPopup
             src="/OC/DT_FieldOp_Jobs.png"
             alt="Image of the Job List shown on the KR stream"
@@ -407,8 +411,6 @@ export default function WhatWeKnow() {
             maxWidth={1200}
             widthPercent="50%"
           />
-        </div>
-        <div>
           <ImageWithPopup
             src="/OC/CriticalEncounter.jpg"
             alt="Image of YoshiP standing in front of a CE"
@@ -421,8 +423,12 @@ export default function WhatWeKnow() {
             maxWidth={1200}
             widthPercent="50%"
           />
-        </div>
-        <div>
+          <ImageWithPopup
+            src="/OC/Mindflayer_CE.jpg"
+            alt="An image of a fight with 3 enemies, all the same model but with different colors, likely from FT"
+            maxWidth={1200}
+            widthPercent="50%"
+          />
           <ImageWithPopup
             src="/OC/MagicPot.jpg"
             alt="Slide explaining Magic Pots"
@@ -463,7 +469,7 @@ export default function WhatWeKnow() {
               {"Per an interview with Famitsu"}
             </Link>
             {
-              ", certain Phantom Jobs will have actions that are required in order to clear Forked Tower."
+              ", players will need to find phantom job combinations that will assist them in clearing Forked Tower."
             }
           </Typography>
         <div>
@@ -476,6 +482,18 @@ export default function WhatWeKnow() {
           <ImageWithPopup
             src="/OC/ForkedTowerEntry.jpg"
             alt="Slide showing forked tower's spawn and entry conditions"
+            maxWidth={1200}
+            widthPercent="50%"
+          />
+          <ImageWithPopup
+            src="/OC/FTSplit.jpg"
+            alt="A Splitting Path Seen in FT"
+            maxWidth={1200}
+            widthPercent="50%"
+          />
+          <ImageWithPopup
+            src="/OC/THREE_OF_THEM.jpg"
+            alt="An image of a fight with 3 enemies, all the same model but with different colors, likely from FT"
             maxWidth={1200}
             widthPercent="50%"
           />
@@ -526,10 +544,18 @@ export default function WhatWeKnow() {
         </Typography>
         <Typography component="p" sx={{ mb: 2 }}>
           {
-            "There will be gear that increases stats in the content (similar to Elemental+2 gear in Eureka), there is no slide shown for this in the live letter but it is mentioned."
+            "There will be gear that increases stats in the content (similar to Elemental+2 gear in Eureka). It is unclear from translations exactly how powerful this bonus will be or when we will get it."
           }
           <br />
         </Typography>
+        <div>
+          <ImageWithPopup
+            src="/OC/OCGear.jpg"
+            alt="OC Armor from the 7.2 Media page"
+            maxWidth={1200}
+            widthPercent="50%"
+          />
+        </div>
       </div>
       <TableOfContents />
     </div>

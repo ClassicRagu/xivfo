@@ -15,7 +15,7 @@ export default function Home(props: { children: React.ReactNode }) {
           style={{ padding: "16px", paddingBottom: "0px", borderRadius: "8px", marginLeft: "0px" }}
         >
           <Typography variant="h3" component="h1" sx={{ mb: 2 }}>
-            What We Know About Occult Crescent {"(as of 3/14/25)"}
+            What We Know About Occult Crescent {"(as of 5/24/25)"}
           </Typography>
           <Typography component="p" sx={{ mb: 2 }}>
             Occult Crescent will be released in Patch 7.25 on May 27th 2025.<br/>
