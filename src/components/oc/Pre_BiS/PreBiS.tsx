@@ -60,6 +60,14 @@ const jobs = [
     credit: "myka",
   },
   {
+    setName: "Omni-Healer",
+    jobAbvs: ["WHM", "SCH", "AST", "SGE"],
+    jobNames: ["whitemage", "scholar", "astrologian", "sage"],
+    xivgear:
+      "https://xivgear.app/?page=sl%7Cfa8c615e-e713-4790-b4f4-3d240b0ab25f",
+    credit: "alttrois",
+  },
+  {
     setName: "WHM",
     jobAbvs: ["WHM"],
     jobNames: ["whitemage"],
