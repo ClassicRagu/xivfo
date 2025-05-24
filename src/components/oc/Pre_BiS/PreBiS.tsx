@@ -120,7 +120,7 @@ const jobs = [
     jobAbvs: ["SAM"],
     jobNames: ["samurai"],
     xivgear:
-      "https://xivgear.app/?page=sl%7Cf483b624-7b0e-4ae3-8a7b-805a95e5ad8c",
+      "https://xivgear.app/?page=sl%7C8c0c636b-fd18-4608-bc01-ab5cd2fd15b4",
     credit: ".ref.",
   },
   {
@@ -128,7 +128,7 @@ const jobs = [
     jobAbvs: ["VPR"],
     jobNames: ["viper"],
     xivgear:
-      "https://xivgear.app/?page=sl%7C7fbe1b9e-7280-422c-9c65-f6b3bd545158",
+      "https://xivgear.app/?page=sl%7C079f0244-5822-45fc-9b24-24192bb74d6d",
     credit: ".ref.",
   },
   {
@@ -152,7 +152,7 @@ const jobs = [
     jobAbvs: ["DNC"],
     jobNames: ["dancer"],
     xivgear:
-      "https://xivgear.app/?page=sl%7Ce55db780-138e-465a-972c-021580313da8",
+      "https://xivgear.app/?page=sl%7C82a95a08-8304-42d7-a0b7-89ffc6ad9328",
     credit: ".ref.",
   },
   {
