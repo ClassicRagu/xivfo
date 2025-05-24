@@ -164,6 +164,14 @@ const jobs = [
     credit: "mortia.",
   },
   {
+    setName: "RDM and PCT",
+    jobAbvs: ["RDM", "PCT"],
+    jobNames: ["redmage", "pictomancer"],
+    xivgear:
+      "https://xivgear.app/?page=sl%7C4edd4e11-a29a-4521-ae2d-2f386dd331db",
+    credit: ".spider",
+  },
+  {
     setName: "BLM",
     jobAbvs: ["BLM"],
     jobNames: ["blackmage"],

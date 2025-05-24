@@ -547,6 +547,10 @@ export default function WhatWeKnow() {
             "There will be gear that increases stats in the content (similar to Elemental+2 gear in Eureka). It is unclear from translations exactly how powerful this bonus will be or when we will get it."
           }
           <br />
+          {
+            "The gear shown below is tied to OC but we cannot confirm that it is the stat increasing gear."
+          }
+          <br />
         </Typography>
         <div>
           <ImageWithPopup
