@@ -11,7 +11,7 @@ const images = [
   {
     url: "/OC/THREE_OF_THEM.jpg",
     title: "Pre-OC Best In Slot",
-    pageUrl: "/oc/What_We_Know",
+    pageUrl: "/oc/Pre_BiS",
   },
   {
     url: "",
