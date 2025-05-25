@@ -19,7 +19,7 @@ export default function Home(props: { children: React.ReactNode }) {
           }}
         >
           <Typography variant="h3" component="h1" sx={{ mb: 2 }}>
-            Pre-OC Gear Best in Slot {"(last updated 5/24/25)"}
+            Pre-OC Gear Best in Slot {"(last updated 5/25/25)"}
           </Typography>
           <Typography component="p" sx={{ mb: 2 }}>
             These are the best in slot sets for Occult Crescent going into patch
