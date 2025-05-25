@@ -64,7 +64,7 @@ const jobs = [
     jobAbvs: ["WHM", "SCH", "AST", "SGE"],
     jobNames: ["whitemage", "scholar", "astrologian", "sage"],
     xivgear:
-      "https://xivgear.app/?page=sl%7C817d2ad7-26f2-4dde-b9f9-aefe8edd3665",
+      "https://xivgear.app/?page=sl%7C0e86cfda-0da0-4c83-8433-f6c561e48875",
     credit: "alttrois",
   },
   {
