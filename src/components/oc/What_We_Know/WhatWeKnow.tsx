@@ -91,23 +91,23 @@ export default function WhatWeKnow() {
           </Typography>
         </Link>
         <Typography component="p" sx={{ mb: 1 }}>
-            {
-              "There will be 12 total phantom jobs + freelancer on 7.25 release. Bard, Monk, and Knight can be obtained from a quest at the start."
-            }
-          </Typography>
-          <Typography component="p" sx={{ mb: 1 }}>
-            {
-              "Phantom Jobs will have their own levels separate from Knowledge Level, these levels will unlock Actions and Traits for each Phantom Job."
-            }
-          </Typography>
-          <Typography component="p" sx={{ mb: 1 }}>
-            {
-              "Phantom Jobs can have up to 5 actions and have a new Duty Action UI element to deal with the increase. Keyboard & mouse users can drag and drop actions onto their hotbars."
-            }
-          </Typography>
-          <Typography component="p" sx={{ mb: 1 }}>
-            {"Some Phantom Jobs will also have traits."}
-          </Typography>
+          {
+            "There will be 12 total phantom jobs + freelancer on 7.25 release. Bard, Monk, and Knight can be obtained from a quest at the start."
+          }
+        </Typography>
+        <Typography component="p" sx={{ mb: 1 }}>
+          {
+            "Phantom Jobs will have their own levels separate from Knowledge Level, these levels will unlock Actions and Traits for each Phantom Job."
+          }
+        </Typography>
+        <Typography component="p" sx={{ mb: 1 }}>
+          {
+            "Phantom Jobs can have up to 5 actions and have a new Duty Action UI element to deal with the increase. Keyboard & mouse users can drag and drop actions onto their hotbars."
+          }
+        </Typography>
+        <Typography component="p" sx={{ mb: 1 }}>
+          {"Some Phantom Jobs will also have traits."}
+        </Typography>
         <div>
           <ImageWithPopup
             src="/OC/JobList.jpg"
@@ -163,10 +163,13 @@ export default function WhatWeKnow() {
             </Typography>
           </Link>
         </div>
-        <Typography component="p" sx={{ mb: 2 }}>
+        <Typography component="p">
           {"Freelancer is the default job."}
         </Typography>
-        <ul>
+        <Typography variant="h6" component="h5">
+          Actions
+        </Typography>
+        <ul style={{ marginTop: 0 }}>
           <li>Occult First Aid: Restores 30% of your Max HP.</li>
           <li>
             Occult Treasure Search: Look up the number of treasure boxes in the
@@ -190,10 +193,13 @@ export default function WhatWeKnow() {
             </Typography>
           </Link>
         </div>
-        <Typography component="p" sx={{ mb: 2 }}>
+        <Typography component="p">
           {"Bard is unlocked in a starter quest."}
         </Typography>
-        <ul>
+        <Typography variant="h6" component="h5">
+          Actions
+        </Typography>
+        <ul style={{ marginTop: 0 }}>
           <li>
             Lvl 1: Song of Attack: <i>Some kind of attack buff</i>
           </li>
@@ -210,7 +216,12 @@ export default function WhatWeKnow() {
               name to Spirit of the Remembered.
             </i>
           </li>
-          <li>Lvl 2: Trait - Song Effectiveness Up</li>
+        </ul>
+        <Typography variant="h6" component="h5">
+          Traits
+        </Typography>
+        <ul style={{ marginTop: 0 }}>
+          <li>Lvl 2: Song Effectiveness Up</li>
         </ul>
         <div style={{ display: "flex", alignItems: "baseline" }}>
           <Box
@@ -229,10 +240,13 @@ export default function WhatWeKnow() {
             </Typography>
           </Link>
         </div>
-        <Typography component="p" sx={{ mb: 2 }}>
+        <Typography component="p">
           {"Monk is unlocked in a starter quest."}
         </Typography>
-        <ul>
+        <Typography variant="h6" component="h5">
+          Actions
+        </Typography>
+        <ul style={{ marginTop: 0 }}>
           <li>
             Lvl 1: Phantom Kick:{" "}
             <i>Some kind of single-target damage probably</i>
@@ -248,8 +262,13 @@ export default function WhatWeKnow() {
           <li>
             Lvl 5: Occult Chakra: <i>Likely a self-heal</i>
           </li>
-          <li>Lvl 4: Trait - Kick Effect Up 1</li>
-          <li>Lvl 6: Trait - Kick Effect Up 2</li>
+        </ul>
+        <Typography variant="h6" component="h5">
+          Traits
+        </Typography>
+        <ul style={{ marginTop: 0 }}>
+          <li>Lvl 4: Kick Effect Up 1</li>
+          <li>Lvl 6: Kick Effect Up 2</li>
         </ul>
         <div style={{ display: "flex", alignItems: "baseline" }}>
           <Box
@@ -268,10 +287,13 @@ export default function WhatWeKnow() {
             </Typography>
           </Link>
         </div>
-        <Typography component="p" sx={{ mb: 2 }}>
+        <Typography component="p">
           {"Knight is unlocked in a starter quest."}
         </Typography>
-        <ul>
+        <Typography variant="h6" component="h5">
+          Actions
+        </Typography>
+        <ul style={{ marginTop: 0 }}>
           <li>
             Lvl 1: Guard: <i>Likely reduces damage taken.</i>
           </li>
@@ -284,8 +306,13 @@ export default function WhatWeKnow() {
           <li>
             Lvl 6: Oath/Vow: <i>Maybe some kind of tank stance?</i>
           </li>
-          <li>Lvl 4: Trait - Guard Effectiveness Up</li>
-          <li>Lvl 5: Trait - Prayer Effectiveness Up</li>
+        </ul>
+        <Typography variant="h6" component="h5">
+          Traits
+        </Typography>
+        <ul style={{ marginTop: 0 }}>
+          <li>Lvl 4: Guard Effectiveness Up</li>
+          <li>Lvl 5: Prayer Effectiveness Up</li>
         </ul>
         <div style={{ display: "flex", alignItems: "baseline" }}>
           <Box
@@ -304,10 +331,13 @@ export default function WhatWeKnow() {
             </Typography>
           </Link>
         </div>
-        <Typography component="p" sx={{ mb: 2 }}>
+        <Typography component="p">
           {"Time Mage's unlock is unknown."}
         </Typography>
-        <ul>
+        <Typography variant="h6" component="h5">
+          Actions
+        </Typography>
+        <ul style={{ marginTop: 0 }}>
           <li>
             Lvl 1: Occult Slow III: Slow target and area around it by 80% for 30
             seconds.
@@ -368,36 +398,36 @@ export default function WhatWeKnow() {
             The Zone: Southern Horn
           </Typography>
         </Link>
-          <Typography component="p" sx={{ mb: 1 }}>
-            {
-              "Occult Crescent: Southern Horn is the zone being released in patch 7.25."
-            }
-          </Typography>
-          <Typography component="p" sx={{ mb: 1 }}>
-            {
-              "This zone is notably quite large compared to existing foray zones and includes a total of 5 aetherytes. All aetherytes can be unlocked immediately with no level requirement as long as you can get to them"
-            }
-          </Typography>
-          <Typography component="p" sx={{ mb: 1 }}>
-            {
-              "Within the zone there will be FATEs (Bozja Skirmishes), Critical Encounters (Bozja Critical Engagements), and Magic Pots (Eureka Bunnies) as well as the usual enemies for you to kill."
-            }
-          </Typography>
-          <Typography component="p" sx={{ mb: 1 }}>
-            {
-              "Unlike Bozja, CEs in OC will require you to walk to them and stand in the circle in order to join. Additionally, all 72 people in instance can join all CEs."
-            }
-          </Typography>
-          <Typography component="p" sx={{ mb: 1 }}>
-            {
-              "The Southern Horn will also include treasure chests throughout the instance for players to find."
-            }
-          </Typography>
-          <Typography component="p" sx={{ mb: 1 }}>
-            {
-              "IL Sync for the instance is 700 and has the same entry message as Eureka so it's likely stats will not be set. This means best in slot will likely be mostly melded Neo-Kindom with some current IL 760 gear."
-            }
-          </Typography>
+        <Typography component="p" sx={{ mb: 1 }}>
+          {
+            "Occult Crescent: Southern Horn is the zone being released in patch 7.25."
+          }
+        </Typography>
+        <Typography component="p" sx={{ mb: 1 }}>
+          {
+            "This zone is notably quite large compared to existing foray zones and includes a total of 5 aetherytes. All aetherytes can be unlocked immediately with no level requirement as long as you can get to them"
+          }
+        </Typography>
+        <Typography component="p" sx={{ mb: 1 }}>
+          {
+            "Within the zone there will be FATEs (Bozja Skirmishes), Critical Encounters (Bozja Critical Engagements), and Magic Pots (Eureka Bunnies) as well as the usual enemies for you to kill."
+          }
+        </Typography>
+        <Typography component="p" sx={{ mb: 1 }}>
+          {
+            "Unlike Bozja, CEs in OC will require you to walk to them and stand in the circle in order to join. Additionally, all 72 people in instance can join all CEs."
+          }
+        </Typography>
+        <Typography component="p" sx={{ mb: 1 }}>
+          {
+            "The Southern Horn will also include treasure chests throughout the instance for players to find."
+          }
+        </Typography>
+        <Typography component="p" sx={{ mb: 1 }}>
+          {
+            "IL Sync for the instance is 700 and has the same entry message as Eureka so it's likely stats will not be set. This means best in slot will likely be mostly melded Neo-Kindom with some current IL 760 gear."
+          }
+        </Typography>
         <div>
           <ImageWithPopup
             src="/OC/OCMap.jpg"
@@ -447,31 +477,35 @@ export default function WhatWeKnow() {
             The Raid: Forked Tower
           </Typography>
         </Link>
-          <Typography component="p" sx={{ mb: 1 }}>
-            {
-              "Forked Tower will be a 48 person raid joined from inside Occult Crescent: Southern Horn."
-            }
-          </Typography>
-          <Typography component="p" sx={{ mb: 1 }}>
-            {
-              'Unlike past raids it seems to be spawnable anytime by players in instance. 16 players must obtain and use 16 "ciphers" in a designated location to enter.'
-            }
-          </Typography>
-          <Typography component="p" sx={{ mb: 1 }}>
-            {
-              "It seems to use a combination of Bozja's Priority Deployment system along with BA's Aetheric Stabilizers as using a cipher will grant you priority but will not guarantee entry."
-            }
-          </Typography>
-          <Typography component="p" sx={{ mb: 1 }}>{"Forked Tower contains hidden rooms."}</Typography>
-          <Typography component="p" sx={{ mb: 1 }}>{"This instance will have Resurrection Restriction."}</Typography>
-          <Typography component="p" sx={{ mb: 1 }}>
-            <Link href="https://www.famitsu.com/article/202503/36244">
-              {"Per an interview with Famitsu"}
-            </Link>
-            {
-              ", players will need to find phantom job combinations that will assist them in clearing Forked Tower."
-            }
-          </Typography>
+        <Typography component="p" sx={{ mb: 1 }}>
+          {
+            "Forked Tower will be a 48 person raid joined from inside Occult Crescent: Southern Horn."
+          }
+        </Typography>
+        <Typography component="p" sx={{ mb: 1 }}>
+          {
+            'Unlike past raids it seems to be spawnable anytime by players in instance. 16 players must obtain and use 16 "ciphers" in a designated location to enter.'
+          }
+        </Typography>
+        <Typography component="p" sx={{ mb: 1 }}>
+          {
+            "It seems to use a combination of Bozja's Priority Deployment system along with BA's Aetheric Stabilizers as using a cipher will grant you priority but will not guarantee entry."
+          }
+        </Typography>
+        <Typography component="p" sx={{ mb: 1 }}>
+          {"Forked Tower contains hidden rooms."}
+        </Typography>
+        <Typography component="p" sx={{ mb: 1 }}>
+          {"This instance will have Resurrection Restriction."}
+        </Typography>
+        <Typography component="p" sx={{ mb: 1 }}>
+          <Link href="https://www.famitsu.com/article/202503/36244">
+            {"Per an interview with Famitsu"}
+          </Link>
+          {
+            ", players will need to find phantom job combinations that will assist them in clearing Forked Tower."
+          }
+        </Typography>
         <div>
           <ImageWithPopup
             src="/OC/ForkedTower.jpg"
