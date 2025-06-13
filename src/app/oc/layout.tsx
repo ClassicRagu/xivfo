@@ -11,9 +11,7 @@ import GeneratedSidebar, {
         name: "",
         contents: [
           { name: "Occult Crescent Home", url: "/oc" },
-          { name: "What We Know", url: "/oc/What_We_Know" },
-          { name: "Pre-OC Best In Slot", url: "/oc/Pre_BiS" },
-          { name: "Countdown", url: "/oc/Countdown" },
+          { name: "OC Gearing", url: "/oc/Gearing" },
         ],
       },
     ];

@@ -4,19 +4,9 @@ import { Box, Container } from "@mui/material";
 
 const images = [
   {
-    url: "/OC/OCPreview.jpg",
-    title: "What We Know So Far",
-    pageUrl: "/oc/What_We_Know",
-  },
-  {
     url: "/OC/THREE_OF_THEM.jpg",
-    title: "Pre-OC Best In Slot",
-    pageUrl: "/oc/Pre_BiS",
-  },
-  {
-    url: "",
-    title: "Countdown",
-    pageUrl: "/oc/Countdown",
+    title: "OC Gearing",
+    pageUrl: "/oc/Gearing",
   },
 ];
 
