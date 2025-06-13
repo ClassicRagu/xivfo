@@ -8,6 +8,11 @@ const images = [
     title: "OC Gearing",
     pageUrl: "/oc/Gearing",
   },
+  {
+    url: "/OC/map/o6b1.png",
+    title: "OC Map",
+    pageUrl: "/oc/map",
+  },
 ];
 
 export default function Home() {

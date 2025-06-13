@@ -11,6 +11,7 @@ import GeneratedSidebar, {
         name: "",
         contents: [
           { name: "Occult Crescent Home", url: "/oc" },
+          { name: "OC Map", url: "/oc/map" },
           { name: "OC Gearing", url: "/oc/Gearing" },
         ],
       },
