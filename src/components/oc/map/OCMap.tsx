@@ -10,6 +10,7 @@ import { bronzeState } from "@/hooks/oc/map/bronzeState";
 import { silverState } from "@/hooks/oc/map/sivlerState";
 import { potState } from "@/hooks/oc/map/potState";
 import { bunnyState } from "@/hooks/oc/map/bunnyState";
+import { MapMarkers } from "./MapMarkers/LevelMarkers";
 
 const bounds: LatLngBoundsExpression = [
   [1, 1],
@@ -130,6 +131,7 @@ function OCMap(props: FragmentMapProps) {
               </Marker>
             );
           }) : null}
+          <MapMarkers minInputLevel={0} maxInputLevel={2} />
           <ImageOverlay url={"/OC/map/o6b1.png"} bounds={bounds} />
         </MapContainer>
       </div>
