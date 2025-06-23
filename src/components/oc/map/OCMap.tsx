@@ -131,7 +131,7 @@ function OCMap(props: FragmentMapProps) {
               </Marker>
             );
           }) : null}
-          <MapMarkers minInputLevel={0} maxInputLevel={2} />
+          <MapMarkers minInputLevel={0} maxInputLevel={30} />
           <ImageOverlay url={"/OC/map/o6b1.png"} bounds={bounds} />
         </MapContainer>
       </div>

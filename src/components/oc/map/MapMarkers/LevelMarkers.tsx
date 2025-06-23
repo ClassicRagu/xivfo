@@ -13,8 +13,10 @@ export function MapMarkers(props: {
   const newZones = levelzones.slice(props.minInputLevel, props.maxInputLevel);
   newZones.forEach((levels, index) => {
     levels.forEach((level, levelIndex) => {
-      const positions = level.map((x) => {
-        return mapXY(x[0], x[1]);
+      const positions: LatLngTuple[][] = level.map((x) => {
+        return x.map((fourDArraysSuck) => {
+          return mapXY(fourDArraysSuck[0], fourDArraysSuck[1]);
+        })
       });
       tmp.push(
         <Polygon
@@ -23,7 +25,7 @@ export function MapMarkers(props: {
             fillColor: setColor(index % 4),
             color: setColor(index % 4),
           }}
-          positions={positions as LatLngTuple[]}
+          positions={positions}
         />
       );
     });
