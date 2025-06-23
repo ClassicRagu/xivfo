@@ -14,7 +14,7 @@ import { MapMarkers } from "./MapMarkers/LevelMarkers";
 
 const bounds: LatLngBoundsExpression = [
   [1, 1],
-  [42, 42],
+  [41.9, 41.9],
 ];
 
 type FragmentMapProps = {

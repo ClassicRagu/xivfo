@@ -1,9 +1,12 @@
-import { mapXY } from "@/functions/bozja/Farming/Fragment_Map/mapXY";
 import { setColor } from "@/functions/bozja/Farming/Fragment_Map/setColor";
 import { levelzones } from "@/static/oc/map/levelzones";
 import { MonsterLocation } from "@/types/bozja/Farming/Fragment_Map/MonsterLocation";
 import { Icon, LatLngExpression, LatLngTuple } from "leaflet";
 import { Circle, Marker, Polygon, Popup } from "react-leaflet";
+
+function mapXY(x:number, y: number) : LatLngTuple {
+  return [42.9 - y, x];
+}
 
 export function MapMarkers(props: {
   minInputLevel: number;
@@ -22,8 +25,8 @@ export function MapMarkers(props: {
         <Polygon
           key={`${index}-${levelIndex}`}
           pathOptions={{
-            fillColor: setColor(index % 4),
-            color: setColor(index % 4),
+            fillColor: setColor(index % 5),
+            color: setColor(index % 5),
           }}
           positions={positions}
         />
