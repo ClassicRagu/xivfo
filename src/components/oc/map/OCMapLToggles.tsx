@@ -17,7 +17,6 @@ import { bunnyState } from "@/hooks/oc/map/bunnyState";
 import { mapState } from "@/hooks/oc/map/mapState";
 import { maxLevelState } from "@/hooks/oc/map/maxLevelState";
 import { minLevelState } from "@/hooks/oc/map/minLevelState";
-import { ChangeEvent } from "react";
 
 function OCMapToggles() {
   const [bronze, setBronze] = useAtom(bronzeState);
