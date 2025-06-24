@@ -10,10 +10,14 @@ import { bronzeState } from "@/hooks/oc/map/bronzeState";
 import { silverState } from "@/hooks/oc/map/sivlerState";
 import { potState } from "@/hooks/oc/map/potState";
 import { bunnyState } from "@/hooks/oc/map/bunnyState";
+import { MapMarkers } from "./MapMarkers/LevelMarkers";
+import { mapState } from "@/hooks/oc/map/mapState";
+import { minLevelState } from "@/hooks/oc/map/minLevelState";
+import { maxLevelState } from "@/hooks/oc/map/maxLevelState";
 
 const bounds: LatLngBoundsExpression = [
   [1, 1],
-  [42, 42],
+  [41.9, 41.9],
 ];
 
 type FragmentMapProps = {
@@ -23,10 +27,13 @@ type FragmentMapProps = {
 };
 
 function OCMap(props: FragmentMapProps) {
-  const [bronzes] = useAtom(bronzeState)
-    const [silvers] = useAtom(silverState)
-    const [pots] = useAtom(potState)
-    const [bunnies] = useAtom(bunnyState)
+  const [bronzes] = useAtom(bronzeState);
+  const [silvers] = useAtom(silverState);
+  const [pots] = useAtom(potState);
+  const [bunnies] = useAtom(bunnyState);
+  const [map] = useAtom(mapState);
+  const [minLevel] = useAtom(minLevelState);
+  const [maxLevel] = useAtom(maxLevelState);
 
   return (
     <Card
@@ -54,82 +61,98 @@ function OCMap(props: FragmentMapProps) {
           bounds={bounds}
           dragging={props.dragging}
         >
-          {bronzes ? bronze.map((x, index) => {
-            return (
-              <Marker
-                key={`bronze-chest-${index}`}
-                position={mapXY(x[0], x[1]) as LatLngTuple}
-                icon={
-                  new Icon({
-                    iconUrl: "/OC/map/060356_hr1.png",
-                    iconSize: [40, 40],
-                    iconAnchor: [20, 20],
+          {map == "Treasure" ? (
+            <>
+              {bronzes
+                ? bronze.map((x, index) => {
+                    return (
+                      <Marker
+                        key={`bronze-chest-${index}`}
+                        position={mapXY(x[0], x[1]) as LatLngTuple}
+                        icon={
+                          new Icon({
+                            iconUrl: "/OC/map/060356_hr1.png",
+                            iconSize: [40, 40],
+                            iconAnchor: [20, 20],
+                          })
+                        }
+                      >
+                        <Popup>
+                          X:{x[0]}, Y:{x[1]}
+                        </Popup>
+                      </Marker>
+                    );
                   })
-                }
-              >
-                <Popup>
-                  X:{x[0]}, Y:{x[1]}
-                </Popup>
-              </Marker>
-            );
-          }) : null}
-          {silvers ? silver.map((x, index) => {
-            return (
-              <Marker
-                key={`silver-chest-${index}`}
-                position={mapXY(x[0], x[1]) as LatLngTuple}
-                icon={
-                  new Icon({
-                    iconUrl: "/OC/map/060355_hr1.png",
-                    iconSize: [40, 40],
-                    iconAnchor: [20, 20],
+                : null}
+              {silvers
+                ? silver.map((x, index) => {
+                    return (
+                      <Marker
+                        key={`silver-chest-${index}`}
+                        position={mapXY(x[0], x[1]) as LatLngTuple}
+                        icon={
+                          new Icon({
+                            iconUrl: "/OC/map/060355_hr1.png",
+                            iconSize: [40, 40],
+                            iconAnchor: [20, 20],
+                          })
+                        }
+                      >
+                        <Popup>
+                          X:{x[0]}, Y:{x[1]}
+                        </Popup>
+                      </Marker>
+                    );
                   })
-                }
-              >
-                <Popup>
-                  X:{x[0]}, Y:{x[1]}
-                </Popup>
-              </Marker>
-            );
-          }) : null}
-          {pots ? pot.map((x, index) => {
-            return (
-              <Marker
-                key={`silver-chest-${index}`}
-                position={mapXY(x[0], x[1]) as LatLngTuple}
-                icon={
-                  new Icon({
-                    iconUrl: "/OC/map/060354_hr1.png",
-                    iconSize: [40, 40],
-                    iconAnchor: [20, 20],
+                : null}
+              {pots
+                ? pot.map((x, index) => {
+                    return (
+                      <Marker
+                        key={`silver-chest-${index}`}
+                        position={mapXY(x[0], x[1]) as LatLngTuple}
+                        icon={
+                          new Icon({
+                            iconUrl: "/OC/map/060354_hr1.png",
+                            iconSize: [40, 40],
+                            iconAnchor: [20, 20],
+                          })
+                        }
+                      >
+                        <Popup>
+                          X:{x[0]}, Y:{x[1]}
+                        </Popup>
+                      </Marker>
+                    );
                   })
-                }
-              >
-                <Popup>
-                  X:{x[0]}, Y:{x[1]}
-                </Popup>
-              </Marker>
-            );
-          }) : null}
-          {bunnies ? bunny.map((x, index) => {
-            return (
-              <Marker
-                key={`silver-chest-${index}`}
-                position={mapXY(x[0], x[1]) as LatLngTuple}
-                icon={
-                  new Icon({
-                    iconUrl: "/OC/map/025207_hr1.png",
-                    iconSize: [40, 40],
-                    iconAnchor: [20, 20],
+                : null}
+              {bunnies
+                ? bunny.map((x, index) => {
+                    return (
+                      <Marker
+                        key={`silver-chest-${index}`}
+                        position={mapXY(x[0], x[1]) as LatLngTuple}
+                        icon={
+                          new Icon({
+                            iconUrl: "/OC/map/025207_hr1.png",
+                            iconSize: [40, 40],
+                            iconAnchor: [20, 20],
+                          })
+                        }
+                      >
+                        <Popup>
+                          X:{x[0]}, Y:{x[1]}
+                        </Popup>
+                      </Marker>
+                    );
                   })
-                }
-              >
-                <Popup>
-                  X:{x[0]}, Y:{x[1]}
-                </Popup>
-              </Marker>
-            );
-          }) : null}
+                : null}
+            </>
+          ) : null}
+          {map == "Mobs" ? (
+            <MapMarkers minInputLevel={minLevel} maxInputLevel={maxLevel} />
+          ) : null}
+
           <ImageOverlay url={"/OC/map/o6b1.png"} bounds={bounds} />
         </MapContainer>
       </div>
