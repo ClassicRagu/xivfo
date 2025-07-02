@@ -3,29 +3,30 @@ import * as React from "react";
 import { Avatar, Button, Grid } from "@mui/material";
 
 function CLL() {
-  // This file ie extreme old and types will need to be added in the future
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [startTime, setStartTime] = React.useState<any>(); 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [now, setNow] = React.useState<any>(); 
-  const [cllTime, setCLLTime] = React.useState(3660);
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const intervalRef = React.useRef<any>(null); 
+  const [startTime, setStartTime] = React.useState<number>(0);
+  const [now, setNow] = React.useState<number>(0);
+  const [cllTime, setCLLTime] = React.useState(3600);
+  const intervalRef = React.useRef<NodeJS.Timeout | null>(null);
 
   function handleStart() {
     // Start counting.
     setStartTime(Date.now());
     setNow(Date.now());
 
-    clearInterval(intervalRef.current);
+    if (intervalRef.current != null) {
+      clearInterval(intervalRef.current);
+    }
     intervalRef.current = setInterval(() => {
-      // Update the current time every 1000ms.
+      // Update the current time every 500ms.
+      // The lower this is the more accurately it updates
       setNow(Date.now());
-    }, 1000);
+    }, 500);
   }
 
   function handleStop() {
-    clearInterval(intervalRef.current);
+    if (intervalRef.current != null) {
+      clearInterval(intervalRef.current);
+    }
   }
 
   let secondsPassed = 0;
@@ -51,7 +52,7 @@ function CLL() {
             {secondsRemaining >= 0 ? secondsRemaining : 0}
           </p>
         </h2>
-        <p>Timer started: {new Date(startTime).toLocaleTimeString()}</p>
+        <p>{startTime == 0 ? "Click START/RESTART to start the timer" : `Timer started: ${new Date(startTime).toLocaleTimeString()}`}</p>
       </div>
       <Grid
         container
@@ -82,7 +83,12 @@ function CLL() {
               setCLLTime(3600);
             }}
             variant={"contained"}
-            startIcon={<Avatar variant="square" src={"/Bozja/Farming/Fragment_Map/CLL.png"} />}
+            startIcon={
+              <Avatar
+                variant="square"
+                src={"/Bozja/Farming/Fragment_Map/CLL.png"}
+              />
+            }
           >
             Start/Restart
           </Button>
