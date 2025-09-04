@@ -152,4 +152,17 @@ export const listEurekaFarms: EurekaFarm[] = [
       },
     ],
   },
+  {
+    name: "Phaenna",
+    farms: [
+      {
+        name: "Rare Weathers",
+        weatherIcon: "/weathericons/Rain.png",
+        info: {
+          weathers: ["Clouds", "Rain"],
+          time: -1,
+        },
+      },
+    ],
+  },
 ];

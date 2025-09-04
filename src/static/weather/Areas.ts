@@ -4,5 +4,6 @@ export const listAreas = [
   "Hydatos",
   "Bozjan Southern Front",
   "Zadnor",
-  "Sinus Ardorum"
+  "Sinus Ardorum",
+  "Phaenna"
 ];

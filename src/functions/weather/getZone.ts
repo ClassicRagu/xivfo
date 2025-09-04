@@ -1,4 +1,4 @@
-import { ZONE_BOZJAN_SOUTHERN_FRONT, ZONE_EUREKA_HYDATOS, ZONE_EUREKA_PAGOS, ZONE_EUREKA_PYROS, ZONE_ZADNOR, ZONE_SINUS_ARDORUM } from "xivweather"
+import { ZONE_BOZJAN_SOUTHERN_FRONT, ZONE_EUREKA_HYDATOS, ZONE_EUREKA_PAGOS, ZONE_EUREKA_PYROS, ZONE_ZADNOR, ZONE_SINUS_ARDORUM, ZONE_PHAENNA } from "xivweather"
 
 export const getZone = (zone: string) => {
   switch(zone) {
@@ -14,6 +14,8 @@ export const getZone = (zone: string) => {
       return ZONE_ZADNOR
     case "Sinus Ardorum":
       return ZONE_SINUS_ARDORUM
+    case "Phaenna":
+      return ZONE_PHAENNA
     default:
       return ZONE_EUREKA_HYDATOS
   }
