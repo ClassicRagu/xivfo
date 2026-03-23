@@ -17,8 +17,8 @@ const images = [
   },
   {
     url: '/OC/OCPreview.jpg',
-    title: 'Occult Crescent (Coming in 7.25)',
-    pageUrl: "/oc"
+    title: 'Occult Crescent',
+    pageUrl: "https://lynn-lizard.github.io/crescent/occult/"
   },
 ];
 
