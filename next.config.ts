@@ -26,6 +26,11 @@ const nextConfig: NextConfig = {
         destination: "/oc/Gearing/Pre_BiS",
         permanent: false,
       },
+      {
+        source: "/occult",
+        destination: "https://lynn-lizard.github.io/crescent/occult/",
+        permanent: false,
+      }
     ];
   },
 };
